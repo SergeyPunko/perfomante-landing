@@ -1,0 +1,89 @@
+@import 'vars';
+@import 'mixin';
+
+@include font("GT Flexa Trial", "GT-Flexa-Standard-Regular", "400", "normal");
+@include font("Neue Montreal", "NeueMontreal-Bold", "400", "normal");
+
+body {
+    font-family: 'GT Flexa Trial', sans-serif;
+    font-size: 16px;
+    color: $text-main;
+    overflow-x: hidden !important;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+}
+
+h5,
+.bold-header {
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+section {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 32px;
+    color: $ui-green;
+    letter-spacing: 0.08em;
+}
+
+.paragraph {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.aditional-paragraph {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+h3 {
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 56px;
+}
+
+.section-header {
+    h3 {
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: $phone) {
+
+    h1 {
+        font-size: 40px;
+        line-height: 56px;
+    }
+
+    .aditional-paragraph {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    h5,
+    .bold-header {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
