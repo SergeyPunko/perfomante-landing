@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <title>Perfomante</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./img/logo.svg" alt="Perfomante logo">
+        </div>
+        <input type="checkbox" id="burger">
+        <label class="burger" for="burger"><img src="./img/burger.svg" alt="burger"></label>
+        <div class="menu">
+            <nav class="navigation">
+                <ul class="navigation__container">
+                    <li class="navigation__item dropdown-container">
+                        Services
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 4.28564L5.67747 7.34561C5.84821 7.54075 6.15179 7.54075 6.32253 7.34561L9 4.28564"
+                                stroke="#22221F" stroke-width="0.998571" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <ul class="dropdown">
+                            <li class="dropdown__item"><a class="link black" href="#">2d video ads</a></li>
+                            <li class="dropdown__item"><a class="link black" href="#">3d video ads</a></li>
+                            <li class="dropdown__item"><a class="link black" href="#">UGC video ads</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item"><a class="link black" href="#cases">Cases</a></li>
+                    <!-- <li class="navigation__item"><a class="link black" href="#">Portfolio</a></li> -->
+                    <li class="navigation__item"><a class="link black" href="#team">About us</a></li>
+                    <li class="navigation__item"><a class="link black" target="_blank"
+                            href="https://perfomante.io/blog/?utm_source=main">Blog</a></li>
+                </ul>
+            </nav>
+            <nav class="header-buttons">
+                <a class="link black" target="_blank" href="https://app.perfomante.io/login">Sign in</a>
+                <button class="outlined"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                    Request demo
+                </button>
+            </nav>
+        </div>
+    </header>
+    <section class="intro">
+        <div class="container">
+            <div class="intro__text">
+                <h1>Marketing videos that perform and attract users</h1>
+                <p class="aditional-paragraph">Experts in visual production maximize return on impressions with
+                    measurably better video creative.
+                </p>
+                <div class="cta">
+                    <button class="button-offer contained"><img src="./img/green-logo.png" alt="perfomante"><span>Get
+                            offer</span></button>
+                    <button class="outlined-dark"
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                        <img src="./img/andrew-avatar.png" alt="perfomante">
+                        <span>Get a demo <span class="mobile-hidden">from Andrew</span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="intro__img">
+                <img src="./img/intro-background.png" alt="intro background">
+            </div>
+        </div>
+    </section>
+    <section class="companies">
+        <div class="container">
+            <h2 class="bold-header">120+ companies in mobile industry trust us</h2>
+            <div id="autoplay" class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="company-list glide__slides">
+                        <li class="company-list__item glide__slide"><img src="./img/mytona.png" alt="mytona logo"></li>
+                        <li class="company-list__item glide__slide"><img src="./img/mail-group.png"
+                                alt="mail group logo"></li>
+                        <li class="company-list__item glide__slide"><img src="./img/azur.png" alt="azur logo"></li>
+                        <li class="company-list__item glide__slide"><img src="./img/lockwood.png" alt="lockwood logo">
+                        </li>
+                        <li class="company-list__item glide__slide"><img src="./img/frog-mind.png" alt="frog mind logo">
+                        </li>
+                        <li class="company-list__item glide__slide"><img src="./img/exient.png" alt="exient logo"></li>
+                        <li class="company-list__item glide__slide"><img src="./img/iq-option.png" alt="iq option logo">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="technology">
+        <div class="container">
+            <div class="text-container section-header">
+                <h4>WHY PERFOMANTE</h4>
+                <h3>Creative ads performance backed by experience and tech</h3>
+                <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
+                    video creative.</p>
+            </div>
+            <ul class="technology-row">
+                <li class="technology-row__item">
+                    <img src="./img/idea.jpg" alt="idea">
+                    <h5>Idea generation</h5>
+                    <p class="aditional-paragraph">By the collected data of thousands of videos we provide the best
+                        parctices in your domain. It’s
+                        not just a perfect motion design.</p>
+                </li>
+                <li class="technology-row__item">
+                    <img src="./img/chart.jpg" alt="chart">
+                    <h5>Mapping</h5>
+                    <p class="aditional-paragraph">Our experienced creative team makes mapping of each video we create.
+                        So you get the insights on
+                        what really works</p>
+                </li>
+                <li class="technology-row__item">
+                    <img src="./img/wfh.jpg" alt="work from home">
+                    <h5>In-house</h5>
+                    <p class="aditional-paragraph">Full in-house team. You just sit back and relax - our managers will
+                        provide all the rest </p>
+                </li>
+                <li class="technology-row__item">
+                    <img src="./img/system.jpg" alt="system">
+                    <h5>System</h5>
+                    <p class="aditional-paragraph">Our production is backed by own framework. so that all your wishes
+                        will be taken into account
+                        100%</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="square"></div>
+            <div class="section-header">
+                <h4>SERVICES</h4>
+                <h3>Video ads for any needs</h3>
+                <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
+                    video creative.</p>
+            </div>
+            <div class="ads">
+                <img src="./img/2d-ads.jpg" alt="2d ads" class="ads__img">
+                <div class="ads__text">
+                    <h5>2d video ads</h5>
+                    <p class="aditional-paragraph">Achieve your goals and benchmarks with ease. Share your assets and
+                        see how the magic happens: our experts in performance marketing analize your product and market
+                        so your creatives will perform like never before.</p>
+                    <a href="#" class="ads__link aditional-paragraph">Learn more</a>
+                </div>
+            </div>
+            <div class="ads">
+                <div class="ads__text">
+                    <h5>3d video ads</h5>
+                    <p class="aditional-paragraph">Get a full cycle of video ad production from your Unity, Unreal
+                        Engine assets. Our creative managers, motion designers + team of tech-ninjas will create
+                        absolutely new approach for your product ads. You will get: idea generation (optional), 3d
+                        animation, and post-production (effects, CTA’s, interface details, etc.)</p>
+                    <a href="#" class="ads__link aditional-paragraph">Learn more</a>
+                </div>
+                <img src="./img/3d-ads.jpg" alt="3d ads" class="ads__img">
+            </div>
+            <div class="ads">
+                <img src="./img/ugc.jpg" alt="ugs" class="ads__img">
+                <div class="ads__text">
+                    <h5>UGC</h5>
+                    <p class="aditional-paragraph">Looking for videos like UGC content for your video ads?
+                        This is the right place! Get top-trended ideas from our creative team, footages from stunning
+                        models, and as result - high-performing video ads. </p>
+                    <a href="#" class="ads__link aditional-paragraph">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="touch-with">
+        <div class="container">
+            <div class="text-container">
+                <h3>See it for yourself</h3>
+                <p class="paragraph">Get in touch with one of our experts and take a personal tour of Perfomante.</p>
+                <div class="cta">
+                    <button class="button-offer contained">
+                        <img src="./img/green-logo.png" alt="perfomante">
+                        <span>Get offer</span>
+                    </button>
+                    <button class="outlined-dark"
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                        <img src="./img/andrew-avatar.png" alt="perfomante">
+                        <span>Get a demo <span class="mobile-hidden">from Andrew</span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cases" class="reviews">
+        <div id="slider" class="container glide">
+            <div data-glide-el="track" class="glide__track">
+                <ul class="glide__slides">
+                    <li class="glide__slide customer">
+                        <div class="customer__about">
+                            <div class="company">
+                                <img src="./img/iq-option-dark.png" alt="iq option" class="company__name">
+                                <p class="aditional-paragraph">Stocks and Forext trading platform</p>
+                            </div>
+                            <p class="quote">For my taste - you have experience working with creatives and purchasing,
+                                you
+                                understand what the user wants in advertising on Facebook, this is reflected in the
+                                videos.
+                                We like the ideas and the focus of where we're going.</p>
+                            <div>
+                                <div class="paragraph">Irina Kirichenko</div>
+                                <div class="aditional-paragraph">UA manager</div>
+                            </div>
+                        </div>
+                        <div class="customer__img">
+                            <img src="./img/irina.jpg" alt="Irina">
+                            <div class="achievement">
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">22 video ads total tested</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">2d + UGC video ads packs</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">10 videos exceeded benchmarks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide customer">
+                        <div class="customer__about">
+                            <div class="company">
+                                <img src="./img/iq-option-dark.png" alt="iq option" class="company__name">
+                                <p class="aditional-paragraph">Stocks and Forext trading platform</p>
+                            </div>
+                            <p class="quote">For my taste - you have experience working with creatives and purchasing,
+                                you
+                                understand what the user wants in advertising on Facebook, this is reflected in the
+                                videos.
+                                We like the ideas and the focus of where we're going.</p>
+                            <div>
+                                <div class="paragraph">Irina Kirichenko</div>
+                                <div class="aditional-paragraph">UA manager</div>
+                            </div>
+                        </div>
+                        <div class="customer__img">
+                            <img src="./img/irina.jpg" alt="Irina">
+                            <div class="achievement">
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">22 video ads total tested</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">2d + UGC video ads packs</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">10 videos exceeded benchmarks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide customer">
+                        <div class="customer__about">
+                            <div class="company">
+                                <img src="./img/iq-option-dark.png" alt="iq option" class="company__name">
+                                <p class="aditional-paragraph">Stocks and Forext trading platform</p>
+                            </div>
+                            <p class="quote">For my taste - you have experience working with creatives and purchasing,
+                                you
+                                understand what the user wants in advertising on Facebook, this is reflected in the
+                                videos.
+                                We like the ideas and the focus of where we're going.</p>
+                            <div>
+                                <div class="paragraph">Irina Kirichenko</div>
+                                <div class="aditional-paragraph">UA manager</div>
+                            </div>
+                        </div>
+                        <div class="customer__img">
+                            <img src="./img/irina.jpg" alt="Irina">
+                            <div class="achievement">
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">22 video ads total tested</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">2d + UGC video ads packs</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">10 videos exceeded benchmarks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide customer">
+                        <div class="customer__about">
+                            <div class="company">
+                                <img src="./img/iq-option-dark.png" alt="iq option" class="company__name">
+                                <p class="aditional-paragraph">Stocks and Forext trading platform</p>
+                            </div>
+                            <p class="quote">For my taste - you have experience working with creatives and purchasing,
+                                you
+                                understand what the user wants in advertising on Facebook, this is reflected in the
+                                videos.
+                                We like the ideas and the focus of where we're going.</p>
+                            <div>
+                                <div class="paragraph">Irina Kirichenko</div>
+                                <div class="aditional-paragraph">UA manager</div>
+                            </div>
+                        </div>
+                        <div class="customer__img">
+                            <img src="./img/irina.jpg" alt="Irina">
+                            <div class="achievement">
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">22 video ads total tested</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">2d + UGC video ads packs</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">10 videos exceeded benchmarks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide customer">
+                        <div class="customer__about">
+                            <div class="company">
+                                <img src="./img/iq-option-dark.png" alt="iq option" class="company__name">
+                                <p class="aditional-paragraph">Stocks and Forext trading platform</p>
+                            </div>
+                            <p class="quote">For my taste - you have experience working with creatives and purchasing,
+                                you
+                                understand what the user wants in advertising on Facebook, this is reflected in the
+                                videos.
+                                We like the ideas and the focus of where we're going.</p>
+                            <div>
+                                <div class="paragraph">Irina Kirichenko</div>
+                                <div class="aditional-paragraph">UA manager</div>
+                            </div>
+                        </div>
+                        <div class="customer__img">
+                            <img src="./img/irina.jpg" alt="Irina">
+                            <div class="achievement">
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">22 video ads total tested</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">2d + UGC video ads packs</p>
+                                </div>
+                                <div class="achievement__item">
+                                    <img src="./img/Icon-check.svg" alt="check">
+                                    <p class="paragraph">10 videos exceeded benchmarks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="actions">
+                <!-- <button class="outlined">Read the story</button> -->
+                <div data-glide-el="controls" class="glide__arrows pagination">
+                    <button class="pagination__button glide__arrow glide__arrow--left" data-glide-dir="<">
+                        <img src="./img/arrow-left.svg" alt="arrow left">
+                    </button>
+                    <span id="slide-info"></span>
+                    <button class="pagination__button glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <img src="./img/arrow-right.svg" alt="arrow right">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="prices" class="price">
+        <div class="container">
+            <div class="price__header section-header">
+                <h4>PRICING</h4>
+                <h3>Your new video content creation strategy starts here</h3>
+                <p class="paragraph">Whether you’re just getting started with rapid testing or scaling across the
+                    organization, we’ve got you covered.</p>
+            </div>
+            <div class="price__services">
+                <div class="service">
+                    <div class="service__img"><img src="./img/2d-ads-service.jpg" alt="2d ads service"></div>
+                    <div class="service__header">
+                        <h5>2D video ads</h5>
+                        <p>Idea generation + Video animation based on your assets</p>
+                    </div>
+                    <div class="service__price">
+                        <span>6'000<sup>$</sup></span>
+                        <p>600$ per video</p>
+                    </div>
+                    <div class="service__benefits">
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Up to 3 days delivery</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Access to Perfomante app</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Art direction</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Creative manager</p>
+                        </div>
+                    </div>
+                    <button class="contained">
+                        <span>Get started</span>
+                    </button>
+                    <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
+                </div>
+                <div class="service">
+                    <div class="service__img"><img src="./img/3d-ads-service.png" alt="3d ads service"></div>
+                    <div class="service__header">
+                        <h5>3D video ads</h5>
+                        <p>Idea generation + Video animation
+                            based on your assets</p>
+                    </div>
+                    <div class="service__price">
+                        <span>6'500<sup>$</sup></span>
+                        <p>1'300$ per video</p>
+                    </div>
+                    <div class="service__benefits">
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Up to 3 days delivery</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Access to Perfomante app</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Art direction</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Creative manager</p>
+                        </div>
+                    </div>
+                    <button class="contained">
+                        <span>Get started</span>
+                    </button>
+                    <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
+                </div>
+                <div class="service">
+                    <div class="service__img"><img src="./img/ugc-service.png" alt="ugc service"></div>
+                    <div class="service__header">
+                        <h5>UGC</h5>
+                        <p>Idea generation + Video animation based on your assets</p>
+                    </div>
+                    <div class="service__price">
+                        <span>5'000<sup>$</sup></span>
+                        <p>1'000$ per video</p>
+                    </div>
+                    <div class="service__benefits">
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Up to 3 days delivery</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Access to Perfomante app</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Art direction</p>
+                        </div>
+                        <div class="service__benefit">
+                            <img src="./img/Icon-check.svg" alt="check">
+                            <p class="paragraph">Creative manager</p>
+                        </div>
+                    </div>
+                    <button class="contained">
+                        <span>Get started</span>
+                    </button>
+                    <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="team">
+        <div class="team__avatar">
+            <img src="./img/Team.png" alt="team">
+        </div>
+        <div class="container">
+            <div class="team__avatar tablet">
+                <img src="./img/Team-full.png" alt="team">
+            </div>
+            <div class="team__header section-header">
+                <h4>TEAM</h4>
+                <h3>We are Perfomante</h3>
+                <div>
+                    <p class="paragraph">Achieve your goals and benchmarks with ease.</p>
+                    <p class="paragraph">Share your assets and see how the magic happens:</p>
+                    <p class="paragraph">
+                        our experts in performance marketing analize your
+                        product and market so your creatives will perform like never before.
+                    </p>
+                </div>
+            </div>
+            <div class="team__promo">
+                <div class="about-system">
+                    <h4>PERFOMANTE SYSTEM</h4>
+                    <h3>Want to scale production?</h3>
+                    <p class="paragraph">
+                        You can use our platform with connected motion designers. All your videos will be checked by
+                        Art-director as well.
+                    </p>
+                    <button class="outlined"
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                        Request demo
+                    </button>
+                    <p class="aditional-information">Price starts at $200 per 15-sec video.</p>
+                </div>
+                <img class="demo" src="./img/Promo.jpg" alt="promo">
+            </div>
+        </div>
+    </section>
+    <section class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h4>RESOURCES</h4>
+                <h3>Ideas for your video marketing</h3>
+                <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
+                    video creative.</p>
+            </div>
+            <div class="resources__ideas">
+                <div class="idea">
+                    <div class="idea__card">
+                        <img src="./img/Logo-light.svg" alt="logo perfomante">
+                        <h5>The state of video marketing at 2021</h5>
+                        <div class="idea__footer">
+                            <img src="./img/idea-avatar.jpg" alt="idea avatar">
+                            <a href="#">Guide</a>
+                        </div>
+                    </div>
+                    <h5 class="idea__name">Guide name</h5>
+                    <p class="paragraph">In context messaging lets us form 1:1 connections with our users. </p>
+                    <button class="outlined">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
+                                fill="#337157" />
+                            <path
+                                d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
+                                stroke="#337157" stroke-width="1.995" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Download the guide</span>
+                    </button>
+                </div>
+                <div class="idea">
+                    <div class="idea__card">
+                        <img src="./img/Logo-light.svg" alt="logo perfomante">
+                        <h5>The state of video marketing at 2021</h5>
+                        <div class="idea__footer">
+                            <img src="./img/idea-avatar.jpg" alt="idea avatar">
+                            <a href="#">Guide</a>
+                        </div>
+                    </div>
+                    <h5 class="idea__name">Guide name</h5>
+                    <p class="paragraph">In context messaging lets us form 1:1 connections with our users. </p>
+                    <button class="outlined">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
+                                fill="#337157" />
+                            <path
+                                d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
+                                stroke="#337157" stroke-width="1.995" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Download the guide</span>
+                    </button>
+                </div>
+                <div class="idea">
+                    <div class="idea__card">
+                        <img src="./img/Logo-light.svg" alt="logo perfomante">
+                        <h5>The state of video marketing at 2021</h5>
+                        <div class="idea__footer">
+                            <img src="./img/idea-avatar.jpg" alt="idea avatar">
+                            <a href="#">Guide</a>
+                        </div>
+                    </div>
+                    <h5 class="idea__name">Guide name</h5>
+                    <p class="paragraph">In context messaging lets us form 1:1 connections with our users. </p>
+                    <button class="outlined">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
+                                fill="#337157" />
+                            <path
+                                d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
+                                stroke="#337157" stroke-width="1.995" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Download the guide</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="offer">
+        <div class="square left"></div>
+        <div class="square right"></div>
+        <div class="container">
+            <h3>Your products tell interest stories,
+                let Perfomante tell it.</h3>
+            <div class="cta">
+                <button class="button-offer contained">
+                    <span>Get offer</span>
+                </button>
+                <button class="outlined-dark"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                    <img src="./img/andrew-avatar.png" alt="perfomante">
+                    <span>Get a demo <span class="mobile-hidden">from Andrew</span></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="perfomante">
+                <div>
+                    <img src="./img/Logo-light.svg" alt="logo perfomante">
+                    <p class="paragraph">Marketing videos that perform and attract users</p>
+                </div>
+                <div class="license">
+                    <p class="aditional-paragraph">
+                        2021 Perfomante Inc.
+                    </p>
+                    <p class="aditional-paragraph">
+                        Terms & Privacy
+                    </p>
+                </div>
+            </div>
+            <nav class="navigation">
+                <div class="navigation__row">
+                    <ul class="navigation__column">
+                        <li class="navigation__item title">Platform</li>
+                        <li class="navigation__item"><a class="link" href="#">2d video ads</a></li>
+                        <li class="navigation__item"><a class="link" href="#">3d video ads</a></li>
+                        <li class="navigation__item"><a class="link" href="#">UGS</a></li>
+                    </ul>
+                    <ul class="navigation__column">
+                        <li class="navigation__item title">Company</li>
+                        <li class="navigation__item"><a class="link" href="#">About us</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Career</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Press room</a></li>
+                    </ul>
+                </div>
+                <div class="navigation__row">
+                    <ul class="navigation__column">
+                        <li class="navigation__item title">Resources</li>
+                        <li class="navigation__item"><a class="link" href="#">Blog</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Guides</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Why Perfomante</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Help Center</a></li>
+                    </ul>
+                    <ul class="navigation__column">
+                        <li class="navigation__item title">Follow</li>
+                        <li class="navigation__item"><a class="link" href="#">Facebook</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Instagram</a></li>
+                        <li class="navigation__item"><a class="link" href="#">LinkedIn</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Pinterest</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Twitter</a></li>
+                        <li class="navigation__item"><a class="link" href="#">Youtube</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="js/runtime.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/vendors.min.js"></script>
+</body>
+
+</html>
