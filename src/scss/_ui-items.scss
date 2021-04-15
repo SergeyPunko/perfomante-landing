@@ -43,10 +43,10 @@ button.outlined-dark {
 button.contained {
     background-color: $ui-green;
     color: $ui-white;
-    border: 4px solid $ui-green;
+    border: 1px solid $ui-green;
 
     img {
-        margin: 0 4px 0 0;
+        margin: 2px 4px 2px 2px;
     }
 
     &:hover,
@@ -96,6 +96,6 @@ button.outlined-dark {
     }
 
     button.contained {
-        border: 2px solid $ui-green;
+        border: 1px solid $ui-green;
     }
 }

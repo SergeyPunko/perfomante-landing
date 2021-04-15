@@ -8,7 +8,8 @@ window.onload = function () {
 
     const glide = new Glide(document.getElementById("slider"), {
         startAt: 0,
-        animationDuration: 0,
+        animationDuration: 350,
+        perTouch: 1,
         rewind: false
     }).mount()
 
@@ -47,11 +48,34 @@ window.onload = function () {
           }
     }).mount()
 
+    new Glide(document.getElementById("resources_slider"), {
+        type: "slider",
+        startAt: 0,
+        perView: 3,
+        bound: true,
+        breakpoints: {
+            1024: {
+                perView: 2,
+                startAt: 1,
+            },
+            768: {
+                perView: 1,
+                peek: 50,
+            },
+            480: {
+                perView: 1,
+                peek: 20,
+            }
+        },
+        rewind: false
+
+    }).mount()
+
     burger.addEventListener("click", ({ target }) => {
         if (target.checked) {
-            document.body.style.overflow = "hidden";
+            document.querySelector('html').style.overflow = "hidden";
         } else {
-            document.body.style.overflow = "auto";
+            document.querySelector('html').style.overflow = "auto";
         }
     })
 };
