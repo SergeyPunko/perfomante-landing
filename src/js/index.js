@@ -5,6 +5,15 @@ window.onload = function () {
     const slides = slider.querySelectorAll(".glide__slide");
     const slideInfoElement = document.getElementById("slide-info");
     const burger = document.getElementById("burger");
+    const dropdowns = document.querySelectorAll(".dropdown-button")
+
+    dropdowns.forEach(elem => {
+        elem.addEventListener("click", e=>{
+            e.stopPropagation();
+            e.target.classList.toggle("active");
+        })
+        document.addEventListener("click", ()=>elem.classList.toggle("active"))
+    })
 
     const glide = new Glide(document.getElementById("slider"), {
         startAt: 0,

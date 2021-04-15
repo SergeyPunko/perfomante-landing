@@ -67,7 +67,7 @@
     .dropdown-container {
         padding: 16px;
 
-        button:focus {
+        button.active {
             svg {
                 transform: rotate(180deg);
                 transition: 300ms;
@@ -145,7 +145,7 @@
                     }
                 }
 
-                button:focus ~ .dropdown {
+                button.active ~ .dropdown {
                     transform: translateY(20px) scaleY(1);
                     height: auto;
                     padding: 16px;
