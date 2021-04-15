@@ -204,6 +204,69 @@
         z-index: 1;
     }
 
+    .text-item {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: $ui-white;
+        box-shadow: 0px 11px 28px rgba(21, 15, 48, 0.04);
+        border-radius: 14px;
+        padding: 7px 25px 7px 7px;
+
+        &.first {
+            right: 0px;
+            top: 330px;
+
+            .text-item__arrow {
+                background-color: rgba($color: $ui-orange, $alpha: 0.12);
+            }
+
+            .text-item__text {
+                p:first-child {
+                    color: $ui-orange;
+                }
+            }
+        }
+
+        &.second {
+            right: 100px;
+            top: 450px;
+
+            .text-item__arrow {
+                background-color: rgba($color: $ui-green, $alpha: 0.12);
+            }
+
+            .text-item__text {
+                p:first-child {
+                    color: $ui-green;
+                }
+            }
+        }
+
+        &__arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            margin-right: 9px;
+        }
+
+        &__text {
+            p:first-child {
+                font-size: 10px;
+                line-height: 12px;
+            }
+
+            p:last-child {
+                font-family: "Neue Montreal", sans-serif;
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+    }
+
     &__text {
         min-width: 600px;
         width: 60%;
@@ -220,7 +283,7 @@
         right: -130px;
         bottom: -250px;
 
-        img {
+        & > img {
             width: 100%;
             transform: translateX(20%);
         }
@@ -245,6 +308,20 @@
             width: 160%;
             bottom: -150px;
         }
+
+        .text-item {
+            &.first {
+                top: 530px;
+                right: auto;
+                left: 200px;
+            }
+
+            &.second {
+                top: 600px;
+                right: auto;
+                left: 100px;
+            }
+        }
     }
 
     @media screen and (max-width: $tablet) {
@@ -254,9 +331,23 @@
             right: auto;
             bottom: -200px;
 
-            img {
+            & > img {
                 min-width: 1200px;
                 transform: translate(-42%, -15%);
+            }
+        }
+
+        .text-item {
+            &.first {
+                top: 700px;
+                right: auto;
+                left: 30%;
+            }
+
+            &.second {
+                top: 770px;
+                right: auto;
+                left: 15%;
             }
         }
 
@@ -274,9 +365,23 @@
         height: 920px;
 
         &__img {
-            img {
+            & > img {
                 min-width: 1100px;
                 transform: translate(-50%, -15%);
+            }
+        }
+
+        .text-item {
+            &.first {
+                top: 550px;
+                right: auto;
+                left: 5%;
+            }
+
+            &.second {
+                top: 620px;
+                right: auto;
+                left: 0;
             }
         }
     }
@@ -440,6 +545,7 @@
 
         &__text {
             width: 40%;
+            color: $text-dark;
         }
 
         &__link {
@@ -577,6 +683,7 @@
 
                 &__img {
                     & > img {
+                        border-radius: 24px;
                         transform: translateY(-100px);
                         transition: transform 0.5s;
                     }
@@ -765,6 +872,7 @@
     &__services {
         display: flex;
         justify-content: space-between;
+        margin-top: 64px;
     }
 
     .service {
@@ -781,6 +889,11 @@
         &__header {
             border-bottom: 1px solid rgba(34, 34, 31, 0.12);
             padding-bottom: 12px;
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+            }
         }
 
         &__benefits {
@@ -798,7 +911,7 @@
         }
 
         &__price {
-            padding-top: 12px;
+            padding-top: 20px;
 
             span {
                 font-family: "Neue Montreal", sans-serif;
@@ -812,6 +925,10 @@
                     font-size: 32px;
                     line-height: 40px;
                 }
+            }
+
+            p {
+                line-height: 28px;
             }
         }
 
@@ -832,6 +949,7 @@
         }
 
         &__services {
+            margin-top: 32px;
             flex-direction: column;
         }
     }
@@ -1081,6 +1199,7 @@
             align-items: flex-end;
 
             img {
+                width: 154px;
                 border-radius: 10px;
             }
         }

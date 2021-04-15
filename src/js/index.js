@@ -10,9 +10,9 @@ window.onload = function () {
     dropdowns.forEach(elem => {
         elem.addEventListener("click", e=>{
             e.stopPropagation();
-            e.target.classList.toggle("active");
+            elem.classList.toggle("active");
         })
-        document.addEventListener("click", ()=>elem.classList.toggle("active"))
+        document.addEventListener("click", ()=>elem.classList.remove("active"))
     })
 
     const glide = new Glide(document.getElementById("slider"), {

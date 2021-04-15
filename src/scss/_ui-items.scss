@@ -24,7 +24,9 @@ button.outlined-dark {
     cursor: pointer;
 
     img {
-        margin: 4px;
+        width: 48px;
+        margin: 3px;
+        border-radius: 8px;
     }
 
     span {
@@ -44,10 +46,6 @@ button.contained {
     background-color: $ui-green;
     color: $ui-white;
     border: 1px solid $ui-green;
-
-    img {
-        margin: 2px 4px 2px 2px;
-    }
 
     &:hover,
     &:focus {
@@ -77,7 +75,6 @@ button.outlined-dark {
 @media screen and (max-width: $phone) {
     button.contained,
     button.outlined-dark {
-        border-radius: 6px;
 
         span {
             font-size: 16px;
