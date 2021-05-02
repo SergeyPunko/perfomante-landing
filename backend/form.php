@@ -22,21 +22,7 @@ header('Content-type:application/json');
     $mail = new PHPMailer(true);
     $mail->IsSMTP();
     $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 587;
-    $mail->SMTPAuth = true;
-
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPOptions = array(
-        'ssl' => [
-            'verify_peer' => true,
-            'verify_depth' => 3,
-            'allow_self-signed' => true,
-            'peer_name' => 'smtp.gmail.com',
-        ]
-    );
-
-    $mail->Username = 'sergeypunko1997@gmail.com';
-    $mail->Password = 'sergey 1997';
+    $mail->Port = 587;ß
 
 
 
