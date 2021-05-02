@@ -22,7 +22,7 @@ header('Content-type:application/json');
     $mail = new PHPMailer(true);
     $mail->IsSMTP();
     $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 587;ß
+    $mail->Port = 587;
 
 
 
