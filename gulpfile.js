@@ -7,10 +7,12 @@ const scripts = require('./_gulp/scripts');
 const img = require('./_gulp/images');
 const { watch } = require('./_gulp/watch');
 const fonts = require('./_gulp/fonts');
+const { backend } = require('./_gulp/backend');
 
 exports.clean = clean;
 exports.html = html;
 exports.modals = modals;
+exports.backend = backend;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.img = img;
@@ -18,12 +20,12 @@ exports.watch = watch;
 
 exports.dev = series(
   clean,
-  parallel(html, styles, scripts, img, modals, fonts),
+  parallel(html, styles, scripts, img, modals, backend, fonts),
   parallel(serve, watch)
 );
 
 exports.build = series(
   clean,
-  parallel(html, styles, scripts, img, modals, fonts),
+  parallel(html, styles, scripts, img, modals, backend, fonts),
   parallel(watch)
 );

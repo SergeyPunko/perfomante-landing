@@ -10,7 +10,7 @@ function html() {
 
 function modals() {
   return src(`${config.source}/modals/*.html`)
-    .pipe(changed(`${config.source}/modals`))
+    .pipe(changed(`${config.source}/modals/*.html`))
     .pipe(dest(`${config.dist}/modals`));
 }
 

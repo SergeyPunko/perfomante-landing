@@ -38,6 +38,9 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1"
+    "@glidejs/glide": "^3.4.1",
+    "dotenv": "^8.2.0",
+    "email-templates": "^8.0.4",
+    "tingle.js": "^0.16.0"
   }
 }
