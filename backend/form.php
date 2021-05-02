@@ -3,6 +3,8 @@
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
 
 // Load Composer's autoloader
 require 'vendor/autoload.php';
@@ -21,8 +23,21 @@ header('Content-type:application/json');
     $mail->IsSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
-    $mail->SMTPAuth = false;
+    $mail->SMTPAuth = true;
+
     $mail->SMTPSecure = 'tls';
+    $mail->SMTPOptions = array(
+        'ssl' => [
+            'verify_peer' => true,
+            'verify_depth' => 3,
+            'allow_self-signed' => true,
+            'peer_name' => 'smtp.gmail.com',
+        ]
+    );
+
+    $mail->Username = 'sergeypunko1997@gmail.com';
+    $mail->Password = 'sergey 1997';
+
 
 
     //Recipients
