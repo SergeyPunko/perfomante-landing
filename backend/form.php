@@ -18,7 +18,11 @@ header('Content-type:application/json');
 
     // Instantiation and passing `true` enables exceptions
     $mail = new PHPMailer(true);
-    // $mail->IsSMTP();
+    $mail->IsSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
+    $mail->SMTPAuth = false;
+    $mail->SMTPSecure = 'tls';
 
 
     //Recipients
