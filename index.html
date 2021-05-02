@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
@@ -17,7 +18,9 @@
             <img src="./img/logo.svg" alt="Perfomante logo">
         </div>
         <input type="checkbox" id="burger">
-        <label class="burger" for="burger"><img src="./img/burger.svg" alt="burger"></label>
+        <label class="burger" for="burger"><img class="burger__menu" src="./img/burger.svg" alt="burger">
+            <div class="cross"></div>
+        </label>
         <div class="menu">
             <nav class="navigation">
                 <ul class="navigation__container">
@@ -207,13 +210,9 @@
                         <img src="./img/green-logo.png" alt="perfomante">
                         <span>Get offer</span>
                     </button>
-                    <button class="outlined-dark"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
-                        <img src="./img/andrew-avatar.png" alt="perfomante">
-                        <span>Get a demo <span class="mobile-hidden">from Andrew</span></span>
-                    </button>
                 </div>
             </div>
+            <div id="calendly"></div>
         </div>
     </section>
     <section id="cases" class="reviews">
@@ -260,30 +259,26 @@
                                 <img src="./img/iq-option-dark.png" alt="iq option" class="company__name">
                                 <p class="aditional-paragraph">Stocks and Forext trading platform</p>
                             </div>
-                            <p class="quote">For my taste - you have experience working with creatives and purchasing,
-                                you
-                                understand what the user wants in advertising on Facebook, this is reflected in the
-                                videos.
-                                We like the ideas and the focus of where we're going.</p>
+                            <p class="quote">TikTok is a very demanding platform when it comes to creatives. Perfomante
+                                team did a great job embracing this mindset as well as the best practices. As a result -
+                                we really liked their work and creative approach. Also thanks to seamless communication
+                                all the deadlines were met.</p>
                             <div>
-                                <div class="paragraph">Irina Kirichenko</div>
-                                <div class="aditional-paragraph">UA manager</div>
+                                <div class="paragraph">Anton Gritsevskii</div>
+                                <div class="aditional-paragraph">Creative Solutions Lead (Gaming&Apps) -
+                                    antongritsevskii@bytedance.com</div>
                             </div>
                         </div>
                         <div class="customer__img">
-                            <img src="./img/irina.jpg" alt="Irina">
+                            <img src="./img/anton.jpg" alt="Irina">
                             <div class="achievement">
                                 <div class="achievement__item">
                                     <img src="./img/Icon-check.svg" alt="check">
-                                    <p class="paragraph">22 video ads total tested</p>
+                                    <p class="paragraph">58 2d + 9 UGC video ads + idea generation</p>
                                 </div>
                                 <div class="achievement__item">
                                     <img src="./img/Icon-check.svg" alt="check">
-                                    <p class="paragraph">2d + UGC video ads packs</p>
-                                </div>
-                                <div class="achievement__item">
-                                    <img src="./img/Icon-check.svg" alt="check">
-                                    <p class="paragraph">10 videos exceeded benchmarks</p>
+                                    <p class="paragraph">Personalised assets</p>
                                 </div>
                             </div>
                         </div>
@@ -416,10 +411,10 @@
             </div>
             <div class="price__services">
                 <div class="service">
-                    <div class="service__img"><img src="./img/2d-ads-service.jpg" alt="2d ads service"></div>
+                    <div class="service__img"><img src="./img/2d-ads-service.png" alt="2d ads service"></div>
                     <div class="service__header">
                         <h5>2D video ads</h5>
-                        <p>Idea generation + Video animation based on your assets</p>
+                        <p>Idea generation + Video animation</p>
                     </div>
                     <div class="service__price">
                         <span>6'000<sup>$</sup></span>
@@ -428,22 +423,22 @@
                     <div class="service__benefits">
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Up to 3 days delivery</p>
+                            <p class="paragraph">10 videos in 2 formats monthly</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Access to Perfomante app</p>
+                            <p class="paragraph">script generation</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Art direction</p>
+                            <p class="paragraph">art director + lead motion designer</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Creative manager</p>
+                            <p class="paragraph">personal manager</p>
                         </div>
                     </div>
-                    <button class="contained">
+                    <button class="contained price__modal" data-index="0">
                         <span>Get started</span>
                     </button>
                     <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
@@ -452,8 +447,7 @@
                     <div class="service__img"><img src="./img/3d-ads-service.png" alt="3d ads service"></div>
                     <div class="service__header">
                         <h5>3D video ads</h5>
-                        <p>Idea generation + Video animation
-                            based on your assets</p>
+                        <p>Idea + 3d animation + Postproduction</p>
                     </div>
                     <div class="service__price">
                         <span>6'500<sup>$</sup></span>
@@ -462,22 +456,22 @@
                     <div class="service__benefits">
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Up to 3 days delivery</p>
+                            <p class="paragraph">5 videos</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Access to Perfomante app</p>
+                            <p class="paragraph">tech lead + art director</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Art direction</p>
+                            <p class="paragraph">personal manager</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Creative manager</p>
+                            <p class="paragraph">creative sessions on demand</p>
                         </div>
                     </div>
-                    <button class="contained">
+                    <button class="contained price__modal" data-index="1">
                         <span>Get started</span>
                     </button>
                     <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
@@ -485,8 +479,8 @@
                 <div class="service">
                     <div class="service__img"><img src="./img/ugc-service.png" alt="ugc service"></div>
                     <div class="service__header">
-                        <h5>UGC</h5>
-                        <p>Idea generation + Video animation based on your assets</p>
+                        <h5>UGC video ads</h5>
+                        <p>Idea + Shooting + Postproduction</p>
                     </div>
                     <div class="service__price">
                         <span>5'000<sup>$</sup></span>
@@ -495,22 +489,22 @@
                     <div class="service__benefits">
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Up to 3 days delivery</p>
+                            <p class="paragraph">5 videos</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Access to Perfomante app</p>
+                            <p class="paragraph">art director + lead motion designer</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Art direction</p>
+                            <p class="paragraph">personal manager</p>
                         </div>
                         <div class="service__benefit">
                             <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">Creative manager</p>
+                            <p class="paragraph">creative sessions on demand</p>
                         </div>
                     </div>
-                    <button class="contained">
+                    <button class="contained price__modal" data-index="2">
                         <span>Get started</span>
                     </button>
                     <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
@@ -550,13 +544,13 @@
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
                         Request demo
                     </button>
-                    <p class="aditional-information">Price starts at $200 per 15-sec video.</p>
+                    <p class="aditional-information">Price starts at $300 per 15-sec video.</p>
                 </div>
                 <img class="demo" src="./img/Promo.jpg" alt="promo">
             </div>
         </div>
     </section>
-    <section class="resources">
+    <!-- <section class="resources">
         <div class="container">
             <div class="section-header">
                 <h4>RESOURCES</h4>
@@ -655,7 +649,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="offer">
         <div class="square left"></div>
         <div class="square right"></div>
