@@ -4,7 +4,6 @@ import Mailer from "../mailer";
 const renderModalContent = function (modalRef, contentUrl) {
   let content;
   const xhr = new XMLHttpRequest();
-  // dynamically get modal content
   xhr.open('GET', contentUrl, false);
 
   xhr.onreadystatechange = function () {
@@ -39,13 +38,16 @@ const PricingModal = (function () {
 
     if (index) {
       modelsOptions[index].checked = true;
+    } else {
+      document.modelsForm.querySelector(".form-group").classList.add("hidden")
+      document.modelsForm.querySelector("h2").textContent = "Order request"
     }
 
     updateSelectedOption();
 
     for (var i = 0; i < modelsOptions.length; i++) {
       modelsOptions[i].addEventListener('change', function () {
-        document.getElementById('creatives').checked = false;
+        document.getElementById('types').checked = false;
         updateSelectedOption();
       });
     }
@@ -64,8 +66,8 @@ const PricingModal = (function () {
 
   const initButtonEventListeners = function () {
     // pricing form success modals
-    if (document.querySelector('.price__modal')) {
-      const PricingModalBtnsList = document.querySelectorAll('.price__modal');
+    if (document.querySelector('.order__modal')) {
+      const PricingModalBtnsList = document.querySelectorAll('.order__modal');
 
       Array.from(PricingModalBtnsList, (item) => {
         // add event listener on each pricing button

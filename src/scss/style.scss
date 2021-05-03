@@ -7,6 +7,16 @@
 @import 'tingle.js/dist/tingle';
 @import "@glidejs/glide/dist/css/glide.core.min";
 
+.tingle-modal-box {
+    background: none;
+    min-width: 300px;
+    width: 50%;
+}
+
+.tingle-modal__close {
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
 .header {
     padding: 20px 24px;
