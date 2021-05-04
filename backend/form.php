@@ -20,11 +20,6 @@ header('Content-type:application/json');
 
     // Instantiation and passing `true` enables exceptions
     $mail = new PHPMailer(true);
-    $mail->IsSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 587;
-
-
 
     //Recipients
     $mail->setFrom('sergeypunko1997@gmail.com', 'Perfomante.io');
@@ -40,12 +35,12 @@ header('Content-type:application/json');
 
     
     if(!$mail->send()) {
+        $result = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $data = ['success' => 'false', 'payload' => $result];
+        echo json_encode($data);
+    } else {
         $result = 'Thank you, we got your request, check your email!';
         $data = ['success' => 'true', 'payload' => $result];
         echo json_encode($data);
     }
-    $result = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    $data = ['success' => 'false', 'payload' => $result];
-    echo json_encode($data);
-
 ?>
