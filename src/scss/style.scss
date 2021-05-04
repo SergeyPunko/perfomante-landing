@@ -7,15 +7,44 @@
 @import 'tingle.js/dist/tingle';
 @import "@glidejs/glide/dist/css/glide.core.min";
 
+
+.calendly-overlay .calendly-popup {
+    width: 100% !important;
+    max-width: initial !important;
+    max-height: initial !important;
+}
+
 .tingle-modal-box {
     background: none;
-    min-width: 300px;
-    width: 50%;
+    min-width: 600px;
+    width: 35%;
 }
 
 .tingle-modal__close {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.tingle-modal-box__content {
+    overflow: initial !important;
+}
+
+@media (max-width: 540px) {
+    .tingle-modal__close {
+        background-color: rgba($ui-figure-color, 0.1);
+    }
+
+    .tingle-modal {
+        padding-top: 60px !important;
+    }
+
+    .tingle-modal-box {
+        min-width: 300px;
+    }
+
+    .tingle-modal-box__content {
+        padding: 3rem 15px;
+    }
 }
 
 .header {
@@ -27,7 +56,7 @@
     top: 0;
     width: 100%;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 4;
     transition: all 300ms;
 
     &.js-sticky {
@@ -272,18 +301,25 @@
         z-index: 1;
     }
 
+    &__labels {
+        display: flex;
+        flex-direction: column;
+        margin-left: 45px;
+        flex: 1;
+        position: relative;
+        align-self: center;
+    }
+
     .text-item {
-        position: absolute;
         display: flex;
         align-items: center;
         background-color: $ui-white;
         box-shadow: 0px 11px 28px rgba(21, 15, 48, 0.04);
         border-radius: 14px;
-        padding: 7px 25px 7px 7px;
+        padding: 8px 25px 8px 8px;
 
         &.first {
-            right: 0px;
-            top: 330px;
+            align-self: flex-end;
 
             .text-item__arrow {
                 background-color: rgba($color: $ui-orange, $alpha: 0.12);
@@ -297,8 +333,8 @@
         }
 
         &.second {
-            right: 100px;
-            top: 450px;
+            margin-top: 90px;
+            align-self: flex-start;
 
             .text-item__arrow {
                 background-color: rgba($color: $ui-green, $alpha: 0.12);
@@ -315,32 +351,34 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 28px;
-            height: 28px;
+            width: 36px;
+            height: 36px;
             border-radius: 6px;
             margin-right: 9px;
         }
 
         &__text {
             p:first-child {
-                font-size: 10px;
-                line-height: 12px;
+                font-size: 13px;
+                line-height: 16px;
             }
 
             p:last-child {
                 font-family: "Neue Montreal", sans-serif;
-                font-size: 11px;
-                line-height: 16px;
+                font-size: 14px;
+                line-height: 20px;
             }
         }
     }
 
     &__text {
         min-width: 600px;
-        width: 60%;
+        width: 50%;
         z-index: 1;
 
-        .aditional-paragraph {
+        p {
+            font-size: 24px;
+            line-height: 40px;
             margin: 24px 0 40px;
         }
     }
@@ -366,6 +404,7 @@
 
         .container {
             align-items: flex-start;
+            flex-direction: column;
         }
 
         &__text {
@@ -377,18 +416,14 @@
             bottom: -150px;
         }
 
-        .text-item {
-            &.first {
-                top: 530px;
-                right: auto;
-                left: 200px;
-            }
+        &__labels {
+            margin-left: 0;
+            width: 60%;
+            justify-content: space-around;
+        }
 
-            &.second {
-                top: 600px;
-                right: auto;
-                left: 100px;
-            }
+        .text-item.second {
+            margin-top: 0;
         }
     }
 
@@ -405,20 +440,6 @@
             }
         }
 
-        .text-item {
-            &.first {
-                top: 700px;
-                right: auto;
-                left: 30%;
-            }
-
-            &.second {
-                top: 770px;
-                right: auto;
-                left: 15%;
-            }
-        }
-
         &__text {
             min-width: auto;
             width: 100%;
@@ -427,29 +448,48 @@
         .mobile-hidden {
             display: none;
         }
+
+        .text-item {
+            padding: 7px 15px 7px 7px;
+
+            &__text {
+                p:first-child {
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+
+                p:last-child {
+                    font-family: "Neue Montreal", sans-serif;
+                    font-size: 11px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        &__labels {
+            margin-top: 100px;
+            width: 90%;
+            flex: initial;
+            height: 200px;
+            justify-content: space-around;
+        }
     }
 
     @media screen and (max-width: $phone) {
         height: 920px;
 
+        &__text {
+            p {
+                font-size: 16px;
+                line-height: 28px;
+                margin: 24px 0 40px;
+            }
+        }
+
         &__img {
             &>img {
                 min-width: 1100px;
                 transform: translate(-50%, -17%);
-            }
-        }
-
-        .text-item {
-            &.first {
-                top: 550px;
-                right: auto;
-                left: 5%;
-            }
-
-            &.second {
-                top: 620px;
-                right: auto;
-                left: 0;
             }
         }
     }
@@ -536,7 +576,7 @@
         }
 
         img {
-            height: 72px;
+            height: 130px;
             margin-bottom: 32px;
         }
     }
@@ -668,7 +708,7 @@
         }
 
         .container {
-            padding: 32px 15px;
+            padding: 32px 0;
 
             :nth-of-type(4) {
                 flex-direction: column-reverse;
@@ -710,9 +750,9 @@
         }
     }
 
-    @media screen and (max-width: 726px) {
+    @media screen and (max-width: $phone) {
         .container {
-            height: 950px;
+            height: 856px;
         }
     }
 
@@ -722,14 +762,14 @@
         }
 
         .container {
-            height: 1050px;
+            height: 1020px;
             background: none;
-            padding: 32px 15px;
+            padding: 32px 0;
             flex-direction: column;
         }
 
         #calendly {
-            padding: 10px 0;
+            padding-top: 10px;
         }
 
         .paragraph {
@@ -919,7 +959,7 @@
     }
 
     @media screen and (max-width: $tablet) {
-        padding: 32px 15px 0;
+        padding: 32px 24px 0;
 
         .customer {
             flex-direction: column-reverse;
@@ -976,7 +1016,11 @@
         border-radius: 32px;
 
         &__img {
-            height: 72px;
+            height: 130px;
+
+            img {
+                height: 100%;
+            }
         }
 
         &__header {
@@ -1035,7 +1079,7 @@
     }
 
     @media screen and (max-width: $tablet) {
-        padding: 32px 15px;
+        padding: 32px 24px;
 
         &__header {
             text-align: left;
@@ -1051,13 +1095,14 @@
 .team {
     // background: linear-gradient(to bottom, $text-main 800px, $ui-white 800px 260px);
     background-color: $text-main;
-    padding-top: 160px;
-    height: 1060px;
+    padding-top: 98px;
+    height: 980px;
     position: relative;
 
     &__header {
-        margin: 0 100px 0 auto;
-        width: 40%;
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
 
         h3,
         .paragraph {
@@ -1067,14 +1112,15 @@
 
     &__avatar {
         position: absolute;
-        width: 700px;
-        top: 0;
-        left: 0;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
 
-        img {
-            width: 100%;
-            transform: translate(-30%, -30%);
+        &.left {
+            right: 75%;
+        }
+
+        &.right {
+            left: 75%;
         }
 
         &.tablet {
@@ -1082,8 +1128,23 @@
         }
     }
 
+    &__avatar-row {
+        display: flex;
+
+        img {
+            width: 88px;
+            margin: 24px 44px;
+            border-radius: 24px;
+        }
+
+        &:last-child {
+            margin-left: 88px;
+        }
+    }
+
     &__promo {
         width: 90%;
+        z-index: 2;
         overflow: hidden;
         display: flex;
         justify-content: space-between;
@@ -1147,25 +1208,30 @@
     @media screen and (max-width: $laptop) {
         height: auto;
         padding-top: 32px;
-        background: linear-gradient(to bottom, $text-main 80%, $ui-white 80% 100%);
+        // background: linear-gradient(to bottom, $text-main 80%, $ui-white 80% 100%);
 
         &__avatar {
             display: none;
             position: relative;
-            top: -32px;
-            min-height: 320px;
 
             &.tablet {
-                display: block;
+                display: flex;
                 width: 100%;
+                align-items: center;
                 margin: 0 auto 20px;
 
                 img {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                    transform: none;
+                    min-width: 56px;
+                    width: 10vw;
+                    margin: 8px 3vw;
+                    border-radius: 16px;
                 }
+            }
+        }
+
+        &__avatar-row {
+            &:last-child {
+                margin-left: 20%;
             }
         }
 
@@ -1181,7 +1247,7 @@
 
         &__promo {
             width: auto;
-            height: 680px;
+            height: auto;
             max-width: initial;
             position: relative;
             flex-direction: column;
@@ -1206,7 +1272,7 @@
 }
 
 .resources {
-    padding: 80px 15px;
+    padding: 80px 24px;
 
     &__ideas {
         margin-top: 64px;
@@ -1317,7 +1383,7 @@
 }
 
 .offer {
-    padding: 0 15px;
+    padding: 0 24px;
     text-align: center;
     color: $ui-white;
     background-color: $text-main;
@@ -1388,7 +1454,7 @@
 
 footer {
     background-color: $text-main;
-    padding: 96px 15px;
+    padding: 96px 24px;
 
     .perfomante {
         display: flex;
@@ -1462,6 +1528,10 @@ footer {
             bottom: -70px;
         }
 
+        .perfomante {
+            margin-bottom: 24px;
+        }
+
         .perfomante,
         .navigation {
             width: 100%;
@@ -1488,7 +1558,8 @@ footer {
         background-color: $ui-white;
     }
 
-    &:hover::after {
+    &:hover::after,
+    &.active::after {
         opacity: 1;
         width: 100%;
         left: 0;

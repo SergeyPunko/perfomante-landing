@@ -1,0 +1,14 @@
+{
+    "name": "salexpro/perfomante",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "google/recaptcha": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "Alexander",
+            "email": "dev@salex.pro"
+        }
+    ]
+}

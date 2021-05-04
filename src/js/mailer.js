@@ -1,16 +1,11 @@
 const Mailer = (function () {
-    const send = () => {
-        const formSenderUrl = 'backend/form.php';
-        const params = {
-            email: "punkosergey1997@gmail.com"
-        };
-
+    const send = (body = new FormData(), url) => {
         //Encode the data
-        const searchParams = Object.keys(params).map((key) => {
-            return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
+        const searchParams = [...body.entries()].map(([key,value]) => {
+            return encodeURIComponent(key) + '=' + encodeURIComponent(value);
         }).join('&');
 
-        fetch(formSenderUrl, {
+        return fetch(url, {
             method: 'POST',
             headers: {
                 // 'Content-Type': 'application/json',

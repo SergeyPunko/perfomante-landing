@@ -1,0 +1,24 @@
+const NoBodyScroll = (function () {
+    const burger = document.getElementById("burger");
+
+    const init = function () {
+        document.addEventListener("click", () => {
+            if (
+                [
+                    burger.checked,
+                    document.querySelector(".calendly-overlay")
+                ].some(e => !!e)
+            ) {
+                document.querySelector('html').style.overflow = "hidden";
+            } else {
+                document.querySelector('html').style.overflow = "auto";
+            }
+        })
+    };
+
+    return {
+        init: init,
+    };
+})();
+
+export default NoBodyScroll;

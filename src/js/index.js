@@ -4,8 +4,9 @@ import Header from "./components/header";
 import Resources from "./sliders/resources";
 import Calendar from "./components/calendly";
 import PricingModal from "./components/pricing-modal";
-
-const burger = document.getElementById("burger");
+import Navigation from "./components/navigation";
+import NoBodyScroll from "./noBodyScroll";
+import Dropdowns from "./components/dropdowns";
 
 window.onload = function () {
     Customers.init();
@@ -14,22 +15,7 @@ window.onload = function () {
     Calendar.init();
     Header.init();
     PricingModal.init();
-
-    const dropdowns = document.querySelectorAll(".dropdown-button")
-
-    dropdowns.forEach(elem => {
-        elem.addEventListener("click", e=>{
-            e.stopPropagation();
-            elem.classList.toggle("active");
-        })
-        document.addEventListener("click", ()=>elem.classList.remove("active"))
-    })
-
-    burger.addEventListener("click", ({ target }) => {
-        if (target.checked) {
-            document.querySelector('html').style.overflow = "hidden";
-        } else {
-            document.querySelector('html').style.overflow = "auto";
-        }
-    })
+    Navigation.init();
+    NoBodyScroll.init();
+    Dropdowns.init();
 };

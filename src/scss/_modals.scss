@@ -1,5 +1,4 @@
 .models-form {
-
     background-color: white;
     outline: none;
     display: flex;
@@ -30,18 +29,17 @@
         }
 
         h2 {
-            margin: 0 auto 8px;
+            margin: 0 auto 26px;
         }
 
-        input[type='text'],
-        textarea {
+        input[type='text'] {
             // height: 48px;
             color: #000000;
             padding: 10px 15px;
             background: #FFFFFF;
             border: 1px solid #DFE3E8;
             box-sizing: border-box;
-            border-radius: 18px;
+            border-radius: 12px;
             transition: border-color .2s ease-in-out;
             outline: none !important;
             box-shadow: none !important;
@@ -84,7 +82,8 @@
             padding: 10px 15px;
             background: #FFFFFF;
             box-shadow: 0 10px 20px rgba(67, 76, 100, 0.1);
-            border-radius: 1rem;
+            border: 1px solid #dfe3e8;
+            border-radius: 12px;
             font-size: 16px;
             line-height: 1.5;
             font-weight: 800;
@@ -101,10 +100,10 @@
             background-color: $ui-green;
             color: $ui-white;
             //z-index: 10;
-            border-radius: 1rem 1rem 0 0;
+            border-radius: 12px 12px 0 0;
 
             &.open-top {
-                border-radius: 0 0 1rem 1rem;
+                border-radius: 0 0 12px 12px;
             }
 
             svg {
@@ -141,7 +140,9 @@
             flex-direction: column;
             padding: 15px 15px;
             background-color: $ui-white;
-            border-radius: 0 0 1rem 1rem;
+            border-radius: 0 0 12px 12px;
+            border: 1px solid #dfe3e8;
+            border-top: none;
             box-shadow: 0 10px 20px rgba(67, 76, 100, 0.1);
             transform: translate(0, 100%);
             z-index: 9;
@@ -149,7 +150,7 @@
             &_open-top {
                 bottom: calc(100% - 1.8rem);
                 transform: translate(0, 0);
-                border-radius: 1rem 1rem 0 0;
+                border-radius: 12px 12px 0 0;
             }
 
             input {
@@ -178,50 +179,29 @@
             }
         }
 
-        textarea {
-            height: 150px;
-            margin-top: 2rem;
-            resize: none;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-
-            &::-webkit-scrollbar {
-                width: 0;
-            }
-
-            &:focus {
-                border: 1px solid $ui-green;
-            }
-
-            &::placeholder {
-                color: #B5BDC6;
-                font-weight: bold;
-                font-size: 16px;
-                line-height: 1.5;
-                letter-spacing: 0.02em;
-            }
-        }
-
         button {
-            margin-top: 1rem;
+            margin-top: 56px;
             background: $ui-green;
             border: 2px solid $ui-green;
             box-sizing: border-box;
-            border-radius: 20px;
-            outline: none;
-            height: 40px;
-
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 36px;
+            border-radius: 12px;
+            outline: 0;
+            height: 56px;
+            font-family: 'Neue Montreal', sans-serif;
+            font-size: 20px;
+            line-height: 52px;
             text-align: center;
-            color: $ui-white;
-
+            color: #fff;
             display: flex;
             align-self: center;
             justify-content: center;
             width: 200px;
             cursor: pointer;
+
+            &:hover {
+                background: $ui-white;
+                color: $ui-green;
+            }
         }
     }
 }

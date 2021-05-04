@@ -42,7 +42,7 @@ h5,
 }
 
 section {
-    padding: 0 15px;
+    padding: 0 24px;
     box-sizing: border-box;
 }
 
@@ -96,5 +96,10 @@ h3 {
     h3 {
         font-size: 28px;
         line-height: 40px;
+    }
+
+    .paragraph {
+        font-size: 16px;
+        line-height: 28px;
     }
 }
