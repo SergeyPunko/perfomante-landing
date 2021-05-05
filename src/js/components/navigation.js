@@ -18,7 +18,7 @@ const Navigation = (function () {
         const sectionList = document.querySelectorAll('[data-navElement]');
         const offset = 200;
 
-        Array.from(sectionList, (section) => {
+        Array.prototype.slice.call(sectionList).forEach((section) => {
             const sectionOffsetTop = section.getBoundingClientRect().top + window.pageYOffset - offset;
             const sectionHeight = section.getBoundingClientRect().height;
             const id = section.id;
@@ -45,7 +45,7 @@ const Navigation = (function () {
 
         const navLinkList = document.querySelectorAll('.js-smooth-scroll');
 
-        Array.from(navLinkList, (link) => {
+        Array.prototype.slice.call(navLinkList).forEach((link) => {
             link.addEventListener('click', scrollToSection);
         });
 

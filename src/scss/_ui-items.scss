@@ -9,8 +9,7 @@ button.outlined {
     line-height: 2rem;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
         background-color: $ui-green;
         color: $ui-white;
     }
@@ -25,6 +24,8 @@ button.outlined-dark {
 
     img {
         width: 48px;
+        height: 48px;
+        object-fit: cover;
         margin: 3px;
         border-radius: 8px;
     }
@@ -34,11 +35,11 @@ button.outlined-dark {
         font-weight: bold;
         font-size: 20px;
         line-height: 24px;
-        margin: 12px 24px;
+        margin: 15px 24px;
     }
 
     img+span {
-        margin: 12px 24px 12px 12px;
+        margin: 15px 24px 15px 15px;
     }
 }
 
@@ -47,8 +48,7 @@ button.contained {
     color: $ui-white;
     border: 1px solid $ui-green;
 
-    &:hover,
-    &:focus {
+    &:hover {
         background-color: $ui-white;
         color: $ui-white;
 
@@ -62,8 +62,7 @@ button.outlined-dark {
     border: 1px solid #cacac9;
     color: $text-main;
 
-    &:hover,
-    &:focus {
+    &:hover {
         background-color: rgba($color: $text-main, $alpha: 0.5);
 
         span {
@@ -79,6 +78,7 @@ button.outlined-dark {
         span {
             font-size: 16px;
             line-height: 24px;
+            margin: 6px 8px;
         }
 
         img {

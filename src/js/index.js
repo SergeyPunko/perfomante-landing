@@ -7,8 +7,10 @@ import PricingModal from "./components/pricing-modal";
 import Navigation from "./components/navigation";
 import NoBodyScroll from "./noBodyScroll";
 import Dropdowns from "./components/dropdowns";
+import ObjectFillPolyfill from "./object-fit-polyfill";
 
 window.onload = function () {
+    ObjectFillPolyfill.init();
     Customers.init();
     Companies.init();
     Resources.init();

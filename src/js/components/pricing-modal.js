@@ -1,5 +1,6 @@
 import tingle from 'tingle.js';
 import Mailer from "../mailer";
+import { sendYMGoal } from '../analytics/send-events';
 
 const renderModalContent = function (modalRef, contentUrl) {
     let content;
@@ -63,6 +64,12 @@ const PricingModal = (function () {
 
             const data = new FormData(form);
             Mailer.send(data, 'backend/form.php')
+                // .then(res =>{
+                //     if(res.success) {
+                //         sendYMGoal('main - plans - order pop-up');
+
+                //     }
+                // })
         }
     };
 
@@ -71,7 +78,7 @@ const PricingModal = (function () {
         if (document.querySelector('.order__modal')) {
             const PricingModalBtnsList = document.querySelectorAll('.order__modal');
 
-            Array.from(PricingModalBtnsList, (item) => {
+            Array.prototype.slice.call(PricingModalBtnsList).forEach((item) => {
                 // add event listener on each pricing button
                 item.addEventListener('click', PricingModal);
             });

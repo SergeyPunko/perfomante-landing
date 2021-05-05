@@ -17,7 +17,7 @@ const Customers = (function () {
     };
 
     const setActiveSlide = () => {
-        slides.forEach((element, index) => {
+        Array.prototype.slice.call(slides).forEach((element, index) => {
             if (element.classList.contains("glide__slide--active")) {
                 slideInfoElement.textContent = `${index + 1}/${slides.length}`
             }
