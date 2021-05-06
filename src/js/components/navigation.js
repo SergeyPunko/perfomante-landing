@@ -40,16 +40,42 @@ const Navigation = (function () {
         });
     };
 
-    const initEventListeners = function () {
-        highlightNavLink();
+    const scrollToHeader = (e) => {
+        jump(document.body, {
+            offset: 0,
+            duration: 1000,
+        });
 
+        e.preventDefault();
+    }
+
+    const showElem = (elem) => {
+        const triggerOffset = 1000;
+        if (window.pageYOffset > triggerOffset && !elem.classList.contains("show")) {
+            elem.classList.add("show")
+        } else if (window.pageYOffset <= triggerOffset && elem.classList.contains("show")) {
+            elem.classList.remove("show")
+        }
+    }
+
+    const initEventListeners = function () {
         const navLinkList = document.querySelectorAll('.js-smooth-scroll');
+        const toTopBtn = document.querySelector('.to-top')
+
+        const scrollHandler = () => {
+            highlightNavLink();
+            showElem(toTopBtn);
+        }
+
+        scrollHandler()
 
         Array.prototype.slice.call(navLinkList).forEach((link) => {
             link.addEventListener('click', scrollToSection);
         });
 
-        window.addEventListener('scroll', highlightNavLink);
+        toTopBtn.addEventListener('click', scrollToHeader);
+
+        window.addEventListener('scroll', scrollHandler);
     };
 
     const init = function () {

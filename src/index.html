@@ -14,50 +14,62 @@
 
 <body>
     <header class="header">
-        <div class="logo">
-            <img src="./img/logo.svg" alt="Perfomante logo">
-        </div>
-        <input type="checkbox" id="burger">
-        <label class="burger" for="burger"><img class="burger__menu" src="./img/burger.svg" alt="burger">
-            <div class="cross"></div>
-        </label>
-        <div class="menu">
-            <nav class="navigation">
-                <ul class="navigation__container">
-                    <li class="navigation__item dropdown-container">
-                        <button class="dropdown-button">
-                            Services
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3 4.28564L5.67747 7.34561C5.84821 7.54075 6.15179 7.54075 6.32253 7.34561L9 4.28564"
-                                    stroke="#22221F" stroke-width="0.998571" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <ul class="dropdown">
-                            <li class="dropdown__item"><a class="link black js-smooth-scroll" href="#ads2d">2d video
-                                    ads</a></li>
-                            <li class="dropdown__item"><a class="link black js-smooth-scroll" href="#ads3d">3d video
-                                    ads</a></li>
-                            <li class="dropdown__item"><a class="link black js-smooth-scroll" href="#ugcads">UGC video
-                                    ads</a></li>
-                        </ul>
-                    </li>
-                    <li class="navigation__item"><a class="link black js-smooth-scroll" href="#cases">Cases</a></li>
-                    <!-- <li class="navigation__item"><a class="link black" href="#">Portfolio</a></li> -->
-                    <li class="navigation__item"><a class="link black js-smooth-scroll" href="#team">About us</a></li>
-                    <li class="navigation__item"><a class="link black" target="_blank"
-                            href="https://perfomante.io/blog/?utm_source=main">Blog</a></li>
-                </ul>
-            </nav>
-            <nav class="header-buttons">
-                <a class="link black" target="_blank" href="https://app.perfomante.io/login">Sign in</a>
-                <button class="outlined"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
-                    Request demo
-                </button>
-            </nav>
+        <div class="header__wrap">
+            <div class="logo">
+                <img src="./img/logo.svg" alt="Perfomante logo">
+            </div>
+            <input type="checkbox" id="burger">
+            <label class="burger" for="burger"><img class="burger__menu" src="./img/burger.svg" alt="burger">
+                <div class="cross"></div>
+            </label>
+            <div class="menu">
+                <nav class="navigation">
+                    <ul class="navigation__container">
+                        <li class="navigation__item dropdown-container">
+                            <button class="dropdown-button">
+                                Services
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 4.28564L5.67747 7.34561C5.84821 7.54075 6.15179 7.54075 6.32253 7.34561L9 4.28564"
+                                        stroke="#22221F" stroke-width="0.998571" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown">
+                                <li class="dropdown__item">
+                                    <a class="link black js-smooth-scroll" href="#ads2d">
+                                        2d video ads
+                                    </a>
+                                    </li>
+                                <li class="dropdown__item">
+                                    <a class="link black js-smooth-scroll" href="#ads3d">
+                                        3d video ads
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="link black js-smooth-scroll" href="#ugcads">
+                                        UGC video ads
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item"><a class="link black js-smooth-scroll" href="#cases">Cases</a></li>
+                        <!-- <li class="navigation__item"><a class="link black" href="#">Portfolio</a></li> -->
+                        <li class="navigation__item"><a class="link black js-smooth-scroll" href="#team">About us</a>
+                        </li>
+                        <li class="navigation__item"><a class="link black" target="_blank"
+                                href="https://perfomante.io/blog/?utm_source=main">Blog</a></li>
+                    </ul>
+                </nav>
+                <nav class="header-buttons">
+                    <a class="link black" target="_blank" href="https://app.perfomante.io/login">Sign in</a>
+                    <button class="outlined"
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                        Request demo
+                    </button>
+                </nav>
+            </div>
         </div>
     </header>
     <section class="intro">
@@ -767,6 +779,14 @@
             </nav>
         </div>
     </footer>
+    <div class="to-top">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="10" fill="#337157"/>
+            <rect x="2" y="2" width="20" height="20" rx="10" fill="white" fill-opacity="0.2"/>
+            <rect x="2" y="2" width="20" height="20" rx="10" fill="black" fill-opacity="0.1"/>
+            <path d="M16 11L12 7M12 7L8 11M12 7L12 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
     <script src="js/runtime.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/vendors.min.js"></script>
