@@ -16,6 +16,7 @@
     opacity: 0;
     transition: 300ms;
     transform: rotate(0);
+    z-index: 99;
     
     svg {
         width: 60px;
