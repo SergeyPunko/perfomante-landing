@@ -1,3 +1,5 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
 const NoBodyScroll = (function () {
     const burger = document.getElementById("burger");
 

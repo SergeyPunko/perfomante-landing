@@ -1,3 +1,4 @@
+import "babel-polyfill";
 import Companies from "./sliders/companies";
 import Customers from "./sliders/customers";
 import Header from "./components/header";
@@ -8,6 +9,7 @@ import Navigation from "./components/navigation";
 import NoBodyScroll from "./noBodyScroll";
 import Dropdowns from "./components/dropdowns";
 import ObjectFillPolyfill from "./object-fit-polyfill";
+import VideoPlayers from "./components/video-player";
 
 window.onload = function () {
     ObjectFillPolyfill.init();
@@ -20,4 +22,5 @@ window.onload = function () {
     Navigation.init();
     NoBodyScroll.init();
     Dropdowns.init();
+    VideoPlayers.init();
 };

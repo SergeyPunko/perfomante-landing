@@ -23,7 +23,6 @@ const ObjectFillPolyfill = (function () {
     }
 
     const init = function () {
-        console.log(supportCSS('objectFit'))
         if (!supportCSS('objectFit')) {
             const elems = document.querySelectorAll(".object-fit");
             Array.prototype.slice.call(elems).forEach(createBGForElement);
