@@ -1,6 +1,7 @@
 const VideoPlayers = (function () {
     let currentScrollPosition = 0;
     let stopHandler = false;
+
     const videos = document.querySelectorAll('video');
 
     const videoHandler = function () {
@@ -90,6 +91,7 @@ const VideoPlayers = (function () {
     };
 
     const init = function () {
+        videoHandler();
         initEventListeners();
     };
 
