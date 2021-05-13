@@ -992,6 +992,11 @@
 
         &__name {
             height: 24px;
+
+            &[alt="avatarify"] {
+                height: 40px;
+                border-radius: 6px;
+            }
         }
     }
 

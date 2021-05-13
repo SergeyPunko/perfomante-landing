@@ -1,6 +1,6 @@
 import tingle from 'tingle.js';
 
-export const GA_CLIENT_TOKEN = '6Ld1TfUUAAAAADqxb7ggrpb0_ry8-BazzM0RsiCN';
+export const GA_CLIENT_TOKEN = '6Lf21fMUAAAAAPUNEc0_1RHMa-wJBOSy9TJirvG-';
 
 const CaptchaModal = (function () {
   const Modal = new tingle.modal({
