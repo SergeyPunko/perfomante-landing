@@ -15,4 +15,12 @@ function images() {
         .pipe(dest(`${dist}/img`))
 }
 
-module.exports = images;
+function videos() {
+    return src(`${source}/video/*`)
+        .pipe(dest(`${dist}/video`))
+}
+
+module.exports = {
+    images,
+    videos
+};

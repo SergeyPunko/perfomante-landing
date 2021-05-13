@@ -29,15 +29,15 @@ function sendData($email) {
         $mail->isHTML(true); // Set email format to HTML
         $mail->CharSet = 'UTF-8';
         $mail->Subject = 'Perfomante.io - your request on UA videos';
-        $mail->Body    = 'Hello, It\'s Nurs from <a href="https://perfomante.io/mobile">Perfomante.io</a><br>You left a request on our website. It would be great to know about your project and create videos for you.<br><br>Let\'s schedule a call? You can book the time here: <a href="https://calendly.com/perfomante/30min">https://calendly.com/perfomante/30min</a>';
-        $mail->AltBody = 'Hello, It\'s Nurs from <a href="https://perfomante.io/mobile">Perfomante.io</a><br>You left a request on our website. It would be great to know about your project and create videos for you.<br><br>Let\'s schedule a call? You can book the time here: <a href="https://calendly.com/perfomante/30min">https://calendly.com/perfomante/30min</a>';
+        $mail->Body    = 'Hello, It\'s Nurs from <a href="https://perfomante.io">Perfomante.io</a><br>You left a request on our website. It would be great to know about your project and create videos for you.<br><br>Let\'s schedule a call? You can book the time here: <a href="https://calendly.com/perfomante/30min">https://calendly.com/perfomante/30min</a>';
+        $mail->AltBody = 'Hello, It\'s Nurs from <a href="https://perfomante.io">Perfomante.io</a><br>You left a request on our website. It would be great to know about your project and create videos for you.<br><br>Let\'s schedule a call? You can book the time here: <a href="https://calendly.com/perfomante/30min">https://calendly.com/perfomante/30min</a>';
 
 
         $mail_owners->isHTML(true); // Set email format to HTML
         $mail_owners->CharSet = 'UTF-8';
         $mail_owners->Subject = '"Get offer" request from ' . $email;
-        $mail_owners->Body    = '"Get offer" request from ' . $email;
-        $mail_owners->AltBody = '"Get offer" request from ' . $email;
+        $mail_owners->Body    = '"Get offer" request from<br>Email: ' . $email . '<br>Name: ' . $name;
+        $mail_owners->AltBody = '"Get offer" request from<br>Email: ' . $email . '<br>Name: ' . $name;
 
         $mail_owners->send();
         $mail->send();

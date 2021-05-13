@@ -1,7 +1,8 @@
 
 const Header = (function () {
+    const headerElem = document.querySelector('.header');
+
     const initStickyHeader = function () {
-        const headerElem = document.querySelector('.header');
         if (window.pageYOffset > 0) {
             headerElem.style.transition = 'none';
             headerElem.classList.add('js-sticky');
@@ -9,14 +10,7 @@ const Header = (function () {
     };
 
     const toggleStickyHeader = function () {
-        const headerElem = document.querySelector('.header');
-
-        if (document.body.querySelector('.tingle-modal')) {
-            return;
-        }
-
         headerElem.removeAttribute('style');
-
         if (window.pageYOffset > 0) {
             headerElem.classList.add('js-sticky');
         } else {

@@ -32,6 +32,8 @@
     }
 }
 
+.grecaptcha-badge { visibility: hidden; }
+
 .calendly-overlay .calendly-popup {
     width: 100% !important;
     max-width: initial !important;
@@ -547,6 +549,10 @@
 
     .button-offer {
         margin-right: 24px;
+
+        @media screen and (max-width: $phone) {
+            margin-right: 12px;
+        }
     }
 }
 
@@ -695,12 +701,11 @@
 
         &__video {
             width: 50%;
-            border-radius: 32px;
-            overflow: hidden;
             position: relative;
             
             video {
                 width: 100%;
+                border-radius: 32px;
 
                 &.active ~ .controller{
                     &[data-role=pause] {
@@ -721,8 +726,8 @@
                 background: rgba(34, 34, 31, 0.24);
                 color: $ui-white;
                 border-radius: 32px;
-                bottom: 20px;
-                left: 20px;
+                bottom: 32px;
+                left: 32px;
                 font-family: 'Neue Montreal', sans-serif;
                 font-size: 14px;
                 line-height: 32px;
@@ -780,9 +785,14 @@
                 width: 100%;
             }
 
-            &__img {
+            &__video {
                 width: 100%;
                 margin: 50px 0;
+
+                .controller {
+                    bottom: 24px;
+                    left: 24px;
+                }
             }
 
             .aditional-paragraph {
@@ -1580,92 +1590,209 @@
     }
 }
 
-footer {
+// footer {
+//     background-color: $text-main;
+//     padding: 96px 24px;
+
+//     .perfomante {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         width: 300px;
+//         color: $ui-white;
+
+//         .paragraph {
+//             margin: 24px 0;
+//             opacity: 0.88;
+//         }
+
+//         .aditional-paragraph {
+//             color: rgba(255, 255, 255, 0.64);
+//         }
+//     }
+
+//     .container {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+//     .navigation {
+//         width: 380px;
+//         color: $ui-white;
+
+//         &__row {
+//             display: flex;
+//             justify-content: space-between;
+
+//             &:first-child {
+//                 margin-bottom: 40px;
+//             }
+//         }
+
+//         &__item {
+//             margin-bottom: 12px;
+//             font-size: 20px;
+//             line-height: 32px;
+
+//             &:not(.title) {
+//                 opacity: 0.88;
+//             }
+
+//             &.title {
+//                 font-family: "Neue Montreal", sans-serif;
+//                 font-weight: bold;
+//                 font-size: 20px;
+//                 line-height: 28px;
+//                 margin-bottom: 16px;
+//             }
+//         }
+
+//         &__column {
+//             flex: 1;
+
+//             &:first-child {
+//                 margin-right: 70px;
+//             }
+//         }
+//     }
+
+//     @media screen and (max-width: $tablet) {
+//         .container {
+//             flex-direction: column;
+//         }
+
+//         .license {
+//             position: absolute;
+//             bottom: -70px;
+//         }
+
+//         .perfomante {
+//             margin-bottom: 24px;
+//         }
+
+//         .perfomante,
+//         .navigation {
+//             width: 100%;
+//         }
+//     }
+// }
+
+.footer {
+    overflow: hidden;
+    color: $ui-white;
     background-color: $text-main;
-    padding: 96px 24px;
+  
+    &__container {
+        position: relative;
+        padding: 96px 24px;
+    }
 
-    .perfomante {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 300px;
-        color: $ui-white;
+    .footer-link {
+        display: inline-flex;
+        align-items: center;
 
-        .paragraph {
-            margin: 24px 0;
-            opacity: 0.88;
-        }
-
-        .aditional-paragraph {
-            color: rgba(255, 255, 255, 0.64);
+        img {
+            display: inline-block;
+            margin-right: 8px;
         }
     }
 
-    .container {
+    .nav__container:not(:first-of-type) {
+        margin-left: 35px;
+    }
+  
+    &__top {
+      position: relative;
+      // Above the shade
+      z-index: 1;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 80px;
+    }
+  
+    &__logo {
+      flex-shrink: 0;
+      width: 250px;
+  
+      > img {
+        display: block;
+        width: 100%;
+      }
+    }
+  
+    &__nav {
         display: flex;
-        justify-content: space-between;
+      flex-grow: 1;
+      margin-top: 20px;
+      padding-left: 5.8rem;
+    }
+  
+    &__bottom {
+      position: relative;
+    }
+  
+    &__copyright {
+      color: rgba(#fff, 0.8);
+      line-height: (16/12);
+      text-align: center;
+
+      p {
+          margin-bottom: 1em;
+      }
     }
 
-    .navigation {
-        width: 380px;
-        color: $ui-white;
+    .payment__section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
 
-        &__row {
-            display: flex;
-            justify-content: space-between;
+      img {
+          width: 100%;
+      }
+    }
 
-            &:first-child {
-                margin-bottom: 40px;
-            }
-        }
-
+    .nav {
         &__item {
-            margin-bottom: 12px;
-            font-size: 20px;
-            line-height: 32px;
+            margin-bottom: 14px;
 
-            &:not(.title) {
-                opacity: 0.88;
-            }
-
-            &.title {
-                font-family: "Neue Montreal", sans-serif;
-                font-weight: bold;
-                font-size: 20px;
-                line-height: 28px;
-                margin-bottom: 16px;
-            }
-        }
-
-        &__column {
-            flex: 1;
-
-            &:first-child {
-                margin-right: 70px;
+            &--heading {
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #fff;
+                opacity: .7;
+                letter-spacing: .15em;
             }
         }
     }
 
     @media screen and (max-width: $tablet) {
-        .container {
+        &__nav {
             flex-direction: column;
+            text-align: center;
+            padding: 0;
         }
 
-        .license {
-            position: absolute;
-            bottom: -70px;
+        &__logo {
+            margin: 30px;
         }
 
-        .perfomante {
-            margin-bottom: 24px;
+        .nav__container:not(:first-of-type) {
+            margin-top: 30px;
+            margin-left: 0;
         }
 
-        .perfomante,
-        .navigation {
-            width: 100%;
+        &__top {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__container {
+            position: relative;
+            padding: 36px 15px;
         }
     }
 }
+  
 
 .link {
     position: relative;

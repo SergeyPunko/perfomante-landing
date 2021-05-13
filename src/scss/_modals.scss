@@ -1,3 +1,5 @@
+@import "vars";
+
 .models-form {
     background-color: white;
     outline: none;
@@ -204,4 +206,26 @@
             }
         }
     }
+}
+
+.success-modal {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $ui-white;
+    border-radius: 25px;
+    font-size: 20px;
+
+    h2 {
+        font-size: 24px;
+        color: $ui-green;
+        margin-bottom: 32px;
+    }
+}
+
+.tingle-top {
+    z-index: 1999 !important;
 }
