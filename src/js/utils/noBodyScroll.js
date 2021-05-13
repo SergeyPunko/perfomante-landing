@@ -5,7 +5,7 @@ const NoBodyScroll = (function () {
 
     const init = function () {
         document.addEventListener("click", setHiddenBody);
-        document.addEventListener("touchstart", setHiddenBody);
+        document.addEventListener("touchend", setHiddenBody);
     };
 
     const setHiddenBody = () => {
