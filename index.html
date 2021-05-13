@@ -5,9 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform images and videos into stunning mobile video ads">
+    <meta name="keywords" content="transform, images, videos, mobile, video, ads, advertisement, short, 15, seconds">
+    <!-- <meta property="og:title" content="Your perfect video ads started from $600">
+    <meta property="og:description" content="Transform images and videos into stunning mobile video ads">
+    <meta property="og:url" content="https://perfomante.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://drive.google.com/u/0/uc?id=1FAUF_AJ6K9e0_PiLg12km-omMaj5hDsR&amp;export=download">
+    <meta name="og:image"
+        content="https://drive.google.com/u/0/uc?id=1FAUF_AJ6K9e0_PiLg12km-omMaj5hDsR&amp;export=download">
+    <meta property="og:site_name" content="Your perfect video ads started from $600">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Your perfect video ads started from $600">
+    <meta name="twitter:title" content="Your perfect video ads started from $600">
+    <meta name="twitter:description" content="Transform images and videos into stunning mobile video ads">
+    <meta name="twitter:image"
+        content="https://drive.google.com/u/0/uc?id=1FAUF_AJ6K9e0_PiLg12km-omMaj5hDsR&amp;export=download">
+    <meta property="twitter:image"
+        content="https://drive.google.com/u/0/uc?id=1FAUF_AJ6K9e0_PiLg12km-omMaj5hDsR&amp;export=download">
+    <meta name="twitter:image:src"
+        content="https://drive.google.com/u/0/uc?id=1FAUF_AJ6K9e0_PiLg12km-omMaj5hDsR&amp;export=download">
+    <meta itemprop="name" content="Your perfect video ads started from $600">
+    <meta itemprop="description" content="Transform images and videos into stunning mobile video ads">
+    <meta itemprop="image"
+        content="https://drive.google.com/u/0/uc?id=1FAUF_AJ6K9e0_PiLg12km-omMaj5hDsR&amp;export=download"> -->
+
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
     <title>Perfomante</title>
 </head>
 
@@ -15,11 +42,10 @@
     <header class="header">
         <div class="header__wrap">
             <div class="logo">
-                <img loading="lazy" src="./img/logo.svg" alt="Perfomante logo">
+                <img src="./img/logo.svg" alt="Perfomante logo">
             </div>
             <input type="checkbox" id="burger">
-            <label class="burger" for="burger"><img loading="lazy" class="burger__menu" src="./img/burger.svg"
-                    alt="burger">
+            <label class="burger" for="burger"><img class="burger__menu" src="./img/burger.svg" alt="burger">
                 <div class="cross"></div>
             </label>
             <div class="menu">
@@ -64,8 +90,7 @@
                 </nav>
                 <nav class="header-buttons">
                     <a class="link black" target="_blank" href="https://app.perfomante.io/login">Sign in</a>
-                    <button class="outlined"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                    <button class="outlined open-calendly">
                         Request demo
                     </button>
                 </nav>
@@ -77,15 +102,16 @@
             <div class="intro__text">
                 <h1>Marketing videos that perform and attract users</h1>
                 <p>Experts in visual production maximize return on impressions with
-                    measurably better video creative.
+                    measurably better video creatives.
                 </p>
                 <div class="cta">
-                    <button class="button-offer contained offer__modal"><img loading="lazy" src="./img/green-logo.png"
-                            alt="perfomante logo"><span>Get
-                            offer</span></button>
-                    <button class="outlined-dark"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
-                        <img loading="lazy" class="object-fit" src="./img/Nurs-min.jpg" alt="Nurs">
+                    <button class="button-offer contained offer__modal" data-seo-target="marketingClick"
+                        data-submit-seo-target="marketingSubmit">
+                        <img src="./img/green-logo.png" alt="perfomante logo">
+                        <span>Get offer</span>
+                    </button>
+                    <button class="outlined-dark open-calendly" data-seo-target="marketingDemoClick">
+                        <img class="object-fit" src="./img/Nurs-min.jpg" alt="Nurs">
                         <span>Get a demo <span class="mobile-hidden">from Nurs</span></span>
                     </button>
                 </div>
@@ -94,13 +120,13 @@
                 <picture>
                     <source srcset="./img/intro-background.webp" type="image/webp">
                     <source srcset="./img/intro-background.png" type="image/jpg">
-                    <img loading="lazy" src="./img/intro-background.png" alt="intro background">
+                    <img src="./img/intro-background.png" alt="intro background">
                 </picture>
             </div>
             <div class="intro__labels">
                 <div class="text-item first">
                     <div class="text-item__arrow">
-                        <img loading="lazy" src="./img/Arrow-Long-Down.svg" alt="Arrow Down">
+                        <img src="./img/Arrow-Long-Down.svg" alt="Arrow Down">
                     </div>
                     <div class="text-item__text">
                         <p>12% reduction</p>
@@ -109,11 +135,11 @@
                 </div>
                 <div class="text-item second">
                     <div class="text-item__arrow">
-                        <img loading="lazy" src="./img/Arrow-Long-Up.svg" alt="Arrow Down">
+                        <img src="./img/Arrow-Long-Up.svg" alt="Arrow Down">
                     </div>
                     <div class="text-item__text">
                         <p>27% growth</p>
-                        <p>New character resulted to CPI reduction</p>
+                        <p>New character resulted in CPI reduction by 27%</p>
                     </div>
                 </div>
             </div>
@@ -125,22 +151,16 @@
             <div id="autoplay" class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="company-list glide__slides">
-                        <li class="company-list__item glide__slide"><img loading="lazy" src="./img/mytona.png"
-                                alt="mytona logo"></li>
-                        <li class="company-list__item glide__slide"><img loading="lazy" src="./img/mail-group.png"
+                        <li class="company-list__item glide__slide"><img src="./img/mytona.png" alt="mytona logo"></li>
+                        <li class="company-list__item glide__slide"><img src="./img/mail-group.png"
                                 alt="mail group logo"></li>
-                        <li class="company-list__item glide__slide"><img loading="lazy" src="./img/azur.png"
-                                alt="azur logo"></li>
-                        <li class="company-list__item glide__slide"><img loading="lazy" src="./img/lockwood.png"
-                                alt="lockwood logo">
+                        <li class="company-list__item glide__slide"><img src="./img/azur.png" alt="azur logo"></li>
+                        <li class="company-list__item glide__slide"><img src="./img/lockwood.png" alt="lockwood logo">
                         </li>
-                        <li class="company-list__item glide__slide"><img loading="lazy" src="./img/frog-mind.png"
-                                alt="frog mind logo">
+                        <li class="company-list__item glide__slide"><img src="./img/frog-mind.png" alt="frog mind logo">
                         </li>
-                        <li class="company-list__item glide__slide"><img loading="lazy" src="./img/exient.png"
-                                alt="exient logo"></li>
-                        <li class="company-list__item glide__slide"><img loading="lazy" src="./img/iq-option.png"
-                                alt="iq option logo">
+                        <li class="company-list__item glide__slide"><img src="./img/exient.png" alt="exient logo"></li>
+                        <li class="company-list__item glide__slide"><img src="./img/iq-option.png" alt="iq option logo">
                         </li>
                     </ul>
                 </div>
@@ -153,35 +173,34 @@
                 <h4>WHY PERFOMANTE</h4>
                 <h3>Creative ads performance backed by experience and tech</h3>
                 <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
-                    video creative.</p>
+                    video creatives.</p>
             </div>
             <ul class="technology-row">
                 <li class="technology-row__item">
-                    <img loading="lazy" src="./img/idea.jpg" alt="idea">
+                    <img src="./img/idea.jpg" alt="idea">
                     <h5>Idea generation</h5>
-                    <p class="aditional-paragraph">By the collected data of thousands of videos we provide the best
-                        parctices in your domain. It’s
-                        not just a perfect motion design.</p>
+                    <p class="aditional-paragraph">Using all collected data from thousands of videos, we provide the
+                        best practices in your domain. It’s not just a perfect motion design, but also creative ideas
+                        and top-notch production.</p>
                 </li>
                 <li class="technology-row__item">
-                    <img loading="lazy" src="./img/chart.jpg" alt="chart">
+                    <img src="./img/chart.jpg" alt="chart">
                     <h5>Mapping</h5>
                     <p class="aditional-paragraph">Our experienced creative team makes mapping of each video we create.
                         So you get the insights on
-                        what really works</p>
+                        what really works.</p>
                 </li>
                 <li class="technology-row__item">
-                    <img loading="lazy" src="./img/wfh.jpg" alt="work from home">
+                    <img src="./img/wfh.jpg" alt="work from home">
                     <h5>In-house</h5>
-                    <p class="aditional-paragraph">Full in-house team. You just sit back and relax - our managers will
-                        provide all the rest </p>
+                    <p class="aditional-paragraph">Fully in-house team. You just sit back and relax - our managers will
+                        cover all work processes.</p>
                 </li>
                 <li class="technology-row__item">
-                    <img loading="lazy" src="./img/system.jpg" alt="system">
+                    <img src="./img/system.jpg" alt="system">
                     <h5>System</h5>
-                    <p class="aditional-paragraph">Our production is backed by own framework. so that all your wishes
-                        will be taken into account
-                        100%</p>
+                    <p class="aditional-paragraph">Our production is backed by own framework, so all your wishes and
+                        preferences will be taken into account</p>
                 </li>
             </ul>
         </div>
@@ -192,26 +211,26 @@
             <div class="section-header">
                 <h4>SERVICES</h4>
                 <h3>Video ads for any needs</h3>
-                <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
-                    video creative.</p>
+                <p class="paragraph">A dedicated team of professionals in visual production maximize return on
+                    impressions by providing more relevant video creatives.</p>
             </div>
             <div id="ads2d" class="ads">
                 <div class="ads__video">
-                    <video playsinline loop muted preload="metadata">
-                        <source src="./img/2d.webm">
-                        <source src="./img/2d.mp4">
+                    <video loop muted preload="metadata">
+                        <source src="./video/2d.webm">
+                        <source src="./video/2d.mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <button class="controller" data-role='play'><img loading="lazy" src="./img/video-play.png"
+                    <button class="controller" data-role='play'><img src="./img/video-play.png"
                             alt="play"><span>Re-play</span></button>
-                    <button class="controller" data-role='pause'><img loading="lazy" src="./img/video-pause.png"
+                    <button class="controller" data-role='pause'><img src="./img/video-pause.png"
                             alt="pause"><span>Pause</span></button>
                 </div>
                 <div class="ads__text">
                     <h5>2d video ads</h5>
                     <p class="aditional-paragraph">Achieve your goals and benchmarks with ease. Share your assets and
-                        see how the magic happens: our experts in performance marketing analize your product and market
-                        so your creatives will perform like never before.</p>
+                        see how the magic happens: our experts in performance marketing will analyze your product so
+                        your creatives will perform better than ever before.</p>
                     <!-- <a href="#" class="ads__link aditional-paragraph">Learn more</a> -->
                 </div>
             </div>
@@ -225,34 +244,34 @@
                     <!-- <a href="#" class="ads__link aditional-paragraph">Learn more</a> -->
                 </div>
                 <div class="ads__video">
-                    <video playsinline loop muted>
-                        <source src="./img/3d.webm">
-                        <source src="./img/3d.mp4">
+                    <video loop muted preload="metadata">
+                        <source src="./video/3d.webm">
+                        <source src="./video/3d.mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <button class="controller" data-role='play'><img loading="lazy" src="./img/video-play.png"
+                    <button class="controller" data-role='play'><img src="./img/video-play.png"
                             alt="play"><span>Re-play</span></button>
-                    <button class="controller" data-role='pause'><img loading="lazy" src="./img/video-pause.png"
+                    <button class="controller" data-role='pause'><img src="./img/video-pause.png"
                             alt="pause"><span>Pause</span></button>
                 </div>
             </div>
             <div id="ugcads" class="ads">
                 <div class="ads__video">
-                    <video playsinline loop muted>
-                        <source src="./img/UGC.webm">
-                        <source src="./img/UGC.mp4">
+                    <video loop muted preload="metadata">
+                        <source src="./video/UGC.webm">
+                        <source src="./video/UGC.mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <button class="controller" data-role='play'><img loading="lazy" src="./img/video-play.png"
+                    <button class="controller" data-role='play'><img src="./img/video-play.png"
                             alt="play"><span>Re-play</span></button>
-                    <button class="controller" data-role='pause'><img loading="lazy" src="./img/video-pause.png"
+                    <button class="controller" data-role='pause'><img src="./img/video-pause.png"
                             alt="pause"><span>Pause</span></button>
                 </div>
                 <div class=" ads__text">
                     <h5>UGC</h5>
-                    <p class="aditional-paragraph">Looking for videos like UGC content for your video ads?
-                        This is the right place! Get top-trended ideas from our creative team, footages from stunning
-                        models, and as result - high-performing video ads. </p>
+                    <p class="aditional-paragraph">Looking for UGC content for your video ads? You came to the right
+                        place! Get top-trended ideas from our creative team, add footages from relevant models, and as a
+                        result receive high-performing video ads.</p>
                     <!-- <a href="#" class="ads__link aditional-paragraph">Learn more</a> -->
                 </div>
             </div>
@@ -264,8 +283,9 @@
                 <h3>See it for yourself</h3>
                 <p class="paragraph">Get in touch with one of our experts and take a personal tour of Perfomante.</p>
                 <div class="cta">
-                    <button class="button-offer contained offer__modal">
-                        <img loading="lazy" src="./img/green-logo.png" alt="perfomante">
+                    <button class="button-offer contained offer__modal" data-seo-target="seeItClick"
+                        data-submit-seo-target="seeItSubmit">
+                        <img src="./img/green-logo.png" alt="perfomante">
                         <span>Get offer</span>
                     </button>
                     <button id="calendly_toggle" class="outlined-dark">
@@ -284,7 +304,7 @@
                     <li class="glide__slide customer">
                         <div class="customer__about">
                             <div class="company">
-                                <img loading="lazy" src="./img/tiktok.png" alt="tiktok" class="company__name">
+                                <img src="./img/tiktok.png" alt="tiktok" class="company__name">
                                 <p class="aditional-paragraph">Creative platform</p>
                             </div>
                             <p class="quote">TikTok is a very demanding platform when it comes to creatives. Perfomante
@@ -293,19 +313,18 @@
                                 all the deadlines were met.</p>
                             <div>
                                 <div class="paragraph">Anton Gritsevskii</div>
-                                <div class="aditional-paragraph">Creative Solutions Lead (Gaming&Apps) -
-                                    antongritsevskii@bytedance.com</div>
+                                <div class="aditional-paragraph">Creative Solutions Lead (Gaming&Apps)</div>
                             </div>
                         </div>
                         <div class="customer__img">
-                            <img loading="lazy" src="./img/anton.jpg" alt="Irina">
+                            <img src="./img/anton.jpg" alt="Irina">
                             <div class="achievement">
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">58 2d + 9 UGC video ads + idea generation</p>
                                 </div>
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">Personalised assets</p>
                                 </div>
                             </div>
@@ -314,8 +333,7 @@
                     <li class="glide__slide customer">
                         <div class="customer__about">
                             <div class="company">
-                                <img loading="lazy" src="./img/iq-option-dark.png" alt="iq option"
-                                    class="company__name">
+                                <img src="./img/iq-option-dark.png" alt="iq option" class="company__name">
                                 <p class="aditional-paragraph">Stocks and Forext trading platform</p>
                             </div>
                             <p class="quote">For my taste - you have experience working with creatives and purchasing,
@@ -329,18 +347,18 @@
                             </div>
                         </div>
                         <div class="customer__img">
-                            <img loading="lazy" src="./img/irina.jpg" alt="Irina">
+                            <img src="./img/irina.jpg" alt="Irina">
                             <div class="achievement">
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">22 video ads total tested</p>
                                 </div>
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">2d + UGC video ads packs</p>
                                 </div>
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">10 videos exceeded benchmarks</p>
                                 </div>
                             </div>
@@ -349,8 +367,7 @@
                     <li class="glide__slide customer">
                         <div class="customer__about">
                             <div class="company">
-                                <img loading="lazy" src="./img/iq-option-dark.png" alt="avatarify"
-                                    class="company__name">
+                                <img src="./img/avatarify.jpeg" alt="avatarify" class="company__name">
                                 <p class="aditional-paragraph">AI Face Animator & talking photos</p>
                             </div>
                             <p class="quote">We had a great experience working with Perfomante team. Very clear and
@@ -358,22 +375,22 @@
                                 quality of creatives correlates with the professionalism of the team.</p>
                             <div>
                                 <div class="paragraph">Karim Iskakov</div>
-                                <div class="aditional-paragraph">Co-founder & CTO - kar.iskakov@gmail.com</div>
+                                <div class="aditional-paragraph">Co-founder & CTO</div>
                             </div>
                         </div>
                         <div class="customer__img">
-                            <img loading="lazy" src="./img/Karim.jpg" alt="Karim">
+                            <img src="./img/Karim.jpg" alt="Karim">
                             <div class="achievement">
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">10 videos were tested</p>
                                 </div>
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">2D video package</p>
                                 </div>
                                 <div class="achievement__item">
-                                    <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                                    <img src="./img/Icon-check.svg" alt="check">
                                     <p class="paragraph">The results are higher than expected: CTR, CPI</p>
                                 </div>
                             </div>
@@ -385,11 +402,11 @@
                 <!-- <button class="outlined">Read the story</button> -->
                 <div data-glide-el="controls" class="glide__arrows pagination">
                     <button class="pagination__button glide__arrow glide__arrow--left" data-glide-dir="<">
-                        <img loading="lazy" src="./img/arrow-left.svg" alt="arrow left">
+                        <img src="./img/arrow-left.svg" alt="arrow left">
                     </button>
                     <span id="slide-info"></span>
                     <button class="pagination__button glide__arrow glide__arrow--right" data-glide-dir=">">
-                        <img loading="lazy" src="./img/arrow-right.svg" alt="arrow right">
+                        <img src="./img/arrow-right.svg" alt="arrow right">
                     </button>
                 </div>
             </div>
@@ -405,8 +422,7 @@
             </div>
             <div class="price__services">
                 <div class="service">
-                    <div class="service__img"><img loading="lazy" src="./img/2d-ads-service.png" alt="2d ads service">
-                    </div>
+                    <div class="service__img"><img src="./img/2d-ads-service.png" alt="2d ads service"></div>
                     <div class="service__header">
                         <h5>2D video ads</h5>
                         <p>Idea generation + Video animation</p>
@@ -417,30 +433,30 @@
                     </div>
                     <div class="service__benefits">
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">10 videos in 2 formats monthly</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">script generation</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">art director + lead motion designer</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">personal manager</p>
                         </div>
                     </div>
-                    <button class="contained order__modal" data-index="0">
+                    <button class="contained order__modal" data-index="0" data-seo-target="2dClick"
+                        data-submit-seo-target="2dSubmit">
                         <span>Get started</span>
                     </button>
                     <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
                 </div>
                 <div class="service">
-                    <div class="service__img"><img loading="lazy" src="./img/3d-ads-service.png" alt="3d ads service">
-                    </div>
+                    <div class="service__img"><img src="./img/3d-ads-service.png" alt="3d ads service"></div>
                     <div class="service__header">
                         <h5>3D video ads</h5>
                         <p>Idea + 3d animation + Postproduction</p>
@@ -451,29 +467,30 @@
                     </div>
                     <div class="service__benefits">
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">5 videos</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">tech lead + art director</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">personal manager</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">creative sessions on demand</p>
                         </div>
                     </div>
-                    <button class="contained order__modal" data-index="1">
+                    <button class="contained order__modal" data-index="1" data-seo-target="3dClick"
+                        data-submit-seo-target="3dSubmit">
                         <span>Get started</span>
                     </button>
                     <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
                 </div>
                 <div class="service">
-                    <div class="service__img"><img loading="lazy" src="./img/ugc-service.png" alt="ugc service"></div>
+                    <div class="service__img"><img src="./img/ugc-service.png" alt="ugc service"></div>
                     <div class="service__header">
                         <h5>UGC video ads</h5>
                         <p>Idea + Shooting + Postproduction</p>
@@ -484,23 +501,24 @@
                     </div>
                     <div class="service__benefits">
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">5 videos</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">art director + lead motion designer</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">personal manager</p>
                         </div>
                         <div class="service__benefit">
-                            <img loading="lazy" src="./img/Icon-check.svg" alt="check">
+                            <img src="./img/Icon-check.svg" alt="check">
                             <p class="paragraph">creative sessions on demand</p>
                         </div>
                     </div>
-                    <button class="contained order__modal" data-index="2">
+                    <button class="contained order__modal" data-index="2" data-seo-target="UGCClick"
+                        data-submit-seo-target="UGCSubmit">
                         <span>Get started</span>
                     </button>
                     <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
@@ -512,53 +530,54 @@
         <div class="container">
             <div class="team__avatar tablet">
                 <div class="team__avatar-row">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
                 </div>
                 <div class="team__avatar-row">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
                 </div>
             </div>
             <div class="team__avatar left">
                 <div class="team__avatar-row">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
                 </div>
                 <div class="team__avatar-row">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar10.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar10.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
                 </div>
             </div>
             <div class="team__avatar right">
                 <div class="team__avatar-row">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar9.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar9.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
                 </div>
                 <div class="team__avatar-row">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar12.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar11.jpg" alt="avatar">
-                    <img loading="lazy" class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar12.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar11.jpg" alt="avatar">
+                    <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
                 </div>
             </div>
             <div class="team__header section-header">
                 <h4>TEAM</h4>
                 <h3>We are Perfomante</h3>
                 <div>
-                    <p class="paragraph">Achieve your goals and benchmarks with ease. Share your assets and see how the
-                        magic happens: our experts in performance marketing analize your
-                        product and market so your creatives will perform like never before.
+                    <p class="paragraph">We at Perfomante are ready to help you achieve your business goals and
+                        benchmarks with ease. Share your assets and see how the magic happens: our experts in
+                        performance marketing will analyze your product so your creatives will perform better than ever
+                        before.
                     </p>
                 </div>
             </div>
@@ -570,13 +589,12 @@
                         You can use our platform with connected motion designers. All your videos will be checked by
                         Art-director as well.
                     </p>
-                    <button class="outlined"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
+                    <button class="outlined open-calendly">
                         Request demo
                     </button>
                     <p class="aditional-information">Price starts at $300 per 15-sec video.</p>
                 </div>
-                <img loading="lazy" class="demo" src="./img/Promo.jpg" alt="promo">
+                <img class="demo" src="./img/Promo.jpg" alt="promo">
             </div>
         </div>
     </section>
@@ -594,10 +612,10 @@
                         <div class="glide__slide">
                             <div class="idea">
                                 <div class="idea__card">
-                                    <img loading="lazy" src="./img/Logo-light.svg" alt="logo perfomante">
+                                    <img src="./img/Logo-light.svg" alt="logo perfomante">
                                     <h5>The state of video marketing at 2021</h5>
                                     <div class="idea__footer">
-                                        <img loading="lazy" src="./img/idea-avatar.jpg" alt="idea avatar">
+                                        <img src="./img/idea-avatar.jpg" alt="idea avatar">
                                         <a href="#">Guide</a>
                                     </div>
                                 </div>
@@ -622,10 +640,10 @@
                         <div class="glide__slide">
                             <div class="idea">
                                 <div class="idea__card">
-                                    <img loading="lazy" src="./img/Logo-light.svg" alt="logo perfomante">
+                                    <img src="./img/Logo-light.svg" alt="logo perfomante">
                                     <h5>The state of video marketing at 2021</h5>
                                     <div class="idea__footer">
-                                        <img loading="lazy" src="./img/idea-avatar.jpg" alt="idea avatar">
+                                        <img src="./img/idea-avatar.jpg" alt="idea avatar">
                                         <a href="#">Guide</a>
                                     </div>
                                 </div>
@@ -650,10 +668,10 @@
                         <div class="glide__slide">
                             <div class="idea">
                                 <div class="idea__card">
-                                    <img loading="lazy" src="./img/Logo-light.svg" alt="logo perfomante">
+                                    <img src="./img/Logo-light.svg" alt="logo perfomante">
                                     <h5>The state of video marketing at 2021</h5>
                                     <div class="idea__footer">
-                                        <img loading="lazy" src="./img/idea-avatar.jpg" alt="idea avatar">
+                                        <img src="./img/idea-avatar.jpg" alt="idea avatar">
                                         <a href="#">Guide</a>
                                     </div>
                                 </div>
@@ -684,26 +702,80 @@
         <div class="square left"></div>
         <div class="square right"></div>
         <div class="container">
-            <h3>Your products tell interest stories,
-                let Perfomante tell it.</h3>
+            <h3>Your products tell interesting stories, let Perfomante make them heard.</h3>
             <div class="cta">
                 <button class="button-offer contained offer__modal">
-                    <img loading="lazy" src="./img/green-logo.png" alt="perfomante">
+                    <img src="./img/green-logo.png" alt="perfomante">
                     <span>Get offer</span>
                 </button>
-                <button class="outlined-dark"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText'})">
-                    <img loading="lazy" class="object-fit" src="./img/Nurs-min.jpg" alt="perfomante">
+                <button class="outlined-dark open-calendly">
+                    <img class="object-fit" src="./img/Nurs-min.jpg" alt="perfomante">
                     <span>Get a demo <span class="mobile-hidden">from Nurs</span></span>
                 </button>
             </div>
         </div>
     </section>
-    <footer>
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <!-- Top part -->
+            <div class="footer__top">
+                <!-- Logo -->
+                <div class="footer__logo">
+                    <img src="./img/Logo-light.svg" alt="Perfomante" draggable="false">
+                </div>
+                <!-- Navigation -->
+                <nav class="nav nav--footer footer__nav">
+                    <ul class="nav__container">
+                        <li class="nav__item nav__item--heading">
+                            Links
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/cntct">Info for clients</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/blog">Blog</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/privacy">Privacy Policy</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/cookies">Cookie Policy</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/gdpr">GDPR</a>
+                        </li>
+                    </ul>
+                    <ul class="nav__container">
+                        <li class="nav__item nav__item--heading">
+                            Partners
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link"
+                                href="https://qonversion.io/?utm_source=perfomante&utm_medium=partners&utm_campaign=footer"
+                                target="_blank">Qonversion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Bottom part -->
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p><a class="link footer-link" href="mailto:hi@perfomante.io"><img src="./img/mail.svg"
+                                alt="">hi@perfomante.io</a></p>
+                    <p>&#169; 2021 All Rights Reserved. Perfomante &#171;LLC&#187;.</p>
+                    <p>HQ in Minsk, Belarus</p>
+                </div>
+            </div>
+            <div class="payment__section">
+                <img src="./img/payment.png" />
+            </div>
+        </div>
+    </footer>
+    <!-- <footer>
         <div class="container">
             <div class="perfomante">
                 <div>
-                    <img loading="lazy" src="./img/Logo-light.svg" alt="logo perfomante">
+                    <img src="./img/Logo-light.svg" alt="logo perfomante">
                     <p class="paragraph">Marketing videos that perform and attract users</p>
                 </div>
                 <div class="license">
@@ -750,7 +822,7 @@
                 </div>
             </nav>
         </div>
-    </footer>
+    </footer> -->
     <div class="to-top">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="20" height="20" rx="10" fill="#337157" />
@@ -760,40 +832,37 @@
                 stroke-linejoin="round" />
         </svg>
     </div>
-    <!-- <script async defer
-        src="https://www.google.com/recaptcha/api.js?render=6Lf21fMUAAAAAPUNEc0_1RHMa-wJBOSy9TJirvG-&render=explicit"
-        nonce="{NONCE}"></script> -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
     <script src="js/runtime.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/vendors.min.js"></script>
+    <script async defer
+        src="https://www.google.com/recaptcha/api.js?render=6Lf21fMUAAAAAPUNEc0_1RHMa-wJBOSy9TJirvG-&render=explicit"
+        nonce="{NONCE}"></script>
     <script type="text/javascript">
-        var css = document.createElement('link');
-        css.rel = "stylesheet";
-        css.href = "https://assets.calendly.com/assets/external/widget.css";
-        document.head.appendChild(css);
-        // (function (m, e, t, r, i, k, a) {
-        //     m[i] = m[i] || function () {
-        //         (m[i].a = m[i].a || []).push(arguments)
-        //     };
-        //     m[i].l = 1 * new Date();
-        //     k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
-        //         a)
-        // })
-        //     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+                a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        // ym(54065377, "init", {
-        //     clickmap: true,
-        //     trackLinks: true,
-        //     accurateTrackBounce: true,
-        //     webvisor: true
-        // });
+        ym(54065377, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
 
     </script>
-    <!-- <noscript>
+    <noscript>
         <div>
-            <img loading="lazy" src="https://mc.yandex.ru/watch/54065377" style="position:absolute; left:-9999px;" alt="" />
+            <img src="https://mc.yandex.ru/watch/54065377" style="position:absolute; left:-9999px;" alt="" />
         </div>
-    </noscript> -->
+    </noscript>
 </body>
 
 </html>
