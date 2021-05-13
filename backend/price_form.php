@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 include('global_vars.php');
 
-session_start();
+// session_start();
 header('Content-type:application/json;charset=utf-8');
 
 function sendData($email, $name, $option) {
@@ -57,22 +57,22 @@ if( $_POST['email'] ):
     $email = strip_tags($_POST['email']);
     $name = strip_tags($_POST['name']);
     $option = strip_tags($_POST['option']);
-    $cookieCaptcha = $_SESSION['recaptchaOk'];
-    $gcaptcha = $_POST['g-recaptcha-response'];
-if (!$cookieCaptcha) {
-    $recaptcha = new \ReCaptcha\ReCaptcha($GLOBALS['RECAPTCHA-SECRET']);
-    $resp = $recaptcha->setScoreThreshold(0.5)->setExpectedAction('mainform')->verify($gcaptcha);
-    if ($resp->isSuccess()) {
-        $_SESSION['recaptchaOk'] = 'true';
-        sendData($email, $name, $option);
-    } else {
-        $errors = $resp->getErrorCodes();
-        $result = "Captcha error: {$errors}";
-        $data = ['success' => 'false', 'payload' => $result];
-        echo json_encode($data);
-    } 
-} else {
+//     $cookieCaptcha = $_SESSION['recaptchaOk'];
+//     $gcaptcha = $_POST['g-recaptcha-response'];
+// if (!$cookieCaptcha) {
+//     $recaptcha = new \ReCaptcha\ReCaptcha($GLOBALS['RECAPTCHA-SECRET']);
+//     $resp = $recaptcha->setScoreThreshold(0.5)->setExpectedAction('mainform')->verify($gcaptcha);
+//     if ($resp->isSuccess()) {
+//         $_SESSION['recaptchaOk'] = 'true';
+//         sendData($email, $name, $option);
+//     } else {
+//         $errors = $resp->getErrorCodes();
+//         $result = "Captcha error: {$errors}";
+//         $data = ['success' => 'false', 'payload' => $result];
+//         echo json_encode($data);
+//     } 
+// } else {
     sendData($email, $name, $option);
-}
+// }
 endif;
 ?>
