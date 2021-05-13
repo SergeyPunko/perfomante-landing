@@ -18,16 +18,16 @@ window.onReEnter = () => {
 export const withRecaptcha = (cb) => (ev) => {
   ev.preventDefault();
   const target = ev.currentTarget;
-  cb(target);
+  cb(target, true);
 
-  CaptchaModal.open();
-  let gcaptcha;
-  let int = setInterval(() => {
-    if (window.RCToken) {
-      gcaptcha = window.RCToken;
-      cb(target, gcaptcha);
-      window.RCToken = null;
-      clearInterval(int);
-    }
-  }, 100);
+  // CaptchaModal.open();
+  // let gcaptcha;
+  // let int = setInterval(() => {
+  //   if (window.RCToken) {
+  //     gcaptcha = window.RCToken;
+  //     cb(target, gcaptcha);
+  //     window.RCToken = null;
+  //     clearInterval(int);
+  //   }
+  // }, 100);
 };
