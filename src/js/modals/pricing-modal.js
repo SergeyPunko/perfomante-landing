@@ -34,7 +34,6 @@ const PricingModal = (function () {
         const index = dataset.index
 
         sendYMGoal(SEO_CODES[dataset.seoTarget]);
-        console.log(document.modelsForm)
         const modal = ModalService.init('modals/pricing.html');
 
         const modelsOptions = document.modelsForm.option;
@@ -57,12 +56,10 @@ const PricingModal = (function () {
     };
 
     const initButtonEventListeners = function () {
-        // pricing form success modals
         if (document.querySelector('.order__modal')) {
             const pricingModalBtnsList = document.querySelectorAll('.order__modal');
 
             Array.prototype.slice.call(pricingModalBtnsList).forEach((item) => {
-                // add event listener on each pricing button
                 item.addEventListener('click', createModal);
             });
         }

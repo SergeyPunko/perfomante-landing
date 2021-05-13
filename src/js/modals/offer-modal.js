@@ -30,12 +30,10 @@ const OfferModal = (function () {
     };
 
     const initButtonEventListeners = function () {
-        // pricing form success modals
         if (document.querySelector('.offer__modal')) {
             const pricingModalBtnsList = document.querySelectorAll('.offer__modal');
 
             Array.prototype.slice.call(pricingModalBtnsList).forEach((item) => {
-                // add event listener on each pricing button
                 item.addEventListener('click', createModal(item), false);
             });
         }

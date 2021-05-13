@@ -1,10 +1,9 @@
 export const sendYMGoal = (goal, trackerId = 54065377) => {
-  // if (ym) {
-  //   ym(trackerId, 'reachGoal', goal);
-  //   console.log(goal)
-  // } else {
-  //   console.error('Yandex metrica not found');
-  // }
+  if (ym) {
+    ym(trackerId, 'reachGoal', goal);
+  } else {
+    console.error('Yandex metrica not found');
+  }
 };
 
 // export const sendGTMGoal = (goal) => {
