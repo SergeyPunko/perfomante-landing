@@ -1,10 +1,13 @@
 import jump from 'jump.js';
 
 const Navigation = (function () {
+    const burger = document.querySelector('#burger');
+
     const scrollToSection = function (e) {
         const linkElem = this;
         const target = document.querySelector(linkElem.hash);
         const headerHeight = 88;
+        burger.checked = false;
 
         jump(target, {
             offset: -headerHeight,
