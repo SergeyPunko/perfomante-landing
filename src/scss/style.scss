@@ -993,7 +993,8 @@
         &__name {
             height: 24px;
 
-            &[alt="avatarify"] {
+            &[alt="avatarify"],
+            &[alt="puzzle point"] {
                 height: 40px;
                 border-radius: 6px;
             }
