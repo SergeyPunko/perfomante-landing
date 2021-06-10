@@ -9,6 +9,8 @@ const Navigation = (function () {
         const headerHeight = 88;
         burger.checked = false;
 
+        history.pushState(null, null, `/${linkElem.hash}`);
+
         jump(target, {
             offset: -headerHeight,
             duration: 1000,
