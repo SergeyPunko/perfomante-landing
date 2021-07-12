@@ -1,4 +1,4 @@
-import { sendYMGoal } from '../analytics/send-events';
+import { sendGoalToAllTrackers } from '../analytics/send-events';
 import SEO_CODES from "../seo-codes/seo-code";
 
 const Calendar = (function () {
@@ -22,7 +22,7 @@ const Calendar = (function () {
     }
 
     const openModal = ({ dataset }) => () => {
-        sendYMGoal(SEO_CODES[dataset.seoTarget]);
+        sendGoalToAllTrackers(SEO_CODES[dataset.seoTarget]);
         Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText&primary_color=337157'});
     }
     const init = function () {

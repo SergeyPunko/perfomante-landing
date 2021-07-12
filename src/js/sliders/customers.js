@@ -1,6 +1,6 @@
 import Glide from "@glidejs/glide";
 import SEO_CODES from "../seo-codes/seo-code";
-import { sendYMGoal } from '../analytics/send-events';
+import { sendGoalToAllTrackers } from '../analytics/send-events';
 
 const Customers = (function () {
     const slider = document.getElementById("slider");
@@ -19,7 +19,7 @@ const Customers = (function () {
     };
 
     const setActiveSlide = e => {
-        e && sendYMGoal(SEO_CODES.swipe);
+        e && sendGoalToAllTrackers(SEO_CODES.swipe);
         Array.prototype.slice.call(slides).forEach((element, index) => {
             if (element.classList.contains("glide__slide--active")) {
                 slideInfoElement.textContent = `${index + 1}/${slides.length}`

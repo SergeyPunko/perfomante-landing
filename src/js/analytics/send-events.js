@@ -6,25 +6,14 @@ export const sendYMGoal = (goal, trackerId = 54065377) => {
   }
 };
 
-// export const sendGTMGoal = (goal) => {
-//   if (!window.dataLayer) window.dataLayer = [];
-//   dataLayer.push({
-//     event: goal,
-//     details: {
-//       formID: goal,
-//       contact: 'test gtm lol',
-//     },
-//   });
-//   dataLayer.push({
-//     event: goal,
-//     eventCategory: goal,
-//     eventAction: goal,
-//     eventLabel: goal,
-//     eventNonInteraction: goal,
-//   });
-// };
+export const sendGTMGoal = ({event, goal}) => {
+  if (ga) {
+    ga('send', 'event', goal, event);
+  } else {
+    console.error('Google metrica not found');
+  }};
 
 export const sendGoalToAllTrackers = (goal) => {
-  sendYMGoal(goal);
-  // sendGTMGoal(goal);
+  sendYMGoal(goal.ym);
+  sendGTMGoal(goal.gm);
 };

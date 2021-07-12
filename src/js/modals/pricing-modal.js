@@ -1,5 +1,5 @@
 import Mailer from "../services/mailer.service";
-import { sendYMGoal } from '../analytics/send-events';
+import { sendGoalToAllTrackers } from '../analytics/send-events';
 import ModalService from '../services/modal.service';
 import { withRecaptcha } from "../utils/recaptcha-wrapper";
 import SEO_CODES from "../seo-codes/seo-code";
@@ -12,7 +12,7 @@ const modalHandler = (modal, seoTarget) => (target, token) => {
         .then(res => {
             if (res.success) {
                 modal.close();
-                sendYMGoal(SEO_CODES[seoTarget]);
+                sendGoalToAllTrackers(SEO_CODES[seoTarget]);
                 ModalService.init('modals/success.html');
             }
         })
@@ -33,7 +33,7 @@ const PricingModal = (function () {
 
         const index = dataset.index
 
-        sendYMGoal(SEO_CODES[dataset.seoTarget]);
+        sendGoalToAllTrackers(SEO_CODES[dataset.seoTarget]);
         const modal = ModalService.init('modals/pricing.html');
 
         const modelsOptions = document.modelsForm.option;

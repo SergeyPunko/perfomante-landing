@@ -1,5 +1,5 @@
 import Mailer from "../services/mailer.service";
-import { sendYMGoal } from '../analytics/send-events';
+import { sendGoalToAllTrackers } from '../analytics/send-events';
 import ModalService from '../services/modal.service';
 import { withRecaptcha } from "../utils/recaptcha-wrapper";
 import SEO_CODES from "../seo-codes/seo-code";
@@ -11,7 +11,7 @@ const modalHandler = (modal, seoTarget) => (target, token) => {
     token && Mailer.send(data, 'backend/offer_form.php')
         .then(res => {
             if (res.success) {
-                sendYMGoal(SEO_CODES[seoTarget]);
+                sendGoalToAllTrackers(SEO_CODES[seoTarget]);
                 modal.close();
 
                 ModalService.init('modals/success.html');
@@ -21,7 +21,7 @@ const modalHandler = (modal, seoTarget) => (target, token) => {
 
 const OfferModal = (function () {
     const createModal = ({ dataset }) => () => {
-        sendYMGoal(SEO_CODES[dataset.seoTarget]);
+        sendGoalToAllTrackers(SEO_CODES[dataset.seoTarget]);
 
         const modal = ModalService.init('modals/offer.html');
 
