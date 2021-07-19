@@ -6,14 +6,14 @@ export const sendYMGoal = (goal, trackerId = 54065377) => {
   }
 };
 
-export const sendGTMGoal = ({event, goal}) => {
-  if (ga) {
-    ga('send', 'event', goal, event);
+export const sendGTMGoal = (goal) => {
+  if (gtag) {
+    gtag('event', goal);
   } else {
     console.error('Google metrica not found');
   }};
 
 export const sendGoalToAllTrackers = (goal) => {
-  sendYMGoal(goal.ym);
-  sendGTMGoal(goal.gm);
+  sendYMGoal(goal);
+  sendGTMGoal(goal);
 };
