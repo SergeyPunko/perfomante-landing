@@ -9,7 +9,7 @@ const Calendar = (function () {
 
     const initInlineCalendly = function () {
         Calendly.initInlineWidget({
-            url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&hide_event_type_details=1&primary_color=337157',
+            url: 'https://calendly.com/andykozik/30?back=1&month=2021-08&hide_event_type_details=1',
             parentElement: calendly
         });
     };
@@ -23,7 +23,7 @@ const Calendar = (function () {
 
     const openModal = ({ dataset }) => () => {
         sendGoalToAllTrackers(SEO_CODES[dataset.seoTarget]);
-        Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?embed_domain=perfomante.io&embed_type=PopupText&primary_color=337157'});
+        Calendly.initPopupWidget({url: 'https://calendly.com/andykozik/30?back=1&month=2021-08'});
     }
     const init = function () {
         if (calendly && calendlyBtn && container) {
