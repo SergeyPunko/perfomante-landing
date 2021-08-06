@@ -11,4 +11,5 @@ export default {
     "marketingDemoClick": "Main_Marketing videos_Get a demo_click",
     "seeItClick": "Main_See it for yourself_Get offer_click",
     "seeItSubmit": "Main_See it for yourself_Get offer_submit",
+    "demoClick": "Main_reqest_demo_click",
 };
