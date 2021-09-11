@@ -19,14 +19,15 @@
     transition: 300ms;
     transform: rotate(0);
     z-index: 99;
-    
+
     svg {
         width: 60px;
 
-        &:hover rect:first-child{
+        &:hover rect:first-child {
             fill-opacity: 0.5;
         }
     }
+
     &.show {
         visibility: visible;
         opacity: 1;
@@ -34,7 +35,9 @@
     }
 }
 
-.grecaptcha-badge { visibility: hidden; }
+.grecaptcha-badge {
+    visibility: hidden;
+}
 
 .calendly-overlay .calendly-popup {
     width: 100% !important;
@@ -663,17 +666,33 @@
 .services {
     .square {
         position: absolute;
-        height: 550px;
-        width: 550px;
         border-radius: 52px;
         background-color: $ui-figure-color;
         z-index: 0;
+    }
+
+    .square-1 {
+        height: 550px;
+        width: 550px;
         left: -100px;
         top: 0;
     }
 
+    .square-2 {
+        height: 320px;
+        width: 550px;
+        right: -100px;
+        top: 32%;
+    }
+
+    .square-3 {
+        height: 320px;
+        width: 600px;
+        left: -100px;
+        top: 68%;
+    }
+
     .section-header {
-        width: 570px;
         z-index: 2;
     }
 
@@ -691,6 +710,36 @@
         margin-bottom: 30px;
     }
 
+    .video__player {
+        &+.description .desc-button[data-role=pause] {
+            display: none;
+        }
+
+        &.active+.description .desc-button[data-role=play] {
+            display: none;
+        }
+
+        &.active+.description .desc-button[data-role=pause] {
+            display: flex;
+        }
+    }
+
+    .desc-button {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+            margin-right: 3px;
+        }
+
+        span {
+            font-family: "Neue Montreal", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
     .ads {
         display: flex;
         flex-direction: column;
@@ -698,17 +747,33 @@
         position: relative;
         z-index: 1;
         padding-top: 88px;
-        margin: -56px 0 32px;
+        margin: -36px 0 32px;
+
+        .link {
+            align-self: flex-end;
+        }
 
         &__video {
             position: relative;
-            z-index: 10;
-            
+
+            &.inline {
+                .video {
+                    flex-wrap: wrap;
+
+                    &__wrap {
+                        height: auto;
+                    }
+                }
+
+                .glide__bullets {
+                    display: none;
+                }
+            }
+
             video {
                 width: 100%;
-                border-radius: 32px;
 
-                &.active ~ .controller{
+                &.active~.controller {
                     &[data-role=pause] {
                         display: inline-flex;
                     }
@@ -742,28 +807,6 @@
         &__text {
             color: $text-dark;
         }
-
-        &__link {
-            font-family: "Neue Montreal", sans-serif;
-            line-height: 48px;
-            color: $ui-green;
-            position: relative;
-
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -10px;
-                left: 0;
-                height: 2px;
-                width: 100%;
-                background: rgba(51, 113, 87, 0.4);
-                transition: 0.3s;
-            }
-
-            &:hover::after {
-                width: 50%;
-            }
-        }
     }
 
     @media screen and (max-width: $tablet) {
@@ -781,13 +824,26 @@
             flex-direction: column;
             margin: 0;
 
+            .video {
+                gap: 0;
+
+                &__wrap {
+                    min-width: 250px;
+                    max-width: 550px;
+                }
+            }
+
             &__text {
                 width: 100%;
             }
 
+            .link {
+                align-self: flex-start;
+            }
+
             &__video {
                 width: 100%;
-                margin: 50px 0;
+                margin: 0;
 
                 .controller {
                     bottom: 24px;
@@ -930,24 +986,54 @@
                     }
 
                     .paragraph,
-                    .aditional-paragraph,
-                    img {
+                    .aditional-paragraph {
                         transform: translateX(-100px);
                         transition: transform 1s;
                     }
                 }
 
-                &__img {
-                    &>img {
-                        border-radius: 24px;
-                        transform: translateY(-100px);
-                        transition: transform 0.5s;
+                &__info {
+                    max-width: 30%;
+                    background: $ui-white;
+                    border-radius: 24px;
+                    padding: 24px;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    img {
+                        width: 100%;
+                        transition: 1s;
+                        opacity: 0;
                     }
 
-                    .achievement {
-                        transform: translate(50px, 20px);
-                        transition: transform 1s;
+                    .benefits {
+                        font-size: 35px;
+                        line-height: 36px;
                     }
+
+                    .count {
+                        font-size: 18px;
+                        line-height: 22px;
+                        margin: 24px 0;
+                    }
+
+                    button {
+                        margin-left: auto;
+                    }
+                }
+            }
+
+            .client {
+                display: flex;
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    transition: 1s;
+                    opacity: 0;
                 }
             }
 
@@ -955,6 +1041,9 @@
                 opacity: 1;
                 visibility: visible;
                 transition: opacity 1s;
+                .client img {
+                    opacity: 1 !important;
+                }
 
                 .customer {
 
@@ -963,6 +1052,10 @@
                     &__about .quote,
                     &__about img {
                         transform: translate(0);
+                    }
+
+                    &__info img {
+                        opacity: 1 !important;
                     }
 
                     &__img {
@@ -1004,6 +1097,7 @@
     .customer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         &__img {
             width: 40%;
@@ -1017,7 +1111,7 @@
         &__about {
             flex: 1;
             width: 60%;
-            margin: 0 5% 140px 0;
+            margin: 0 5% 60px 0;
 
             .paragraph {
                 font-family: "Neue Montreal", sans-serif;
@@ -1048,12 +1142,13 @@
 
     .actions {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        width: 140px;
-        position: absolute;
-        bottom: 50px;
-        left: 0;
+        width: 100%;
+
+        .pagination {
+            width: 140px;
+        }
 
         .outlined {
             margin-right: 50px;
@@ -1061,20 +1156,25 @@
     }
 
     .pagination {
-        flex: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     @media screen and (max-width: $laptop) {
+        padding-top: 32px;
+
         .customer {
-            &__img {
-                width: 50%;
+            flex-direction: column-reverse;
+
+            &__info {
+                width: auto;
+                max-width: 400px !important;
+                margin-bottom: 32px;
             }
 
             &__about {
-                width: 50%;
+                width: auto;
 
                 .quote {
                     font-size: 24px;
@@ -1090,12 +1190,18 @@
     }
 
     @media screen and (max-width: $tablet) {
-        padding: 32px 24px 0;
+        .actions {
+            justify-content: flex-start;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 32px 24px;
 
         .customer {
             flex-direction: column-reverse;
 
-            &__img,
+            &__info,
             &__about {
                 width: 100%;
             }
@@ -1374,6 +1480,7 @@
             &:last-child {
                 align-self: flex-end;
             }
+
             &:first-child {
                 align-self: flex-start;
             }
@@ -1687,7 +1794,7 @@
     overflow: hidden;
     color: $ui-white;
     background-color: $text-main;
-  
+
     &__container {
         position: relative;
         padding: 96px 24px;
@@ -1706,55 +1813,55 @@
     .nav__container:not(:first-of-type) {
         margin-left: 35px;
     }
-  
+
     &__top {
-      position: relative;
-      // Above the shade
-      z-index: 1;
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 80px;
+        position: relative;
+        // Above the shade
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 80px;
     }
-  
+
     &__logo {
-      flex-shrink: 0;
-      width: 250px;
-  
-      > img {
-        display: block;
-        width: 100%;
-      }
+        flex-shrink: 0;
+        width: 250px;
+
+        >img {
+            display: block;
+            width: 100%;
+        }
     }
-  
+
     &__nav {
         display: flex;
-      flex-grow: 1;
-      margin-top: 20px;
-      padding-left: 5.8rem;
+        flex-grow: 1;
+        margin-top: 20px;
+        padding-left: 5.8rem;
     }
-  
-    &__bottom {
-      position: relative;
-    }
-  
-    &__copyright {
-      color: rgba(#fff, 0.8);
-      line-height: (16/12);
-      text-align: center;
 
-      p {
-          margin-bottom: 1em;
-      }
+    &__bottom {
+        position: relative;
+    }
+
+    &__copyright {
+        color: rgba(#fff, 0.8);
+        line-height: (16/12);
+        text-align: center;
+
+        p {
+            margin-bottom: 1em;
+        }
     }
 
     .payment__section {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-      img {
-          width: 100%;
-      }
+        img {
+            width: 100%;
+        }
     }
 
     .nav {
@@ -1798,7 +1905,7 @@
         }
     }
 }
-  
+
 
 .link {
     position: relative;
@@ -1829,4 +1936,21 @@
 
 .calendly-overlay {
     background-color: rgba(31, 31, 31, 0.9) !important;
+}
+
+.glide__bullets {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .glide__bullet {
+        height: 14px;
+        width: 14px;
+        background: #C4C4C4;
+        border-radius: 50%;
+
+        &--active {
+            background: $ui-green;
+        }
+    }
 }

@@ -6,6 +6,52 @@
     margin: 120px 0 40px;
 }
 
+@media screen and (max-width: $tablet) {
+    .video-player {
+        margin: 0 20px;
+
+        &__description {
+            padding: 40px 20px;
+        }
+    }
+
+    .video__wrap {
+        min-width: 160px;
+
+        &:hover .description {
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+
+        .description {
+            display: none;
+            left: 50%;
+            top: 50%;
+            width: auto;
+            padding: 4px 16px;
+            height: 40px;
+            border-radius: 32px;
+
+            transform: translate(-50%, -50%);
+
+            .content {
+                display: none;
+            }
+
+            span {
+                font-size: 16px;
+                line-height: 32px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $phone) {
+    .video__wrap {
+        min-width: 110px;
+    }
+}
+
 .category {
     width: 100%;
 
@@ -24,7 +70,7 @@
                 background: $ui-green;
                 color: $ui-figure-color;
             }
-            
+
             &:hover {
                 background: rgba($color: $ui-green, $alpha: 0.3);
             }
@@ -32,6 +78,26 @@
 
         &:not(:first-child) {
             margin-left: 20px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        &__navigation {
+            justify-content: space-between;
+        }
+
+        &__navigation-item {
+            a {
+                min-width: 130px;
+                padding: 8px 22px;
+
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
         }
     }
 }
@@ -60,13 +126,15 @@
 
     margin: 30px 0 50px;
 
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: space-around;
+    gap: 20px;
 
     &__wrap {
         overflow: hidden;
         border-radius: 18px;
-        max-width: 300px;
+        flex: 1;
+        max-width: 400px;
+        min-width: 300px;
 
         position: relative;
 
@@ -90,10 +158,12 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        gap: 10px;
 
         position: absolute;
 
-        width: calc(100% - 30px);
+        width: 100%;
+        box-sizing: border-box;
         left: 0;
         bottom: 0;
         background: rgba($color: $ui-black, $alpha: 0.5);
@@ -162,15 +232,15 @@
         position: relative;
 
         &:hover {
-            video.active ~ .controller[data-role=play] {
+            video.active~.controller[data-role=play] {
                 display: none;
             }
-        
-            video.active ~ .controller[data-role=pause] {
+
+            video.active~.controller[data-role=pause] {
                 display: inline-flex;
             }
 
-            video ~ .controller[data-role=play] {
+            video~.controller[data-role=play] {
                 display: inline-flex;
             }
         }
@@ -260,118 +330,164 @@
 }
 
 .touch-with-us {
+    padding: 50px 0;
     background: $ui-green;
     color: $ui-white;
 
-    overflow: hidden;
-    position: relative;
+    .container {
+        position: relative;
 
-    padding: 50px 0;
-
-    display: flex;
-    align-items: center;
-
-    .text {
-        width: 50%;
-        padding: 0 40px;
-    }
-
-    .form-offer {
-        width: 50%;
-        padding: 0 40px;
-        z-index: 10;
-    }
-
-    .input {
         display: flex;
-        border-radius: 12px;
-        overflow: hidden;
-        margin-bottom: 32px;
+        align-items: center;
 
-        input[type=email] {
-            flex: 1;
-            padding: 12px 24px;
+        .text {
+            width: 50%;
+            padding: 0 40px;
+        }
 
-            font-size: 18px;
-            line-height: 32px;
+        .form-offer {
+            width: 50%;
+            padding: 0 40px;
+            z-index: 10;
+        }
 
-            background: rgba($color: $ui-white, $alpha: 0.3);
-            color: $ui-white;
+        .input {
+            display: flex;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 32px;
 
-            &::placeholder {
+            input[type=email] {
+                flex: 1;
+                padding: 12px 24px;
+
+                font-size: 18px;
+                line-height: 32px;
+
+                background: rgba($color: $ui-white, $alpha: 0.3);
                 color: $ui-white;
+
+                &::placeholder {
+                    color: $ui-white;
+                }
+            }
+
+            input[type=submit] {
+                padding: 12px 24px;
+                background: #24CD90;
+
+                cursor: pointer;
+
+                font-family: 'Neue Montreal', sans-serif;
+                font-size: 20px;
+                line-height: 32px;
             }
         }
 
-        input[type=submit] {
-            padding: 12px 24px;
-            background: #24CD90;
-
-            cursor: pointer;
-
-            font-family: 'Neue Montreal', sans-serif;
-            font-size: 20px;
-            line-height: 32px;
-        }
-    }
-
-    .policy {
-        display: flex;
-        align-items: center;
-    }
-
-    .paragraph {
-        margin-top: 20px;
-    }
-
-    .square {
-        position: absolute;
-        background: rgba(255, 255, 255, 0.04);
-        border-radius: 24px;
-
-        height: 156px;
-        width: 156px;
-
-        right: -20px;
-        top: -20px;
-    }
-
-    .checkbox {
-        position: relative;
-        margin-right: 10px;
-
-        img {
-            display: none;
+        .policy {
+            display: flex;
+            align-items: center;
         }
 
-        input, label {
-            width: 24px;
-            height: 24px;
+        .paragraph {
+            margin-top: 20px;
         }
 
-        label {
+        .square {
             position: absolute;
-            background: $ui-white;
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 24px;
 
-            cursor: pointer;
+            height: 156px;
+            width: 156px;
 
-            top: 50%;
-            left: 50%;
-
-            transform: translate(-50%, -50%);
+            right: -20px;
+            top: -70px;
         }
 
-        input[type=checkbox]:checked ~ label img {
-            display: inline-block;
+        .checkbox {
+            position: relative;
+            margin-right: 10px;
+
+            img {
+                display: none;
+            }
+
+            input,
+            label {
+                width: 24px;
+                height: 24px;
+            }
+
+            label {
+                position: absolute;
+                background: $ui-white;
+                border-radius: 4px;
+
+                cursor: pointer;
+
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+            }
+
+            input[type=checkbox]:checked~label img {
+                display: inline-block;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+            }
         }
 
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+        @media screen and (max-width: $tablet) {
+            flex-wrap: wrap;
 
-            transform: translate(-50%, -50%);
+            .text {
+                width: 100%;
+                padding: 0 40px 32px;
+            }
+
+            .form-offer {
+                width: 100%;
+                padding: 0 40px;
+                z-index: 10;
+            }
+
+            .input {
+                input[type=email] {
+                    padding: 8px 16px;
+
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+
+                input[type=submit] {
+                    padding: 8px 16px;
+
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+
+            .policy {
+                font-size: 14px;
+                line-height: 17px;
+
+                .checkbox {
+
+                    input,
+                    label {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
         }
     }
 }

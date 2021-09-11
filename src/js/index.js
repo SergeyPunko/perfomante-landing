@@ -1,4 +1,6 @@
 import "babel-polyfill";
+import Glide from "@glidejs/glide";
+
 import Companies from "./sliders/companies";
 import Customers from "./sliders/customers";
 import Header from "./components/header";
@@ -12,13 +14,14 @@ import Dropdowns from "./components/dropdowns";
 import ObjectFillPolyfill from "./utils/object-fit-polyfill";
 import VideoPlayerModal from "./modals/video-player";
 import Portfolio from "./pages/portfolio";
-// import VideoPlayers from "./components/video-player";
+import Videos from "./sliders/video";
 
 window.onload = function () {
     Header.init();
     ObjectFillPolyfill.init();
     Customers.init();
     Companies.init();
+    Videos.init();
     Resources.init();
     Calendar.init();
     PricingModal.init();
@@ -28,5 +31,4 @@ window.onload = function () {
     Dropdowns.init();
     VideoPlayerModal.init();
     Portfolio.init();
-    // VideoPlayers.init();
 };
