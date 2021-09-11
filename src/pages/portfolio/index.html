@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.min.css">
+
+    <title>Document</title>
+
+    <style>
+        .tingle-modal__close {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header portfolio-header">
+        <div class="header__wrap">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="Perfomante logo">
+            </div>
+            <input type="checkbox" id="burger">
+            <label class="burger" for="burger"><img class="burger__menu" src="../img/burger.svg" alt="burger">
+                <div class="cross"></div>
+            </label>
+            <div class="menu">
+                <nav class="navigation">
+                    <ul class="navigation__container">
+                        <li class="navigation__item dropdown-container">
+                            <button class="dropdown-button">
+                                Services
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 4.28564L5.67747 7.34561C5.84821 7.54075 6.15179 7.54075 6.32253 7.34561L9 4.28564"
+                                        stroke="#22221F" stroke-width="0.998571" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown">
+                                <li class="dropdown__item">
+                                    <a class="link black" href="../#ads2d">
+                                        2d video ads
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="link black" href="../#ads3d">
+                                        3d video ads
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a class="link black" href="../#ugcads">
+                                        UGC video ads
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item"><a class="link black" href="../#cases">Cases</a></li>
+                        <li class="navigation__item"><a class="link black" href="#">Portfolio</a></li>
+                        <li class="navigation__item"><a class="link black" href="../#team">About us</a>
+                        </li>
+                        <li class="navigation__item"><a class="link black" target="_blank"
+                                href="https://perfomante.io/blog/?utm_source=main"
+                                onclick="gtag('event', 'Main_header_Blog')">Blog</a></li>
+                    </ul>
+                </nav>
+                <nav class="header-buttons">
+                    <a class="link black" target="_blank" href="https://app.perfomante.io/login">Sign in</a>
+                    <button class="outlined open-calendly" data-seo-target="demoClick">
+                        Request demo
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="videos-section">
+        <nav class="category">
+            <ul class="category__navigation">
+                <li class="category__navigation-item active"><a href="#2d">2D video</a></li>
+                <li class="category__navigation-item"><a href="#3d">3D video</a></li>
+                <li class="category__navigation-item"><a href="#UGC">UGC</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="filter">
+            <button class="filter__item">Game</button>
+            <button class="filter__item active">Health&Fit</button>
+            <button class="filter__item">Match-3</button>
+        </div> -->
+        <ul class="video">
+        </ul>
+        <div class="more"><button class="more-link aditional-paragraph">Load more</button></div>
+    </section>
+    <section class="touch-with-us">
+        <div class="square"></div>
+        <div class="text">
+            <h3>Wanna great performing video ads?</h3>
+            <p class="paragraph">Get in touch with one of our experts and
+                take a personal tour of Perfomante.</p>
+        </div>
+            <form class="form-offer">
+                <div class="input">
+                    <input required type="email" name="email" placeholder="Enter your email">
+                    <input type="submit" value="Get offer">
+                </div>
+                <div class="policy">
+                    <div class="checkbox">
+                        <input required type="checkbox" name="policy" id="policy">
+                        <label for="policy">
+                            <img src="../img/check.svg" alt="check">
+                        </label>
+                    </div>
+                    
+                    <p>By checking this box you are agreeing to our Privacy Policy.</p>
+                </div>
+            </form>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <!-- Top part -->
+            <div class="footer__top">
+                <!-- Logo -->
+                <div class="footer__logo">
+                    <img src="../img/Logo-light.svg" alt="Perfomante" draggable="false">
+                </div>
+                <!-- Navigation -->
+                <nav class="nav nav--footer footer__nav">
+                    <ul class="nav__container">
+                        <li class="nav__item nav__item--heading">
+                            Links
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/cntct">Info for clients</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/blog">Blog</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/privacy">Privacy Policy</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/cookies">Cookie Policy</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://perfomante.io/gdpr">GDPR</a>
+                        </li>
+                    </ul>
+                    <ul class="nav__container">
+                        <li class="nav__item nav__item--heading">
+                            Partners
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link"
+                                href="https://qonversion.io/?utm_source=perfomante&utm_medium=partners&utm_campaign=footer"
+                                target="_blank">Qonversion</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="https://asodesk.com/" target="_blank">ASOdesk</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Bottom part -->
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p><a class="link footer-link" href="mailto:hi@perfomante.io"><img src="../img/mail.svg"
+                                alt="">hi@perfomante.io</a></p>
+                    <p>&#169; 2021 All Rights Reserved. Perfomante &#171;LLC&#187;.</p>
+                    <p>HQ in Minsk, Belarus</p>
+                </div>
+            </div>
+            <div class="payment__section">
+                <img src="../img/payment.png" />
+            </div>
+        </div>
+    </footer>
+    <div class="to-top">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="10" fill="#337157" />
+            <rect x="2" y="2" width="20" height="20" rx="10" fill="white" fill-opacity="0.2" />
+            <rect x="2" y="2" width="20" height="20" rx="10" fill="black" fill-opacity="0.1" />
+            <path d="M16 11L12 7M12 7L8 11M12 7L12 17" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script src="../js/runtime.min.js"></script>
+    <script src="../js/main.min.js"></script>
+    <script src="../js/vendors.min.js"></script>
+</body>
+
+</html>

@@ -14,5 +14,12 @@ function modals() {
     .pipe(dest(`${config.dist}/modals`));
 }
 
+function pages() {
+  return src(`${config.source}/pages/**/*.*`)
+    .pipe(changed(`${config.source}/pages/*.*`))
+    .pipe(dest(`${config.dist}`));
+}
+
 exports.html = html;
 exports.modals = modals;
+exports.pages = pages;

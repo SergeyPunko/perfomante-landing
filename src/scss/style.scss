@@ -4,6 +4,8 @@
 @import "ui-items";
 @import "modals";
 
+@import "pages/portfolio";
+
 @import 'tingle.js/dist/tingle';
 @import "@glidejs/glide/dist/css/glide.core.min";
 
@@ -672,7 +674,6 @@
 
     .section-header {
         width: 570px;
-        margin: 0 0 0 auto;
         z-index: 2;
     }
 
@@ -692,16 +693,16 @@
 
     .ads {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         position: relative;
         z-index: 1;
         padding-top: 88px;
         margin: -56px 0 32px;
 
         &__video {
-            width: 50%;
             position: relative;
+            z-index: 10;
             
             video {
                 width: 100%;
@@ -739,7 +740,6 @@
         }
 
         &__text {
-            width: 40%;
             color: $text-dark;
         }
 

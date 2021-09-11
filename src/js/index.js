@@ -10,7 +10,9 @@ import Navigation from "./components/navigation";
 import NoBodyScroll from "./utils/noBodyScroll";
 import Dropdowns from "./components/dropdowns";
 import ObjectFillPolyfill from "./utils/object-fit-polyfill";
-import VideoPlayers from "./components/video-player";
+import VideoPlayerModal from "./modals/video-player";
+import Portfolio from "./pages/portfolio";
+// import VideoPlayers from "./components/video-player";
 
 window.onload = function () {
     Header.init();
@@ -24,5 +26,7 @@ window.onload = function () {
     Navigation.init();
     NoBodyScroll.init();
     Dropdowns.init();
-    VideoPlayers.init();
+    VideoPlayerModal.init();
+    Portfolio.init();
+    // VideoPlayers.init();
 };

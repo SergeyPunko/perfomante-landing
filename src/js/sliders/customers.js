@@ -4,7 +4,7 @@ import { sendGoalToAllTrackers } from '../analytics/send-events';
 
 const Customers = (function () {
     const slider = document.getElementById("slider");
-    const slides = slider.querySelectorAll(".glide__slide");
+    const slides = slider && slider.querySelectorAll(".glide__slide");
     const slideInfoElement = document.getElementById("slide-info");
 
     const initCarousel = function () { 
