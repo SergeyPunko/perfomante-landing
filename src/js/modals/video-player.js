@@ -6,7 +6,9 @@ const VideoPlayerModal = (function () {
         e.preventDefault();
 
         const modal = ModalService.init('../modals/video.html');
-        modal.modalBox.querySelector('video').innerHTML = video.innerHTML;
+        const videoElement = modal.modalBox.querySelector('video');
+        videoElement.innerHTML = video.innerHTML;
+        videoElement.poster = video.poster;
         modal.modalBox.querySelector('.video-player__description').innerHTML = video.parentElement.querySelector('.content').innerHTML;
 
         initControlsForModal(modal)

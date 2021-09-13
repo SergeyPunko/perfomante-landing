@@ -34,7 +34,6 @@ const Videos = (function () {
 
     const initSliders = () => {
         sliders.forEach(slide => {
-            console.log(slide.querySelector("video").children)
             slide.classList.remove("inline");
             const glide = new Glide(slide, {
                 type: "slider",

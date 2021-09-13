@@ -18,7 +18,7 @@ const Portfolio = (function () {
     const renderVideo = () => {
         const currentType = getCurrentType();
         const videos = getVideosByType(currentType);
-        console.log(videos)
+
         const slicedVideo = showAll ? videos : videos.slice(0,MAX_VIDEO_LENGTH);
         moreButton.classList.remove('hidden');
 
@@ -33,7 +33,7 @@ const Portfolio = (function () {
 
         const videosHTML = slicedVideo.map(video => `
             <li class="video__wrap">
-                <video class="video__player">
+                <video playsinline class="video__player" poster="../img/Karim.jpg">
                     ${video.sources.map(source => `<source src="${source}">`).join('')}
                     Your browser does not support the video tag.
                 </video>
