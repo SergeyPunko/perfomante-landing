@@ -750,7 +750,7 @@
         margin: -36px 0 32px;
 
         .link {
-            align-self: flex-end;
+            align-self: flex-start;
         }
 
         &__video {
@@ -830,6 +830,7 @@
                 &__wrap {
                     min-width: 250px;
                     max-width: 550px;
+                    height: auto !important;
                 }
             }
 
