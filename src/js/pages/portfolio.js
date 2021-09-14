@@ -12,14 +12,14 @@ const Portfolio = (function () {
     const videoTypeButton = document.querySelectorAll('.category__navigation-item > a');
     const formOffer = document.querySelector('.touch-with-us .form-offer')
 
-    const getCurrentType = () => window.location.hash || TYPE["2d"];
-    const getVideosByType = (type) => videosInformation.filter(video => video.type === type)
+    const getCurrentType = () => Object.values(TYPE).includes(window.location.hash) ? window.location.hash : "";
+    const getVideosByType = (type) => type ? videosInformation.filter(video => video.type === type) : videosInformation
 
     const renderVideo = () => {
         const currentType = getCurrentType();
         const videos = getVideosByType(currentType);
 
-        const slicedVideo = showAll ? videos : videos.slice(0,MAX_VIDEO_LENGTH);
+        const slicedVideo = showAll ? videos : videos.slice(0, MAX_VIDEO_LENGTH);
         moreButton.classList.remove('hidden');
 
         videoTypeButton.forEach(button => {
@@ -33,7 +33,7 @@ const Portfolio = (function () {
 
         const videosHTML = slicedVideo.map(video => `
             <li class="video__wrap">
-                <video playsinline class="video__player" poster="../img/Karim.jpg">
+                <video playsinline class="video__player" poster="${video.poster}" preload="none">
                     ${video.sources.map(source => `<source src="${source}">`).join('')}
                     Your browser does not support the video tag.
                 </video>
@@ -52,7 +52,7 @@ const Portfolio = (function () {
         videoContainer.innerHTML = videosHTML;
         VideoPlayerModal.init();
 
-        if(videos.length < MAX_VIDEO_LENGTH || showAll) {
+        if (videos.length < MAX_VIDEO_LENGTH || showAll) {
             moreButton.classList.add('hidden');
         }
     }
@@ -60,7 +60,7 @@ const Portfolio = (function () {
     const initButtonEventListeners = () => {
         renderVideo();
 
-        window.addEventListener('hashchange', ()=> {
+        window.addEventListener('hashchange', () => {
             showAll = false;
             renderVideo();
         })
@@ -72,8 +72,9 @@ const Portfolio = (function () {
     }
 
     const submitEvent = () => {
-        formOffer.onsubmit = withRecaptcha(offerHandler)
-    } 
+        formOffer.policy && (formOffer.policy.checked = true);
+        formOffer.onsubmit = withRecaptcha(offerHandler);
+    }
 
     const offerHandler = (target, token) => {
         const data = new FormData(target);

@@ -18,16 +18,26 @@ const VideoPlayerModal = (function () {
         const playButton = modal.modalBox.querySelector('.controller[data-role=play]');
         const pauseButton = modal.modalBox.querySelector('.controller[data-role=pause]');
         const closeButton = modal.modalBox.querySelector('.close');
+        const video = modal.modalBox.querySelector('video');
 
         const playVideo = () => {
-            const video = modal.modalBox.querySelector('video');
             video.play();
-            video.classList.add('active')
         }
 
         const pauseVideo = () => {
-            const video = modal.modalBox.querySelector('video');
             video.pause();
+        }
+
+        const onPlayHandler = () => {
+            video.classList.add('active')
+        }
+
+        const onPauseHandler = () => {
+            video.classList.remove('active');
+        }
+
+        const onEndHandler = () => {
+            video.currentTime = 0
             video.classList.remove('active');
         }
 
@@ -37,8 +47,16 @@ const VideoPlayerModal = (function () {
     
             closeButton.removeEventListener('click', close);
 
+            video.removeEventListener('play', onPlayHandler);
+            video.removeEventListener('pause', onPauseHandler);
+            video.removeEventListener('ended', onEndHandler);
+
             modal.close();
         }
+
+        video.addEventListener('play', onPlayHandler);
+        video.addEventListener('pause', onPauseHandler);
+        video.addEventListener('ended', onEndHandler);
 
         playButton.addEventListener('click', playVideo);
         pauseButton.addEventListener('click', pauseVideo);

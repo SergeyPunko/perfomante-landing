@@ -16,8 +16,16 @@ const Videos = (function () {
         btnControlPlay.forEach(control => {
             const video = control.parentElement.parentElement.querySelector('video');
 
-            control.addEventListener("click", () => {
-                video.play();
+            control.addEventListener("click", async () => {
+                const videos = document.querySelectorAll("video");
+                await videos.forEach(async v => {
+                    if(v !== video) {
+                        await v.load();
+                        v.classList.remove("active")
+                    }
+                })
+
+                await video.play();
                 video.classList.add("active")
             })
         })
@@ -25,8 +33,8 @@ const Videos = (function () {
         btnControlPause.forEach(control => {
             const video = control.parentElement.parentElement.querySelector('video');
 
-            control.addEventListener("click", () => {
-                video.pause();
+            control.addEventListener("click", async () => {
+                await video.pause();
                 video.classList.remove("active")
             })
         })

@@ -4,6 +4,10 @@
 
 .videos-section {
     margin: 120px 0 40px;
+
+    .section-header {
+        margin-bottom: 36px;
+    }
 }
 
 @media screen and (max-width: $tablet) {
@@ -19,12 +23,14 @@
         min-width: 160px;
 
         &:hover .description {
-            transform: translate(-50%, -50%);
-            display: flex;
+            display: flex !important;
+        }
+
+        & .video__player.active~.description {
+            display: none;
         }
 
         .description {
-            display: none;
             left: 50%;
             top: 50%;
             width: auto;
@@ -57,11 +63,13 @@
 
     &__navigation {
         display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     &__navigation-item {
         a {
-            min-width: 130px;
+            display: inline-flex;
             padding: 9px 32px;
             border-radius: 85px;
             background: $ui-gray;
@@ -76,28 +84,28 @@
             }
         }
 
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+        // &:not(:first-child) {
+        //     margin-left: 20px;
+        // }
     }
 
     @media screen and (max-width: $tablet) {
         &__navigation {
             justify-content: space-between;
+            gap: 10px;
         }
 
         &__navigation-item {
             a {
-                min-width: 130px;
                 padding: 8px 22px;
 
                 font-size: 13px;
                 line-height: 20px;
             }
 
-            &:not(:first-child) {
-                margin-left: 10px;
-            }
+            // &:not(:first-child) {
+            //     margin-left: 10px;
+            // }
         }
     }
 }
@@ -148,9 +156,6 @@
             width: 100%;
         }
 
-        &:hover .description {
-            transform: translateY(0);
-        }
     }
 
     .description {
@@ -170,10 +175,6 @@
         padding: 15px;
 
         color: $ui-white;
-
-        transform: translateY(100%);
-
-        transition: 500ms;
 
         &__title {
             font-family: "Neue Montreal", sans-serif;
@@ -209,6 +210,7 @@
 }
 
 .more-link {
+    font-size: 20px;
     color: $ui-green;
     border-bottom: 2px solid rgba($color: $ui-green, $alpha: 0.3);
 
@@ -233,16 +235,13 @@
     &__content {
         position: relative;
 
-        &:hover {
-            video.active~.controller[data-role=play] {
+        video.active {
+            &~.controller[data-role=play] {
                 display: none;
             }
 
-            video.active~.controller[data-role=pause] {
-                display: inline-flex;
-            }
-
-            video~.controller[data-role=play] {
+            &:hover~.controller[data-role=pause],
+            &~.controller:hover[data-role=pause] {
                 display: inline-flex;
             }
         }
@@ -263,6 +262,10 @@
         border-radius: 32px;
 
         padding: 8px 16px;
+
+        &[data-role=play] {
+            display: inline-flex;
+        }
     }
 
     &__description {

@@ -12,7 +12,6 @@ const Customers = (function () {
             startAt: 0,
             animationDuration: 350,
             perTouch: 1,
-            rewind: false
         }).mount()
     
         glide.on("run.after", setActiveSlide);
