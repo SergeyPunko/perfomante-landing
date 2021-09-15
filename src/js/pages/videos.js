@@ -74,9 +74,9 @@ export const videosInformation = [
     },
     {
         sources: [
-            'https://drive.google.com/u/1/uc?id=1lPCpIClxnChi-CEdWoQk-5pETBEFjriz&export=download'
+            'https://drive.google.com/u/1/uc?id=1qXrkrr-9nrjZpJZhFT7VhHsYDVkyUwb4&export=download'
         ],
-        poster: '../img/2d-videos/2d8.jpg',
+        poster: '../img/2d-videos/2d10.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
         title: 'Games. Hidden Object 1.'
@@ -92,9 +92,9 @@ export const videosInformation = [
     },
     {
         sources: [
-            'https://drive.google.com/u/1/uc?id=1qXrkrr-9nrjZpJZhFT7VhHsYDVkyUwb4&export=download'
+            'https://drive.google.com/u/1/uc?id=1lPCpIClxnChi-CEdWoQk-5pETBEFjriz&export=download'
         ],
-        poster: '../img/2d-videos/2d10.jpg',
+        poster: '../img/2d-videos/2d8.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
         title: 'Games. Hidden Object 1.'

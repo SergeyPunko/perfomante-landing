@@ -15,17 +15,15 @@ const VideoPlayerModal = (function () {
     };
 
     const initControlsForModal = (modal) => {
-        const playButton = modal.modalBox.querySelector('.controller[data-role=play]');
-        const pauseButton = modal.modalBox.querySelector('.controller[data-role=pause]');
         const closeButton = modal.modalBox.querySelector('.close');
         const video = modal.modalBox.querySelector('video');
 
         const playVideo = () => {
-            video.play();
-        }
-
-        const pauseVideo = () => {
-            video.pause();
+            if (video.classList.contains('active')) {
+                video.pause();
+            } else {
+                video.play();
+            }
         }
 
         const onPlayHandler = () => {
@@ -42,9 +40,8 @@ const VideoPlayerModal = (function () {
         }
 
         const close = () => {
-            playButton.removeEventListener('click', playVideo);
-            pauseButton.removeEventListener('click', pauseVideo);
-    
+            video.parentElement.removeEventListener('click', playVideo);
+
             closeButton.removeEventListener('click', close);
 
             video.removeEventListener('play', onPlayHandler);
@@ -58,15 +55,14 @@ const VideoPlayerModal = (function () {
         video.addEventListener('pause', onPauseHandler);
         video.addEventListener('ended', onEndHandler);
 
-        playButton.addEventListener('click', playVideo);
-        pauseButton.addEventListener('click', pauseVideo);
+        video.parentElement.addEventListener('click', playVideo);
 
         closeButton.addEventListener('click', close);
     }
 
     const initButtonEventListeners = function () {
-        if (document.querySelector('.video__player+.description .description__button') && document.querySelectorAll('.video__player')) {
-            const playButtonList = document.querySelectorAll('.video__player+.description .description__button');
+        if (document.querySelector('.video__wrap') && document.querySelectorAll('.video__player')) {
+            const playButtonList = document.querySelectorAll('.video__wrap');
             const videoList = document.querySelectorAll('.video__player');
 
             Array.prototype.slice.call(playButtonList).forEach((item, i) => {
@@ -80,8 +76,8 @@ const VideoPlayerModal = (function () {
     };
 
     const destroy = () => {
-        if (document.querySelector('.video__player+.description .description__button') && document.querySelectorAll('.video__player')) {
-            const playButtonList = document.querySelectorAll('.video__player+.description .description__button');
+        if (document.querySelector('.video__wrap') && document.querySelectorAll('.video__player')) {
+            const playButtonList = document.querySelectorAll('.video__wrap');
             const videoList = document.querySelectorAll('.video__player');
 
             Array.prototype.slice.call(playButtonList).forEach((item, i) => {

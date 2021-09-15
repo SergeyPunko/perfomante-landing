@@ -146,6 +146,8 @@
 
         position: relative;
 
+        cursor: pointer;
+
         &.hidden {
             display: none;
         }
@@ -212,7 +214,6 @@
 .more-link {
     font-size: 20px;
     color: $ui-green;
-    border-bottom: 2px solid rgba($color: $ui-green, $alpha: 0.3);
 
     &.hidden {
         display: none;
@@ -234,6 +235,7 @@
 
     &__content {
         position: relative;
+        cursor: pointer;
 
         video.active {
             &~.controller[data-role=play] {

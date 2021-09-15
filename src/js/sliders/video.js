@@ -9,33 +9,25 @@ const Videos = (function () {
         document.getElementById('2dslider')
     ].filter(Boolean)
 
-    const btnControlPlay = document.querySelectorAll(".desc-button[data-role=play]");
-    const btnControlPause = document.querySelectorAll(".desc-button[data-role=pause]");
+    const videos = document.querySelectorAll("video");
 
     const videoControl = () => {
-        btnControlPlay.forEach(control => {
-            const video = control.parentElement.parentElement.querySelector('video');
+        videos.forEach(video => {
+            video.parentElement.addEventListener("click", async () => {
+                if (video.classList.contains("active")) {
+                    await video.pause();
+                    video.classList.remove("active")
+                } else {
+                    await videos.forEach(async v => {
+                        if (v !== video) {
+                            await v.load();
+                            v.classList.remove("active")
+                        }
+                    })
 
-            control.addEventListener("click", async () => {
-                const videos = document.querySelectorAll("video");
-                await videos.forEach(async v => {
-                    if(v !== video) {
-                        await v.load();
-                        v.classList.remove("active")
-                    }
-                })
-
-                await video.play();
-                video.classList.add("active")
-            })
-        })
-
-        btnControlPause.forEach(control => {
-            const video = control.parentElement.parentElement.querySelector('video');
-
-            control.addEventListener("click", async () => {
-                await video.pause();
-                video.classList.remove("active")
+                    await video.play();
+                    video.classList.add("active")
+                }
             })
         })
     }

@@ -4,7 +4,7 @@ import { withRecaptcha } from "../utils/recaptcha-wrapper";
 import { TYPE, videosInformation } from "./videos";
 
 const Portfolio = (function () {
-    const MAX_VIDEO_LENGTH = 8;
+    const MAX_VIDEO_LENGTH = 9;
     let showAll = false
 
     const moreButton = document.querySelector('button.more-link');
