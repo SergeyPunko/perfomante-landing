@@ -32,7 +32,7 @@ const Portfolio = (function () {
         VideoPlayerModal.destroy();
 
         const videosHTML = slicedVideo.map(video => `
-            <li class="video__wrap">
+            <li class="video__wrap modal">
                 <video playsinline class="video__player" poster="${video.poster}" preload="none">
                     ${video.sources.map(source => `<source src="${source}">`).join('')}
                     Your browser does not support the video tag.

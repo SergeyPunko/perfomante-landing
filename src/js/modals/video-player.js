@@ -61,7 +61,7 @@ const VideoPlayerModal = (function () {
     }
 
     const initButtonEventListeners = function () {
-        if (document.querySelector('.video__wrap') && document.querySelectorAll('.video__player')) {
+        if (document.querySelector('.video__wrap.modal') && document.querySelectorAll('.video__player')) {
             const playButtonList = document.querySelectorAll('.video__wrap');
             const videoList = document.querySelectorAll('.video__player');
 
