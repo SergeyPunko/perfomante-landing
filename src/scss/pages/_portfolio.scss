@@ -63,11 +63,13 @@
 
     &__navigation {
         display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     &__navigation-item {
         a {
-            min-width: 130px;
+            display: inline-flex;
             padding: 9px 32px;
             border-radius: 85px;
             background: $ui-gray;
@@ -82,28 +84,28 @@
             }
         }
 
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+        // &:not(:first-child) {
+        //     margin-left: 20px;
+        // }
     }
 
     @media screen and (max-width: $tablet) {
         &__navigation {
             justify-content: space-between;
+            gap: 10px;
         }
 
         &__navigation-item {
             a {
-                min-width: 130px;
                 padding: 8px 22px;
 
                 font-size: 13px;
                 line-height: 20px;
             }
 
-            &:not(:first-child) {
-                margin-left: 10px;
-            }
+            // &:not(:first-child) {
+            //     margin-left: 10px;
+            // }
         }
     }
 }
