@@ -758,15 +758,32 @@
         &__video {
             position: relative;
 
-            &.inline {
-                .video {
-                    flex-wrap: wrap;
-
-                    &__wrap {
-                        height: auto;
-                    }
+            .video {
+                flex-flow: column wrap;
+                align-content: space-between;
+                justify-content: initial;
+                
+                &::before,
+                &::after {
+                    content: "";
+                    flex-basis: 100%;
+                    width: 0;
+                    order: 2;
                 }
 
+                &__wrap {
+                    height: auto;
+                    width: 31%;
+                    min-width: initial;
+                    flex: initial;
+
+                    &:nth-child(3n+1) { order: 1; }
+                    &:nth-child(3n+2) { order: 2; }
+                    &:nth-child(3n)   { order: 3; }
+                }
+            }
+
+            &.inline {
                 .glide__bullets {
                     display: none;
                 }
@@ -811,6 +828,35 @@
         }
     }
 
+    @media screen and (max-width: $laptop) {
+        .video {
+            gap: 0;
+            flex-direction: row !important;
+            flex-flow: initial !important;
+            align-content: initial !important;
+            justify-content: initial !important;
+            max-height: initial !important;
+            min-width: initial !important;
+
+            &__wrap {
+                height: auto !important;
+                max-width: initial !important;
+                height: auto !important;
+
+                &:nth-child(3n+1) { order: initial !important; }
+                &:nth-child(3n+2) { order: initial !important; }
+                &:nth-child(3n)   { order: initial !important; }
+            }
+
+            &::before,
+            &::after {
+                flex-basis: initial !important;
+                width: initial !important;
+                order: initial !important;
+            }
+        }
+    }
+
     @media screen and (max-width: $tablet) {
         .section-header {
             width: 100%;
@@ -825,16 +871,6 @@
         .ads {
             flex-direction: column;
             margin: 0;
-
-            .video {
-                gap: 0;
-
-                &__wrap {
-                    min-width: 250px;
-                    max-width: 550px;
-                    height: auto !important;
-                }
-            }
 
             &__text {
                 width: 100%;
@@ -1047,6 +1083,7 @@
     .benefits {
         font-size: 35px;
         line-height: 36px;
+        margin-bottom: 24px;
     }
 
     .count {
@@ -1200,12 +1237,16 @@
         .benefits {
             font-size: 17px;
             line-height: 20px;
+            margin-bottom: 9px;
         }
 
         .count {
             font-size: 10px;
             line-height: 12px;
-            margin: 9px 0;
+        }
+
+        .customer__content button {
+            margin-top: 9px;
         }
     }
 
@@ -1232,6 +1273,7 @@
             &__content {
                 display: flex;
                 flex-direction: row;
+                margin-top: 24px;
 
                 img {
                     width: 30% !important;

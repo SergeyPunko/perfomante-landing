@@ -16,7 +16,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d1.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'American Dad. games'
     },
     {
         sources: [
@@ -25,7 +25,7 @@ export const videosInformation = [
         type: TYPE["2d"],
         poster: '../img/2d-videos/2d2.jpg',
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'American Dad. games'
     },
     {
         sources: [
@@ -34,7 +34,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d3.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'American Dad. games'
     },
     {
         sources: [
@@ -43,7 +43,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d4.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'American Dad. games'
     },
     {
         sources: [
@@ -52,16 +52,16 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d5.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Dominos. games'
     },
     {
         sources: [
-            'https://drive.google.com/u/1/uc?id=1YE1LRxWJcNqq2j5P_iHRUy_cOEsvB9os&export=download'
+            'https://drive.google.com/u/1/uc?id=1rR-6xn0MyeMzc20hJxVNJZ-tuBQ8YMZ6&export=download'
         ],
-        poster: '../img/2d-videos/2d6.jpg',
+        poster: '../img/2d-videos/2d20.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'LogicLike. education'
     },
     {
         sources: [
@@ -70,7 +70,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d7.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Farm. games'
     },
     {
         sources: [
@@ -79,7 +79,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d10.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Rush Royale. games'
     },
     {
         sources: [
@@ -88,7 +88,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d9.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: ''
     },
     {
         sources: [
@@ -97,7 +97,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d8.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Hidden Object. games'
     },
     {
         sources: [
@@ -106,7 +106,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d11.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'GinRummy. games'
     },
     {
         sources: [
@@ -115,7 +115,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d12.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Sunset Secret. games'
     },
     {
         sources: [
@@ -124,7 +124,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d13.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Instadapp. Finance'
     },
     {
         sources: [
@@ -133,7 +133,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d14.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'JoinBlocks. games'
     },
     {
         sources: [
@@ -142,7 +142,7 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d15.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Rush royal. games'
     },
     {
         sources: [
@@ -151,7 +151,43 @@ export const videosInformation = [
         poster: '../img/2d-videos/2d16.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Spades. games'
+    },
+    {
+        sources: [
+            'https://drive.google.com/u/1/uc?id=1dUaH3vQiMEZFom2ZUDOTzEDaM8cpG4tg&export=download'
+        ],
+        poster: '../img/2d-videos/2d18.jpg',
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Weight loss. health&fitness'
+    },
+    {
+        sources: [
+            'https://drive.google.com/u/1/uc?id=16dEP7A5Io5CRyR2IKf4PSccXPw_i-OSt&export=download'
+        ],
+        poster: '../img/2d-videos/2d19.jpg',
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Simple. health&fitness'
+    },
+    {
+        sources: [
+            'https://drive.google.com/u/1/uc?id=1dzscQ9TBtq0V1WimNP9zs19O9pEy1Zzg&export=download'
+        ],
+        poster: '../img/2d-videos/2d17.jpg',
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Dragon Vale. games'
+    },
+    {
+        sources: [
+            'https://drive.google.com/u/1/uc?id=1YE1LRxWJcNqq2j5P_iHRUy_cOEsvB9os&export=download'
+        ],
+        poster: '../img/2d-videos/2d6.jpg',
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Dragon Vale. games'
     },
     {
         sources: [
@@ -160,7 +196,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/1.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Airport city. games'
     },
     {
         sources: [
@@ -169,7 +205,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/2.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Airport city. games'
     },
     {
         sources: [
@@ -178,7 +214,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/3.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Dawn of zombies - Survival. games'
     },
     {
         sources: [
@@ -187,7 +223,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/4.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Age of Magic. games'
     },
     {
         sources: [
@@ -196,7 +232,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/5.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Age of Magic. games'
     },
     {
         sources: [
@@ -205,7 +241,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/6.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Riverlands. games'
     },
     {
         sources: [
@@ -214,7 +250,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/7.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Riverlands. games'
     },
     {
         sources: [
@@ -223,7 +259,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/8.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'NitroNation. games'
     },
     {
         sources: [
@@ -232,7 +268,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/9.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'NitroNation. games'
     },
     {
         sources: [
@@ -241,7 +277,7 @@ export const videosInformation = [
         poster: '../img/3d-videos/10.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'NitroNation. games'
     },
     {
         sources: [
@@ -250,7 +286,7 @@ export const videosInformation = [
         poster: '../img/UGC/1.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Avakin Life. games'
     },
     {
         sources: [
@@ -259,7 +295,7 @@ export const videosInformation = [
         poster: '../img/UGC/2.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Mojo. video editor'
     },
     {
         sources: [
@@ -268,7 +304,7 @@ export const videosInformation = [
         poster: '../img/UGC/3.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Mojo. video editor'
     },
     {
         sources: [
@@ -277,7 +313,7 @@ export const videosInformation = [
         poster: '../img/UGC/4.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Keto Diet. health & fitness'
     },
     {
         sources: [
@@ -286,7 +322,7 @@ export const videosInformation = [
         poster: '../img/UGC/5.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Keto Diet. health & fitness'
     },
     {
         sources: [
@@ -295,7 +331,7 @@ export const videosInformation = [
         poster: '../img/UGC/6.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Keto Diet. health & fitness'
     },
     {
         sources: [
@@ -304,7 +340,7 @@ export const videosInformation = [
         poster: '../img/UGC/7.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Spades. games'
     },
     {
         sources: [
@@ -313,6 +349,33 @@ export const videosInformation = [
         poster: '../img/UGC/8.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Games. Hidden Object 1.'
+        title: 'Spades. games'
+    },
+    {
+        sources: [
+            'https://drive.google.com/u/1/uc?id=19jl9IUaxHTsIv4TXjGTYtxnnJxLAaHRQ&export=download'
+        ],
+        poster: '../img/UGC/9.jpg',
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'IQ Option. finance'
+    },
+    {
+        sources: [
+            'https://drive.google.com/u/1/uc?id=1UAtus5_gSRHVNeb1NolB6ftkILxRW6i6&export=download'
+        ],
+        poster: '../img/UGC/10.jpg',
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'Bloom. services'
+    },
+    {
+        sources: [
+            'https://drive.google.com/u/1/uc?id=1bn4fAvYczGeko8azXz6OGfExPh3eQmxN&export=download'
+        ],
+        poster: '../img/UGC/11.jpg',
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'IQ Option. finance'
     }
 ]

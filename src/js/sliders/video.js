@@ -16,7 +16,6 @@ const Videos = (function () {
             video.parentElement.addEventListener("click", async () => {
                 if (video.classList.contains("active")) {
                     await video.pause();
-                    video.classList.remove("active")
                 } else {
                     await videos.forEach(async v => {
                         if (v !== video) {
@@ -28,7 +27,15 @@ const Videos = (function () {
                     await video.play();
                     video.classList.add("active")
                 }
-            })
+            });
+
+            video.addEventListener('pause', ()=>{
+                video.classList.remove('active');
+            });
+            video.addEventListener('ended', ()=>{
+                video.load()
+                video.classList.remove('active');
+            });
         })
     }
 
@@ -61,14 +68,14 @@ const Videos = (function () {
 
     const init = function () {
         if (sliders.length) {
-            if (document.documentElement.clientWidth < 920) {
+            if (document.documentElement.clientWidth < 1024) {
                 initSliders();
             }
 
             window.addEventListener('resize', () => {
-                if (document.documentElement.clientWidth < 920 && !glides.length) {
+                if (document.documentElement.clientWidth < 1024 && !glides.length) {
                     initSliders()
-                } else if (document.documentElement.clientWidth > 920 && glides.length) {
+                } else if (document.documentElement.clientWidth > 1024 && glides.length) {
                     glides.forEach(glide => glide.destroy());
                     sliders.forEach(slide => slide.classList.add("inline"));
                     glides = []
