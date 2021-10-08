@@ -9,36 +9,6 @@ const Videos = (function () {
         document.getElementById('2dslider')
     ].filter(Boolean)
 
-    const videos = document.querySelectorAll("video");
-
-    const videoControl = () => {
-        videos.forEach(video => {
-            video.parentElement.addEventListener("click", async () => {
-                if (video.classList.contains("active")) {
-                    await video.pause();
-                } else {
-                    await videos.forEach(async v => {
-                        if (v !== video) {
-                            await v.load();
-                            v.classList.remove("active")
-                        }
-                    })
-
-                    await video.play();
-                    video.classList.add("active")
-                }
-            });
-
-            video.addEventListener('pause', ()=>{
-                video.classList.remove('active');
-            });
-            video.addEventListener('ended', ()=>{
-                video.load()
-                video.classList.remove('active');
-            });
-        })
-    }
-
     const initSliders = () => {
         sliders.forEach(slide => {
             slide.classList.remove("inline");
@@ -81,8 +51,6 @@ const Videos = (function () {
                     glides = []
                 }
             })
-
-            videoControl()
         }
     };
 

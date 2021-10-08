@@ -221,6 +221,20 @@
     }
 }
 
+video {
+    width: 100%;
+
+    &.active~.controller {
+        &[data-role=pause] {
+            display: inline-flex;
+        }
+
+        &[data-role=play] {
+            display: none;
+        }
+    }
+}
+
 .video-player {
     color: $ui-white;
     position: relative;

@@ -8,17 +8,23 @@ const Calendar = (function () {
     const openCalendlyModalBtn = document.querySelectorAll(".open-calendly");
 
     const initInlineCalendly = function () {
-        Calendly.initInlineWidget({
-            url: 'https://calendly.com/perfomante/30min?back=1&hide_event_type_details=1',
-            parentElement: calendly
-        });
+        if(calendly) {
+            Calendly.initInlineWidget({
+                url: 'https://calendly.com/perfomante/30min?back=1&hide_event_type_details=1',
+                parentElement: calendly
+            });
+        }
     };
 
     const initEventListeners = () => {
-        calendlyBtn.addEventListener("click", ()=> container.classList.toggle("calendly--open"));
-        Array.prototype.slice.call(openCalendlyModalBtn).forEach(element => {
-            element.addEventListener("click", openModal(element))
-        });
+        if(calendlyBtn) {
+            calendlyBtn.addEventListener("click", ()=> container.classList.toggle("calendly--open"));
+        }
+        if(openCalendlyModalBtn.length) {
+            Array.prototype.slice.call(openCalendlyModalBtn).forEach(element => {
+                element.addEventListener("click", openModal(element))
+            });
+        }
     }
 
     const openModal = ({ dataset }) => () => {
@@ -26,10 +32,8 @@ const Calendar = (function () {
         Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?back=1'});
     }
     const init = function () {
-        if (calendly && calendlyBtn && container) {
-            initInlineCalendly();
-            initEventListeners();
-        }
+        initInlineCalendly();
+        initEventListeners();
     };
 
     return {

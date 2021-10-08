@@ -6,6 +6,7 @@ const VideoPlayerModal = (function () {
         e.preventDefault();
 
         const modal = ModalService.init('../modals/video.html');
+        modal.modal.style.paddingTop = 0;
         const videoElement = modal.modalBox.querySelector('video');
         videoElement.innerHTML = video.innerHTML;
         videoElement.poster = video.poster;
@@ -14,59 +15,83 @@ const VideoPlayerModal = (function () {
         initControlsForModal(modal)
     };
 
+    const onPlayHandler = video => () => {
+        video.classList.add('active')
+    }
+
+    const onPauseHandler = video => () => {
+        video.classList.remove('active');
+    }
+
+    const onEndHandler = video => () => {
+        video.currentTime = 0
+        video.classList.remove('active');
+    }
+
+    const playVideo = video => async () => {
+        if (video.classList.contains('active')) {
+            await video.pause();
+        } else {
+            const videos = document.querySelectorAll('video');
+
+            await videos.forEach(async v => {
+                if (v !== video) {
+                    await v.load();
+                    v.classList.remove("active")
+                }
+            });
+
+            await video.play();
+        }
+    }
+
     const initControlsForModal = (modal) => {
         const closeButton = modal.modalBox.querySelector('.close');
         const video = modal.modalBox.querySelector('video');
 
-        const playVideo = () => {
-            if (video.classList.contains('active')) {
-                video.pause();
-            } else {
-                video.play();
-            }
-        }
-
-        const onPlayHandler = () => {
-            video.classList.add('active')
-        }
-
-        const onPauseHandler = () => {
-            video.classList.remove('active');
-        }
-
-        const onEndHandler = () => {
-            video.currentTime = 0
-            video.classList.remove('active');
-        }
-
         const close = () => {
-            video.parentElement.removeEventListener('click', playVideo);
-
             closeButton.removeEventListener('click', close);
 
-            video.removeEventListener('play', onPlayHandler);
-            video.removeEventListener('pause', onPauseHandler);
-            video.removeEventListener('ended', onEndHandler);
+            deleteVideoHandler(video);
 
             modal.close();
         }
 
-        video.addEventListener('play', onPlayHandler);
-        video.addEventListener('pause', onPauseHandler);
-        video.addEventListener('ended', onEndHandler);
-
-        video.parentElement.addEventListener('click', playVideo);
+        videoHandler(video);
 
         closeButton.addEventListener('click', close);
     }
 
-    const initButtonEventListeners = function () {
-        if (document.querySelector('.video__wrap.modal') && document.querySelectorAll('.video__player')) {
-            const playButtonList = document.querySelectorAll('.video__wrap');
-            const videoList = document.querySelectorAll('.video__player');
+    const videoHandler = video => {
+        video.addEventListener('play', onPlayHandler(video));
+        video.addEventListener('pause', onPauseHandler(video));
+        video.addEventListener('ended', onEndHandler(video));
 
+        video.parentElement.addEventListener('click', playVideo(video));
+    }
+
+    const deleteVideoHandler = video => {
+        video.parentElement.removeEventListener('click', playVideo(video));
+
+        video.removeEventListener('play', onPlayHandler(video));
+        video.removeEventListener('pause', onPauseHandler(video));
+        video.removeEventListener('ended', onEndHandler(video));
+    }
+
+    const initButtonEventListeners = function () {
+        const playButtonList = document.querySelectorAll('.video__wrap');
+        const videoList = document.querySelectorAll('.video__player');
+
+        if (playButtonList.length && videoList.length) {
             Array.prototype.slice.call(playButtonList).forEach((item, i) => {
-                item.addEventListener('click', createModal(videoList[i]));
+                const video = videoList[i];
+                if(document.documentElement.clientWidth < 1024 && item.classList.contains("modal")){
+                    item.addEventListener('click', createModal(video));
+
+                    return
+                }
+
+                videoHandler(video);
             });
         }
     };
@@ -76,12 +101,20 @@ const VideoPlayerModal = (function () {
     };
 
     const destroy = () => {
-        if (document.querySelector('.video__wrap') && document.querySelectorAll('.video__player')) {
-            const playButtonList = document.querySelectorAll('.video__wrap');
-            const videoList = document.querySelectorAll('.video__player');
+        const playButtonList = document.querySelectorAll('.video__wrap');
+        const videoList = document.querySelectorAll('.video__player');
 
+        if (playButtonList.length && videoList.length) {
             Array.prototype.slice.call(playButtonList).forEach((item, i) => {
-                item.removeEventListener('click', createModal(videoList[i]));
+                const video = videoList[i];
+
+                if(document.documentElement.clientWidth < 1024){
+                    item.removeEventListener('click', createModal(video));
+
+                    return
+                }
+
+                deleteVideoHandler(video);
             });
         }
     }

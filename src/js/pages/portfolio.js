@@ -41,9 +41,14 @@ const Portfolio = (function () {
                     <div class="content">
                         <p class="description__title">${video.title}</p>
                         <!-- <span class="description__category">${video.category}</span> -->
-                    </div>  
-                    <button class="description__button">
-                        <img src="../img/video-play.png" alt="play"><span>Play</span>
+                    </div> 
+                    <button class="desc-button" data-role='play'>
+                        <img src="../img/video-play.png" alt="play">
+                        <span>Play</span>
+                    </button>
+                    <button class="desc-button" data-role='pause'>
+                        <img src="../img/video-pause.png" alt="pause">
+                        <span>Pause</span>
                     </button>
                 </div>
             </li> 
