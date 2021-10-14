@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    block head
+      include _head
+  body
+    include _mixins
+    include _header
+    block content
+    include _footer
+    //- block scripts-config
+    block scripts
+      include _scripts

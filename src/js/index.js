@@ -12,23 +12,48 @@ import Navigation from "./components/navigation";
 import NoBodyScroll from "./utils/noBodyScroll";
 import Dropdowns from "./components/dropdowns";
 import ObjectFillPolyfill from "./utils/object-fit-polyfill";
-import VideoPlayerModal from "./modals/video-player";
 import Portfolio from "./pages/portfolio";
 import Videos from "./sliders/video";
+import caseSlider from './sliders/case-slider'
 
-window.onload = function () {
-    Header.init();
-    ObjectFillPolyfill.init();
-    Customers.init();
-    Companies.init();
-    Videos.init();
-    Resources.init();
-    Calendar.init();
-    PricingModal.init();
-    OfferModal.init();
-    Navigation.init();
-    NoBodyScroll.init();
-    Dropdowns.init();
-    VideoPlayerModal.init();
-    Portfolio.init();
-};
+// Инициализируем только необходимые скрипты для определенной страницы
+export function initMainScript(page) {
+    if (page === 'index') {
+        Header.init();
+        Dropdowns.init();
+        ObjectFillPolyfill.init();
+        Videos.init();
+        Customers.init();
+        Companies.init();
+        Resources.init();
+        Calendar.init();
+        PricingModal.init();
+        OfferModal.init();
+        Navigation.init();
+        NoBodyScroll.init();
+    } else if (page === 'portfolio') {
+        Header.init();
+        Dropdowns.init();
+        ObjectFillPolyfill.init();
+        Customers.init();
+        Companies.init();
+        Resources.init();
+        Calendar.init();
+        PricingModal.init();
+        OfferModal.init();
+        Navigation.init();
+        NoBodyScroll.init();
+        Portfolio.init();
+    } else if (page === 'cases') {
+        Header.init();
+        Dropdowns.init();
+        ObjectFillPolyfill.init();
+        caseSlider();
+    } else if (page === 'case') {
+        Header.init();
+        Dropdowns.init();
+        ObjectFillPolyfill.init();
+        caseSlider();
+    }
+}
+window.initMainScript = initMainScript;

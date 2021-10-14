@@ -1,0 +1,30 @@
+mixin case-link(link, src, precent, tag, name)
+  a.case-link(href=link) 
+    .case-link__top
+      .case-link__logo.case-banner__logo
+        img(src=src, alt="")
+      .case-link__procent.case-banner__precent
+        span=precent 
+        img(src="./img/precent.svg", alt="")
+      h3.case-banner__small-title more efficient (lower) Cost Per Lead 
+      p.case-banner__small-description 30 creative assets procuced
+    .case-link__bottom 
+      h4.case-link__tag=tag
+      .case-link__name=name
+mixin offer(text)
+  section.touch-with-us&attributes(attributes)
+    .container
+      .square
+      .text
+        h3 Wanna great performing video ads?
+        p.paragraph=text
+      form.form-offer
+        .input
+          input(required='', type='email', name='email', placeholder='Enter your email')
+          input(type='submit', value='Get offer')
+        .policy
+          .checkbox
+            input#policy(required='', type='checkbox', name='policy')
+            label(for='policy')
+              img(src='./img/check.svg', alt='check')
+          p By checking this box you are agreeing to our Privacy Policy.

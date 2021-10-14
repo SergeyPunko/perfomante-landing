@@ -1,6 +1,18 @@
 const { src, dest } = require('gulp');
 const changed = require('gulp-changed');
 const config = require('./_config');
+const pug = require('gulp-pug');
+
+
+function views() {
+  return src('./src/views/*.*')
+    .pipe(
+      pug({
+        pretty: true,
+      })
+    )
+    .pipe(dest('./dist'));
+};
 
 function html() {
   return src(`${config.source}/*.html`)
@@ -20,6 +32,7 @@ function pages() {
     .pipe(dest(`${config.dist}`));
 }
 
-exports.html = html;
+exports.views = views;
 exports.modals = modals;
 exports.pages = pages;
+exports.html = html;

@@ -8,4 +8,4 @@ function scripts() {
     .pipe(dest(`${config.dist}/js`));
 }
 
-module.exports = scripts;
+exports.scripts = scripts;

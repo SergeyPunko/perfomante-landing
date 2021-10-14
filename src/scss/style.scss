@@ -5,9 +5,11 @@
 @import "modals";
 
 @import "pages/portfolio";
+@import "pages/cases";
 
 @import 'tingle.js/dist/tingle';
 @import "@glidejs/glide/dist/css/glide.core.min";
+
 
 .to-top {
     position: fixed;
@@ -663,38 +665,6 @@
     }
 }
 
-.video__player {
-    cursor: pointer;
-
-    &+.description .desc-button[data-role=pause] {
-        display: none;
-    }
-
-    &.active+.description .desc-button[data-role=play] {
-        display: none;
-    }
-
-    &.active+.description .desc-button[data-role=pause] {
-        display: flex;
-    }
-}
-
-.desc-button {
-    display: flex;
-    align-items: center;
-
-    img {
-        width: 20px;
-        margin-right: 3px;
-    }
-
-    span {
-        font-family: "Neue Montreal", sans-serif;
-        font-weight: bold;
-        font-size: 18px;
-    }
-}
-
 .services {
     .square {
         position: absolute;
@@ -742,6 +712,58 @@
         margin-bottom: 30px;
     }
 
+    .video__player {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+
+        &+.description .desc-button[data-role=pause] {
+            display: none;
+        }
+
+        &.active+.description .desc-button[data-role=play] {
+            display: none;
+        }
+
+        &.active+.description .desc-button[data-role=pause] {
+            display: flex;
+        }
+
+        .video-bg-overlay {
+            position: absolute;
+            width: 363px;
+            height: 363px;
+            left: calc(50% - 363px/2);
+            top: calc(50% - 363px/2);
+        }
+        .video-iframe {
+            width:100%;
+            height: 100%;
+            & > div {
+                padding: 0px!important;
+                width: 100%!important;
+                height: 100%!important;
+            }
+        }
+    }
+
+    .desc-button {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+            margin-right: 3px;
+        }
+
+        span {
+            font-family: "Neue Montreal", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
     .ads {
         display: flex;
         flex-direction: column;
@@ -763,6 +785,14 @@
                 align-content: space-between;
                 justify-content: initial;
 
+                &::before,
+                &::after {
+                    content: "";
+                    flex-basis: 100%;
+                    width: 0;
+                    order: 2;
+                }
+
                 &__wrap {
                     height: auto;
                     width: 31%;
@@ -778,6 +808,20 @@
             &.inline {
                 .glide__bullets {
                     display: none;
+                }
+            }
+
+            video {
+                width: 100%;
+
+                &.active~.controller {
+                    &[data-role=pause] {
+                        display: inline-flex;
+                    }
+
+                    &[data-role=play] {
+                        display: none;
+                    }
                 }
             }
 
@@ -824,6 +868,17 @@
                 &:nth-child(3n+1) { order: initial !important; }
                 &:nth-child(3n+2) { order: initial !important; }
                 &:nth-child(3n)   { order: initial !important; }
+
+                iframe {
+                    visibility: hidden;
+                }
+            }
+
+            &::before,
+            &::after {
+                flex-basis: initial !important;
+                width: initial !important;
+                order: initial !important;
             }
         }
     }
@@ -1094,10 +1149,6 @@
             color: $ui-green;
         }
 
-        &__more {
-            display: none;
-        }
-
         &__info {
             max-width: 30%;
             background: $ui-white;
@@ -1242,23 +1293,13 @@
             }
 
             &__info {
-                padding: 16px;
-                margin-bottom: 16px;
-
-                button {
-                    display: none;
-                }
-            }
-
-            &__more {
-                display: inline-block;
-                align-self: flex-end;
-                margin-bottom: 32px;
+                padding: 20px;
             }
 
             &__content {
                 display: flex;
                 flex-direction: row;
+                margin-top: 24px;
 
                 img {
                     width: 30% !important;
@@ -2015,3 +2056,16 @@
         }
     }
 }
+
+.inner-main{
+    padding: 160px 0 81px;
+    background-color: #FDF9F5;
+    margin-bottom: 60px;
+}
+
+.buttin-center {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
