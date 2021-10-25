@@ -41,7 +41,11 @@
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "body-scroll-lock": "^3.1.5",
+    "gulp-filter": "^7.0.0",
+    "gulp-pug": "^5.0.0",
     "jump.js": "^1.0.2",
-    "tingle.js": "^0.16.0"
+    "swiper": "^7.0.6",
+    "tingle.js": "^0.16.0",
+    "uuid": "^8.3.2"
   }
 }

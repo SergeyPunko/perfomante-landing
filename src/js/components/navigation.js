@@ -27,7 +27,7 @@ const Navigation = (function () {
             const sectionOffsetTop = section.getBoundingClientRect().top + window.pageYOffset - offset;
             const sectionHeight = section.getBoundingClientRect().height;
             const id = section.id;
-            if (window.pageYOffset >= sectionOffsetTop && window.pageYOffset < sectionOffsetTop+sectionHeight+offset) {
+            if (window.pageYOffset >= sectionOffsetTop && window.pageYOffset < sectionOffsetTop + sectionHeight + offset) {
                 const currentlyActiveNavLinkElem = document.querySelector('.link.active');
                 const activeNavLinkElem = document.querySelector(`.link[href="#${id}"]`);
 
@@ -69,7 +69,9 @@ const Navigation = (function () {
 
         const scrollHandler = () => {
             highlightNavLink();
-            showElem(toTopBtn);
+            if (toTopBtn) {
+                showElem(toTopBtn);
+            }
         }
 
         scrollHandler()

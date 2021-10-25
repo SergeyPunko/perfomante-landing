@@ -5,7 +5,7 @@ const VideoPlayers = (function () {
     const videos = document.querySelectorAll('video');
 
     const videoHandler = function () {
-        if(stopHandler) {
+        if (stopHandler) {
             return;
         }
         const activeVideo = document.querySelector('video.active');
@@ -34,11 +34,11 @@ const VideoPlayers = (function () {
                 video.classList.remove("active");
             })
 
-            video.parentNode.querySelector('.controller[data-role=pause]').addEventListener("click",()=>{
+            video.parentNode.querySelector('.controller[data-role=pause]').addEventListener("click", () => {
                 stopHandler = true;
                 stopVideo(video, true);
             });
-            video.parentNode.querySelector('.controller[data-role=play]').addEventListener("click",()=>playVideo(video));
+            video.parentNode.querySelector('.controller[data-role=play]').addEventListener("click", () => playVideo(video));
         })
     }
 

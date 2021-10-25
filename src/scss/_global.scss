@@ -2,7 +2,7 @@
 @import "mixin";
 
 @include font("GT Flexa Trial", "GT-Flexa-Standard-Regular", "400", "normal");
-@include font("Neue Montreal", "NeueMontreal-Bold", "400", "normal");
+@include font("Neue Montreal", "NeueMontreal-Bold", "bold", "normal");
 
 html {
     overflow: auto;
@@ -31,6 +31,14 @@ h1 {
     font-weight: bold;
     font-size: 64px;
     line-height: 80px;
+}
+
+h2{
+    font-family: "Neue Montreal", sans-serif;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 60px;
+    margin-bottom: 35px;
 }
 
 h5,
@@ -65,15 +73,19 @@ h4 {
 
 h3 {
     font-family: "Neue Montreal", sans-serif;
-    font-weight: bold;
     font-size: 44px;
     line-height: 56px;
+    font-weight: bold;
 }
 
 .section-header {
     h3 {
         margin: 8px 0;
     }
+}
+
+video{
+    display: block;
 }
 
 @media screen and (max-width: $phone) {
@@ -101,5 +113,11 @@ h3 {
     .paragraph {
         font-size: 16px;
         line-height: 28px;
+    }
+
+    h2{
+        font-size: 24px;
+        line-height: 150%;
+        margin-bottom: 22px;
     }
 }

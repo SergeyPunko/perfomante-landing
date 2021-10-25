@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export const TYPE = {
     "3d": "#3d",
     "2d": "#2d",
@@ -8,374 +10,562 @@ export const CATEGORY = {
     PLAYGAME: "PLAYGAME"
 }
 
+function generateUniqueId(prefix) {
+    return `${prefix}-${uuidv4()}`;
+}
+
+
 export const videosInformation = [
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-american-dad-underground.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1aPQAbmsaPLBZ7Zi9Y5ilkj24UtkAV4KS&export=download'
-        ],
-        poster: '../img/2d-videos/2d1.jpg',
-        type: TYPE["2d"],
-        category: CATEGORY.PLAYGAME,
-        title: 'American Dad. games'
-    },
-    {
-        sources: [
-            'https://drive.google.com/u/1/uc?id=1w21D8MqkvOde7aX21TNxiNxD1aUfMXOn&export=download'
+            'https://player.vimeo.com/video/556182786'
         ],
         type: TYPE["2d"],
-        poster: '../img/2d-videos/2d2.jpg',
         category: CATEGORY.PLAYGAME,
-        title: 'American Dad. games'
+        title: 'American dad Underground'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-hidden-object-square.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1I-sbwpJLPLA2WBxsgc9Z27DsOOq3tM9O&export=download'
+            'https://player.vimeo.com/video/554652338'
         ],
-        poster: '../img/2d-videos/2d3.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'American Dad. games'
+        title: 'Hidden Object'
     },
     {
+        id: generateUniqueId('portfolio-video'),
         sources: [
-            'https://drive.google.com/u/1/uc?id=1-ZDTw_lRwtynE8jx3HoflsGKbiJrrtfI&export=download'
+            'https://player.vimeo.com/video/618979427'
         ],
-        poster: '../img/2d-videos/2d4.jpg',
+        poster: '../img/new-previews/2d/2d-hs-room-man-1.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'American Dad. games'
+        title: 'Hustle Castle Room Men'
     },
     {
+        id: generateUniqueId('portfolio-video'),
         sources: [
-            'https://drive.google.com/u/1/uc?id=1PMq2ivkeMIj8CamkfjMl7iAD2MUwqcqa&export=download'
+            'https://player.vimeo.com/video/618987455'
         ],
-        poster: '../img/2d-videos/2d5.jpg',
+        poster: '../img/new-previews/2d/2d-1.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Dominos. games'
+        title: 'Merge Inn. food'
     },
     {
+        id: generateUniqueId('portfolio-video'),
         sources: [
-            'https://drive.google.com/u/1/uc?id=1rR-6xn0MyeMzc20hJxVNJZ-tuBQ8YMZ6&export=download'
+            'https://player.vimeo.com/video/618987351'
         ],
-        poster: '../img/2d-videos/2d20.jpg',
+        type: TYPE["2d"],
+        poster: '../img/new-previews/2d/2d-2.jpg',
+        category: CATEGORY.PLAYGAME,
+        title: 'Merge In. Food Tinder'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-dominoes.jpg',
+        sources: [
+            'https://player.vimeo.com/video/554748442'
+        ],
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'LogicLike. education'
+        title: 'Dominoes'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-american-dad-escape.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1qcSSuV_xImd5c2jYZ2XeKiua1sDbhGmi&export=download'
+            'https://player.vimeo.com/video/556182633'
         ],
-        poster: '../img/2d-videos/2d7.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Farm. games'
+        title: 'American Dad. Escape'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-american-dad-roulete.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1qXrkrr-9nrjZpJZhFT7VhHsYDVkyUwb4&export=download'
+            'https://player.vimeo.com/video/556182677'
         ],
-        poster: '../img/2d-videos/2d10.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Rush Royale. games'
+        title: 'American Dad Roulette'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-hidden-object.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1bOGnSAlxByNbZws3e9j53Z0GIfehMbGU&export=download'
+            'https://player.vimeo.com/video/554744308'
         ],
-        poster: '../img/2d-videos/2d9.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: ''
+        title: 'Games Hidden Object'
     },
+
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-hs-room-man-2.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1lPCpIClxnChi-CEdWoQk-5pETBEFjriz&export=download'
+            'https://player.vimeo.com/video/618979302'
         ],
-        poster: '../img/2d-videos/2d8.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Hidden Object. games'
+        title: 'Hustle Castle Combat Tower. 2D'
     },
     {
+        id: generateUniqueId('portfolio-video'),
         sources: [
-            'https://drive.google.com/u/1/uc?id=1Fy6QUCkOLx6I0f5xGHXP1WBDtCjTz0Xw&export=download'
+            'https://player.vimeo.com/video/618982000'
         ],
-        poster: '../img/2d-videos/2d11.jpg',
+        poster: '../img/new-previews/2d/2d-zero-city-1.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'GinRummy. games'
+        title: 'Zero City'
     },
     {
+        id: generateUniqueId('portfolio-video'),
         sources: [
-            'https://drive.google.com/u/1/uc?id=1vGj8vME8u_J8-1pJuDYDs0JiGFVsLTFp&export=download'
+            'https://player.vimeo.com/video/618981813'
         ],
-        poster: '../img/2d-videos/2d12.jpg',
+        poster: '../img/new-previews/2d/2d-hustle-castle-potion.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Sunset Secret. games'
+        title: 'Hustle Castle. Potion Puzzle'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-dragon-vale.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1zpKZZLbubqofSFFsfqcNkKB8XxiloOJF&export=download'
+            'https://player.vimeo.com/video/618875839'
         ],
-        poster: '../img/2d-videos/2d13.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Instadapp. Finance'
+        title: 'DragonVale Games'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-hidden-object-1.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1ZPv94L0N9a8g-CndN5ktO2Ip3EbVprv8&export=download'
+            'https://player.vimeo.com/video/554744406'
         ],
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Games. Hidden Object'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-instadapp.jpg',
+        sources: [
+            'https://player.vimeo.com/video/580225159'
+        ],
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Instadapp'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-idle-game.jpg',
+        sources: [
+            'https://player.vimeo.com/video/574512909'
+        ],
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Idle Game example'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-rush-royal.jpg',
+        sources: [
+            'https://player.vimeo.com/video/556344370'
+        ],
+        type: TYPE["2d"],
+        category: CATEGORY.PLAYGAME,
+        title: 'Rush Royale'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
         poster: '../img/2d-videos/2d14.jpg',
+        sources: [
+            'https://player.vimeo.com/video/554748795'
+        ],
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'JoinBlocks. games'
+        title: 'Games. Rush Royale'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-join-blocks.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1lqV9g8rv-EhArgqIPhJHU9KnseK4HMNj&export=download'
+            'https://player.vimeo.com/video/554748396'
         ],
-        poster: '../img/2d-videos/2d15.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Rush royal. games'
+        title: 'Join blocks'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-join-spades.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1-7udWi4RPRVb5X1abcMTIcMOzSTeJVFm&export=download'
+            'https://player.vimeo.com/video/554748344'
         ],
-        poster: '../img/2d-videos/2d16.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Spades. games'
+        title: 'Spades'
     },
     {
-        sources: [
-            'https://drive.google.com/u/1/uc?id=1dUaH3vQiMEZFom2ZUDOTzEDaM8cpG4tg&export=download'
-        ],
-        poster: '../img/2d-videos/2d18.jpg',
-        type: TYPE["2d"],
-        category: CATEGORY.PLAYGAME,
-        title: 'Weight loss. health&fitness'
-    },
-    {
-        sources: [
-            'https://drive.google.com/u/1/uc?id=16dEP7A5Io5CRyR2IKf4PSccXPw_i-OSt&export=download'
-        ],
-        poster: '../img/2d-videos/2d19.jpg',
-        type: TYPE["2d"],
-        category: CATEGORY.PLAYGAME,
-        title: 'Simple. health&fitness'
-    },
-    {
-        sources: [
-            'https://drive.google.com/u/1/uc?id=1dzscQ9TBtq0V1WimNP9zs19O9pEy1Zzg&export=download'
-        ],
+        id: generateUniqueId('portfolio-video'),
         poster: '../img/2d-videos/2d17.jpg',
+        sources: [
+            'https://player.vimeo.com/video/522270200'
+        ],
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Dragon Vale. games'
+        title: 'DragonVale Games'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/2d/2d-american-dad-apocalypse.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1YE1LRxWJcNqq2j5P_iHRUy_cOEsvB9os&export=download'
+            'https://player.vimeo.com/video/522270072'
         ],
-        poster: '../img/2d-videos/2d6.jpg',
         type: TYPE["2d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Dragon Vale. games'
+        title: 'American Dad Apocalypse Soon'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/age-of-magic.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1yAZEskue417sm3O7gCfDn0CyD7CFEYQh&export=download'
+            'https://player.vimeo.com/video/582858764'
         ],
-        poster: '../img/3d-videos/1.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Airport city. games'
+        title: 'Age of Magic. Battle'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/age-of-magic-3.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1a9Pcn6NrwLAyAtrQUHKKtCK-_6NYO--6&export=download',
+            'https://player.vimeo.com/video/582858451'
         ],
-        poster: '../img/3d-videos/2.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Airport city. games'
+        title: 'Age of Magic. Fresh tower'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/age-of-magic-4.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1AAj5dGRf67ABWTaO7VEtaCGM9ePqUQds&export=download'
+            'https://player.vimeo.com/video/582856768'
         ],
-        poster: '../img/3d-videos/3.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Dawn of zombies - Survival. games'
+        title: 'Age of Magic. Throne road'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/age-of-magic-5.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1hlH6re910NcPEXx7Zo_2WEvULQq-Y2j0&export=download'
+            'https://player.vimeo.com/video/582856901'
         ],
-        poster: '../img/3d-videos/4.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Age of Magic. games'
+        title: 'Age of Magic. Best Arcade'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/age-of-magic-2.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1T0lYcC8Vp_5WBlVcmGV5oOTDNTC3_0cG&export=download'
+            'https://player.vimeo.com/video/582853442'
         ],
-        poster: '../img/3d-videos/5.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Age of Magic. games'
+        title: 'Age of Magic. Roland&Balthazar'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/airport-city.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1MFDSIBHRwI58qVFkC7qy3AMPrb1xMNR4&export=download'
+            'https://player.vimeo.com/video/537291200'
         ],
-        poster: '../img/3d-videos/6.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Riverlands. games'
+        title: 'Airport City'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/airport-city-2.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=15sn-6XellNpU4YU8r7fNm56zFgfn_21b&export=download'
+            'https://player.vimeo.com/video/522290279'
         ],
-        poster: '../img/3d-videos/7.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Riverlands. games'
+        title: '3D video. Airport City. Bridge'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/airport-city-3.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1aTRaZuVzT-s3kGPaYPHW7T1AucBXZd2w&export=download'
+            'https://player.vimeo.com/video/580220396'
         ],
-        poster: '../img/3d-videos/8.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'NitroNation. games'
+        title: 'Airport City Boeing'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/autochess-2.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1MP-8cTZcRToi8ibUeDdq2rqrxwfr-npi&export=download'
+            'https://player.vimeo.com/video/522290353'
         ],
-        poster: '../img/3d-videos/9.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'NitroNation. games'
+        title: 'Autochess heroes'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/unity.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1dK0G686Wj59ZXP4vrhGI6EYtATHkWHIW&export=download'
+            'https://player.vimeo.com/video/556176205'
         ],
-        poster: '../img/3d-videos/10.jpg',
         type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'NitroNation. games'
+        title: '3D video. Unity3D'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/autochess-1.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1O1_SpHV3kN10x4zK-ufhCVnWk4_DYDDs&export=download'
+            'https://player.vimeo.com/video/522290499'
         ],
-        poster: '../img/UGC/1.jpg',
-        type: TYPE.UGC,
+        type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Avakin Life. games'
+        title: 'Autochess'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/nitro-nation-5.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1uswMHn34ENKhddR-Z2FEgl-CAJVStria&export=download'
+            'https://player.vimeo.com/video/586186472'
         ],
-        poster: '../img/UGC/2.jpg',
-        type: TYPE.UGC,
+        type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Mojo. video editor'
+        title: 'Nitro Nation. Coffee Ride'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/nitro-nation-4.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1zZnyZaQdttAos6-jND5NP-Y8Q8vaAEck&export=download'
+            'https://player.vimeo.com/video/586186614'
         ],
-        poster: '../img/UGC/3.jpg',
-        type: TYPE.UGC,
+        type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Mojo. video editor'
+        title: 'Nitro Nation. Violet'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/nitro-nation-3.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=14CGeAgZn_Kgg7R4Es4hd4Tpbv6bnvaBL&export=download'
+            'https://player.vimeo.com/video/586186528'
         ],
-        poster: '../img/UGC/4.jpg',
-        type: TYPE.UGC,
+        type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Keto Diet. health & fitness'
+        title: 'Nitro Nation. Drift'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/nitro-nation-2.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1Lwk-nOltM9wiIFi3P4qSBE9CvFRZZzZw&export=download'
+            'https://player.vimeo.com/video/586186392'
         ],
-        poster: '../img/UGC/5.jpg',
-        type: TYPE.UGC,
+        type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Keto Diet. health & fitness'
+        title: 'Nitro Nation. Upgrade'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/3d/nitro-nation-1.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1H_FT3L0iSM6rRGy4XmbWp80LcAGpAcT8&export=download'
+            'https://player.vimeo.com/video/586186303'
         ],
-        poster: '../img/UGC/6.jpg',
-        type: TYPE.UGC,
+        type: TYPE["3d"],
         category: CATEGORY.PLAYGAME,
-        title: 'Keto Diet. health & fitness'
+        title: 'Nitro Nation. Desert'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/keto-diet.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1JfSSm4P0Y5hl6y5fpehHELaAZtxAiKH5&export=download'
+            'https://player.vimeo.com/video/561265225'
         ],
-        poster: '../img/UGC/7.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Spades. games'
+        title: 'UGC. Keto Diet'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/spades-1.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1CSMuPXkyTrqFKqGB2keUMWZt2_Yw7Q7-&export=download'
+            'https://player.vimeo.com/video/556185930'
         ],
-        poster: '../img/UGC/8.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Spades. games'
+        title: 'UGC. Spades'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/spades-2.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=19jl9IUaxHTsIv4TXjGTYtxnnJxLAaHRQ&export=download'
+            'https://player.vimeo.com/video/556185967'
         ],
-        poster: '../img/UGC/9.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'IQ Option. finance'
+        title: 'UGC. Spades'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/mojo-1.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1UAtus5_gSRHVNeb1NolB6ftkILxRW6i6&export=download'
+            'https://player.vimeo.com/video/522270457'
         ],
-        poster: '../img/UGC/10.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'Bloom. services'
+        title: 'UGC video. Mojo'
     },
     {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/ugc-1.jpg',
         sources: [
-            'https://drive.google.com/u/1/uc?id=1bn4fAvYczGeko8azXz6OGfExPh3eQmxN&export=download'
+            'https://player.vimeo.com/video/510726778'
         ],
-        poster: '../img/UGC/11.jpg',
         type: TYPE.UGC,
         category: CATEGORY.PLAYGAME,
-        title: 'IQ Option. finance'
+        title: 'UGC video'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/keto-diet-2.jpg',
+        sources: [
+            'https://player.vimeo.com/video/561265179'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'UGC. Keto'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/keto-diet-3.jpg',
+        sources: [
+            'https://player.vimeo.com/video/556228942'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'UGC. Keto Diet'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/vprok.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618778707'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'Vprok.ru TikTok'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/vprok-2.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618775273'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'Vprok'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/vprok-3.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618775242'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'Vprok dog'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/upsets.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618930376'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'UpsetStyle'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/angry-style.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618930574'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'AngryStyle'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/meme.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618930320'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'MemeMerge'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/positive.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618930180'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'Positive'
+    },
+
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/spades-2.jpg',
+        sources: [
+            'https://player.vimeo.com/video/618986610'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'Spades. UGC'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/iq.jpg',
+        sources: [
+            'https://player.vimeo.com/video/600275577'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'IQ Option UGC'
+    },
+    {
+        id: generateUniqueId('portfolio-video'),
+        poster: '../img/new-previews/ugc/bloom.jpg',
+        sources: [
+            'https://player.vimeo.com/video/591484102'
+        ],
+        type: TYPE.UGC,
+        category: CATEGORY.PLAYGAME,
+        title: 'Bloom UGC'
     }
 ]

@@ -1,0 +1,45 @@
+extends base/_layout
+block content
+  main.cases-page.inner-main
+    section.case-page__main
+      .container
+        h4 CASE STUDY
+        .case-banner
+          .case-banner__item.--col-6
+            .case-banner__logo
+              img(src="./img/logos/1.svg", alt="")
+            .case-banner__precent
+              | 50% 
+              img(src="./img/precent.svg", alt="")
+            h3.case-banner__small-title more efficient (lower) Cost Per Lead 
+            p.case-banner__small-description 30 creative assets procuced
+          .case-banner__item.--white.--col-6
+            h4 INTERVIEWS
+            .case-banner__title
+              h2 Case Study: ElliotLee Estate Agents
+            .case-banner__text
+              p Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit... 
+            button.contained
+              span Read more
+  section.cases
+    .container 
+      nav.category
+        ul.category__navigation
+          li.category__navigation-item
+            a(href='#2d') 2D video
+          li.category__navigation-item
+            a(href='#3d') 3D video
+          li.category__navigation-item
+            a(href='#UGC') UGC
+      .cases__list 
+        +case-link('case.html', './img/logos/1.svg', '50%', '2D VIDEO', 'Case Study - 2')
+        +case-link('case.html', './img/logos/2.svg', '50%', '2D VIDEO', 'Case Study - 2')
+        +case-link('case.html', './img/logos/3.svg', '50%', '2D VIDEO', 'Case Study - 2')
+        +case-link('case.html', './img/logos/1.svg', '50%', '2D VIDEO', 'Case Study - 2')
+        +case-link('case.html', './img/logos/2.svg', '50%', '2D VIDEO', 'Case Study - 2')
+        +case-link('case.html', './img/logos/3.svg', '50%', '2D VIDEO', 'Case Study - 2')
+        +case-link('case.html', './img/logos/2.svg', '50%', '2D VIDEO', 'Case Study - 2')
+      .buttin-center 
+        button.contained
+          span Load more
+  +offer(class="--gray")

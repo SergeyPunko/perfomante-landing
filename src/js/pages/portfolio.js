@@ -1,7 +1,6 @@
-import VideoPlayerModal from "../modals/video-player";
 import Mailer from "../services/mailer.service";
-import { withRecaptcha } from "../utils/recaptcha-wrapper";
-import { TYPE, videosInformation } from "./videos";
+import {withRecaptcha} from "../utils/recaptcha-wrapper";
+import {TYPE, videosInformation} from "./videos";
 
 const Portfolio = (function () {
     const MAX_VIDEO_LENGTH = 9;
@@ -11,15 +10,17 @@ const Portfolio = (function () {
     const videoContainer = document.querySelector('.videos-section .video');
     const videoTypeButton = document.querySelectorAll('.category__navigation-item > a');
     const formOffer = document.querySelector('.touch-with-us .form-offer')
+    let currentVimeoPlayers = [];
 
     const getCurrentType = () => Object.values(TYPE).includes(window.location.hash) ? window.location.hash : "";
     const getVideosByType = (type) => type ? videosInformation.filter(video => video.type === type) : videosInformation
 
     const renderVideo = () => {
+        pauseAllVimeoPlayers();
         const currentType = getCurrentType();
         const videos = getVideosByType(currentType);
 
-        const slicedVideo = showAll ? videos : videos.slice(0, MAX_VIDEO_LENGTH);
+        const slicedVideo = showAll ? videos.slice(MAX_VIDEO_LENGTH) : videos.slice(0, MAX_VIDEO_LENGTH);
         moreButton.classList.remove('hidden');
 
         videoTypeButton.forEach(button => {
@@ -29,51 +30,40 @@ const Portfolio = (function () {
             }
         })
 
-        VideoPlayerModal.destroy();
-
-        const videosHTML = slicedVideo.map(video => `
+        const videosHTML = slicedVideo.map(video =>`
             <li class="video__wrap modal">
-                <video playsinline class="video__player" poster="${video.poster}" preload="none">
-                    ${video.sources.map(source => `<source src="${source}">`).join('')}
-                    Your browser does not support the video tag.
-                </video>
-                <div class="description">
-                    <div class="content">
-                        <p class="description__title">${video.title}</p>
-                        <!-- <span class="description__category">${video.category}</span> -->
-                    </div> 
-                    <button class="desc-button" data-role='play'>
-                        <img src="../img/video-play.png" alt="play">
-                        <span>Play</span>
-                    </button>
-                    <button class="desc-button" data-role='pause'>
-                        <img src="../img/video-pause.png" alt="pause">
-                        <span>Pause</span>
-                    </button>
-                </div>
+                <div class="video__overlay" style="background-image: url(${video.poster})"></div>
+                <div class="video__player" id="${video.id}" ></div>  
+                <div class="video__play">
+                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z" stroke="#fff" stroke-width="2"/></svg>Play
+</div>
+                <div class="video__description">${video.title}</div>                              
             </li> 
-        `).join('')
+        `);
 
-        videoContainer.innerHTML = videosHTML;
-        VideoPlayerModal.init();
+        if (showAll) {
+            videoContainer.innerHTML += videosHTML.join('');
+        } else {
+            videoContainer.innerHTML = videosHTML.join('');
+        }
 
         if (videos.length < MAX_VIDEO_LENGTH || showAll) {
             moreButton.classList.add('hidden');
         }
+
+        setPlayersHandlers(videos);
     }
 
     const initButtonEventListeners = () => {
-        renderVideo();
-
         window.addEventListener('hashchange', () => {
             showAll = false;
             renderVideo();
-        })
+        });
 
         moreButton.addEventListener("click", () => {
             showAll = true;
             renderVideo();
-        })
+        });
     }
 
     const submitEvent = () => {
@@ -94,9 +84,54 @@ const Portfolio = (function () {
     }
 
     const init = function () {
+        renderVideo();
         moreButton && initButtonEventListeners();
         formOffer && submitEvent();
     };
+
+    const setPlayersHandlers = function(videos) {
+        const players = [];
+
+        videos.map(video => {
+            const videoBlock = document.getElementById(`${video.id}`);
+            if (videoBlock) {
+                const videoCont = videoBlock.parentElement;
+                const playButtons = videoCont.querySelectorAll('.video__overlay, .video__play');
+                const player = new Vimeo.Player(`${video.id}`, {
+                    responsive: true,
+                    keyboard: false,
+                    byline: false,
+                    portrait: false,
+                    controls: true,
+                    playsinline: false,
+                    autopause: false,
+                    title: false,
+                    url: video.sources[0]
+                });
+
+                playButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        pauseAllVimeoPlayers();
+                        player.play();
+                        videoCont.classList.add('started');
+                        videoCont.classList.add('playing');
+                    });
+                });
+
+                players.push(player);
+            }
+        });
+
+        currentVimeoPlayers = players;
+    }
+
+    const pauseAllVimeoPlayers = function () {
+        currentVimeoPlayers.forEach(player => {
+            player.pause();
+        });
+    }
 
     return {
         init: init,

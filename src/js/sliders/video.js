@@ -9,6 +9,68 @@ const Videos = (function () {
         document.getElementById('2dslider')
     ].filter(Boolean)
 
+    const videos = document.querySelectorAll("video");
+    const vimeoVideos = document.querySelectorAll('.vimeo__video');
+    const vimeoPlayers = [];
+
+    const videoControl = () => {
+        vimeoVideos.forEach(videoCont => {
+            const playButton = videoCont.querySelector('.video__play');
+            const playerElem = videoCont.querySelector('.video__player');
+            const videoUrl = playerElem.dataset.videoUrl
+            const player = new Vimeo.Player(playerElem, {
+                responsive: true,
+                keyboard: false,
+                byline: false,
+                controls: false,
+                autopause: false,
+                title: false,
+                url: videoUrl
+            });
+
+            playButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                pauseAllVimeoPlayers();
+                player.play();
+                videoCont.classList.add('started');
+                videoCont.classList.add('playing');
+            });
+
+            player.on('pause', function() {
+                videoCont.classList.remove('playing');
+            });
+
+            vimeoPlayers.push(player);
+        });
+
+        // videos.forEach(video => {
+        //     video.parentElement.addEventListener("click", async () => {
+        //         if (video.classList.contains("active")) {
+        //             await video.pause();
+        //         } else {
+        //             await videos.forEach(async v => {
+        //                 if (v !== video) {
+        //                     await v.load();
+        //                     v.classList.remove("active")
+        //                 }
+        //             })
+        //
+        //             await video.play();
+        //             video.classList.add("active")
+        //         }
+        //     });
+        //
+        //     video.addEventListener('pause', () => {
+        //         video.classList.remove('active');
+        //     });
+        //     video.addEventListener('ended', () => {
+        //         video.load()
+        //         video.classList.remove('active');
+        //     });
+        // })
+    }
+
     const initSliders = () => {
         sliders.forEach(slide => {
             slide.classList.remove("inline");
@@ -31,6 +93,10 @@ const Videos = (function () {
                     },
                 }
             })
+
+            glide.on('move', pauseAllVimeoPlayers);
+            glide.on('swipe', pauseAllVimeoPlayers);
+
             glide.mount();
             glides.push(glide);
         })
@@ -51,8 +117,16 @@ const Videos = (function () {
                     glides = []
                 }
             })
+
+            videoControl()
         }
     };
+
+    const pauseAllVimeoPlayers = function () {
+        vimeoPlayers.forEach(player => {
+            player.pause();
+        });
+    }
 
     return {
         init: init
