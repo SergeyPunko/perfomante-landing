@@ -5,13 +5,14 @@ const pug = require('gulp-pug');
 
 
 function views() {
-  return src('./src/views/*.*')
+  return src(`${config.source}/views/**/*.*`)
+    .pipe(changed(`${config.source}/views/*.*`))
     .pipe(
       pug({
         pretty: true,
       })
     )
-    .pipe(dest('./dist'));
+    .pipe(dest(config.dist));
 };
 
 function html() {

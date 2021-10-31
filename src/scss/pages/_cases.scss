@@ -487,6 +487,10 @@
   align-items: center;
   display: flex;
   margin-right: 21px;
+
+  img {
+    width: 100%;
+  }
 }
 
 
@@ -504,7 +508,7 @@
 }
 
 .cases-recomendations{
-  padding-bottom: 200px;
+  padding-bottom: 30px;
   padding-top: 80px;
   position: relative;
   .container{

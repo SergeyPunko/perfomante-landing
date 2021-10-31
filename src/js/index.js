@@ -15,6 +15,7 @@ import ObjectFillPolyfill from "./utils/object-fit-polyfill";
 import Portfolio from "./pages/portfolio";
 import Videos from "./sliders/video";
 import caseSlider from './sliders/case-slider'
+import CaseContent from './pages/case'
 
 // Инициализируем только необходимые скрипты для определенной страницы
 export function initMainScript(page) {
@@ -54,6 +55,7 @@ export function initMainScript(page) {
         Dropdowns.init();
         ObjectFillPolyfill.init();
         caseSlider();
+        CaseContent.init();
     }
 }
 window.initMainScript = initMainScript;
