@@ -6,7 +6,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161605356-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-161605356-3');
@@ -62,1286 +66,1157 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P39CN3P" height="0" width="0"
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P39CN3P" height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header class="header">
-        <div class="header__wrap">
-            <div class="logo">
-                <img src="./img/logo.svg" alt="Perfomante logo">
-            </div>
-            <input type="checkbox" id="burger">
-            <label class="burger" for="burger"><img class="burger__menu" src="./img/burger.svg" alt="burger">
-                <div class="cross"></div>
-            </label>
-            <div class="menu">
-                <nav class="navigation">
-                    <ul class="navigation__container">
-                        <li class="navigation__item dropdown-container">
-                            <button class="dropdown-button">
-                                Services
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="header">
+    <div class="header__wrap">
+        <div class="logo">
+            <img src="./img/logo.svg" alt="Perfomante logo">
+        </div>
+        <input type="checkbox" id="burger">
+        <label class="burger" for="burger"><img class="burger__menu" src="./img/burger.svg" alt="burger">
+            <div class="cross"></div>
+        </label>
+        <div class="menu">
+            <nav class="navigation">
+                <ul class="navigation__container">
+                    <li class="navigation__item dropdown-container">
+                        <button class="dropdown-button">
+                            Services
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
                                         d="M3 4.28564L5.67747 7.34561C5.84821 7.54075 6.15179 7.54075 6.32253 7.34561L9 4.28564"
                                         stroke="#22221F" stroke-width="0.998571" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                            <ul class="dropdown">
-                                <li class="dropdown__item">
-                                    <a class="link black js-smooth-scroll" href="#ads2d">
-                                        2d video ads
-                                    </a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a class="link black js-smooth-scroll" href="#ads3d">
-                                        3d video ads
-                                    </a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a class="link black js-smooth-scroll" href="#ugcads">
-                                        UGC video ads
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navigation__item"><a class="link black js-smooth-scroll" href="#cases">Cases</a></li>
-                        <li class="navigation__item"><a class="link black" href="portfolio">Portfolio</a></li>
-                        <li class="navigation__item"><a class="link black js-smooth-scroll" href="#team">About us</a>
-                        </li>
-                        <li class="navigation__item"><a class="link black" target="_blank"
-                                href="https://perfomante.io/blog/?utm_source=main"
-                                onclick="gtag('event', 'Main_header_Blog')">Blog</a></li>
-                    </ul>
-                </nav>
-                <nav class="header-buttons">
-                    <a class="link black" target="_blank" href="https://app.perfomante.io/login">Sign in</a>
-                    <button class="outlined open-calendly" data-seo-target="demoClick">
-                        Request demo
-                    </button>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <section class="intro" id="main">
-        <div class="container">
-            <div class="intro__text">
-                <h1>Marketing videos that perform and attract users</h1>
-                <p>Experts in visual production maximize return on impressions with
-                    measurably better video creatives.
-                </p>
-                <div class="cta">
-                    <button class="button-offer contained offer__modal" data-seo-target="marketingClick"
-                        data-submit-seo-target="marketingSubmit">
-                        <img src="./img/green-logo.png" alt="perfomante logo">
-                        <span>Get offer</span>
-                    </button>
-                    <button class="outlined-dark open-calendly" data-seo-target="marketingDemoClick">
-                        <img class="object-fit" src="./img/Nurs-min.jpg" alt="Nurs">
-                        <span>Get a demo <span class="mobile-hidden">from Nurs</span></span>
-                    </button>
-                </div>
-            </div>
-            <div class="intro__img">
-                <picture>
-                    <source srcset="./img/intro-background.webp" type="image/webp">
-                    <source srcset="./img/intro-background.png" type="image/jpg">
-                    <img src="./img/intro-background.png" alt="intro background">
-                </picture>
-            </div>
-            <div class="intro__labels">
-                <div class="text-item first">
-                    <div class="text-item__arrow">
-                        <img src="./img/Arrow-Long-Down.svg" alt="Arrow Down">
-                    </div>
-                    <div class="text-item__text">
-                        <p>12% reduction</p>
-                        <p>New scenario led to 12% CTR reduction</p>
-                    </div>
-                </div>
-                <div class="text-item second">
-                    <div class="text-item__arrow">
-                        <img src="./img/Arrow-Long-Up.svg" alt="Arrow Down">
-                    </div>
-                    <div class="text-item__text">
-                        <p>27% growth</p>
-                        <p>New character resulted in CPI reduction by 27%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="companies" id="companies">
-        <div class="container">
-            <h2 class="bold-header">120+ companies in mobile industry trust us</h2>
-            <div id="autoplay" class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="company-list glide__slides">
-                        <li class="company-list__item glide__slide"><img src="./img/mytona.png" alt="mytona logo"></li>
-                        <li class="company-list__item glide__slide"><img src="./img/mail-group.png"
-                                alt="mail group logo"></li>
-                        <li class="company-list__item glide__slide"><img src="./img/azur.png" alt="azur logo"></li>
-                        <li class="company-list__item glide__slide"><img src="./img/lockwood.png" alt="lockwood logo">
-                        </li>
-                        <li class="company-list__item glide__slide"><img src="./img/frog-mind.png" alt="frog mind logo">
-                        </li>
-                        <li class="company-list__item glide__slide"><img src="./img/exient.png" alt="exient logo"></li>
-                        <li class="company-list__item glide__slide"><img src="./img/iq-option.png" alt="iq option logo">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="technology" id="technology">
-        <div class="container">
-            <div class="text-container section-header">
-                <h4>WHY PERFOMANTE</h4>
-                <h3>Creative ads performance backed by experience and tech</h3>
-                <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
-                    video creatives.</p>
-            </div>
-            <ul class="technology-row">
-                <li class="technology-row__item">
-                    <img src="./img/idea.jpg" alt="idea">
-                    <h5>Idea generation</h5>
-                    <p class="aditional-paragraph">Using all collected data from thousands of videos, we provide the
-                        best practices in your domain. It’s not just a perfect motion design, but also creative ideas
-                        and top-notch production.</p>
-                </li>
-                <li class="technology-row__item">
-                    <img src="./img/chart.jpg" alt="chart">
-                    <h5>Mapping</h5>
-                    <p class="aditional-paragraph">Our experienced creative team makes mapping of each video we create.
-                        So you get the insights on
-                        what really works.</p>
-                </li>
-                <li class="technology-row__item">
-                    <img src="./img/wfh.jpg" alt="work from home">
-                    <h5>In-house</h5>
-                    <p class="aditional-paragraph">Fully in-house team. You just sit back and relax - our managers will
-                        cover all work processes.</p>
-                </li>
-                <li class="technology-row__item">
-                    <img src="./img/system.jpg" alt="system">
-                    <h5>System</h5>
-                    <p class="aditional-paragraph">Our production is backed by own framework, so all your wishes and
-                        preferences will be taken into account</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h4>SERVICES</h4>
-            </div>
-            <div class="square square-1"></div>
-            <div class="square square-2"></div>
-            <div class="square square-3"></div>
-            <div id="ads2d" class="ads" data-navElement>
-                <div class="ads__text">
-                    <h3>2d video ads</h3>
-                    <p class="aditional-paragraph">Achieve your goals and benchmarks with ease. Share your assets and
-                        see how the magic happens: our experts in performance marketing will analyze your product so
-                        your creatives will perform better than ever before.</p>
-                </div>
-                <div id="2dslider" class="glide ads__video inline">
-                    <div data-glide-el="track" class="glide__track">
-                        <ul class="video glide__slides" style="max-height: 620px;">
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none"
-                                    poster="./img/2d-videos/2d18.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1dUaH3vQiMEZFom2ZUDOTzEDaM8cpG4tg&export=download"
-                                        type='video/mp4'>
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Weight loss. health&fitness</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
+                                        stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <ul class="dropdown">
+                            <li class="dropdown__item">
+                                <a class="link black js-smooth-scroll" href="#ads2d">
+                                    2d video ads
+                                </a>
                             </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none"
-                                    poster="./img/2d-videos/2d2.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1w21D8MqkvOde7aX21TNxiNxD1aUfMXOn&export=download"
-                                        type='video/mp4'>
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">American Dad. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
+                            <li class="dropdown__item">
+                                <a class="link black js-smooth-scroll" href="#ads3d">
+                                    3d video ads
+                                </a>
                             </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none"
-                                    poster="./img/2d-videos/2d19.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=16dEP7A5Io5CRyR2IKf4PSccXPw_i-OSt&export=download"
-                                        type='video/mp4'>
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Simple. health&fitness</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none"
-                                    poster="./img/2d-videos/2d9.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1bOGnSAlxByNbZws3e9j53Z0GIfehMbGU&export=download"
-                                        type='video/mp4'>
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Mystery Manor. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none"
-                                    poster="./img/2d-videos/2d17.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1YE1LRxWJcNqq2j5P_iHRUy_cOEsvB9os&export=download"
-                                        type='video/mp4'>
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Dragon Vale. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none"
-                                    poster="./img/2d-videos/2d15.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1lqV9g8rv-EhArgqIPhJHU9KnseK4HMNj&export=download"
-                                        type='video/mp4'>
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Rush royal. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
+                            <li class="dropdown__item">
+                                <a class="link black js-smooth-scroll" href="#ugcads">
+                                    UGC video ads
+                                </a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                        <button class="glide__bullet" data-glide-dir="=2"></button>
-                        <button class="glide__bullet" data-glide-dir="=3"></button>
-                        <button class="glide__bullet" data-glide-dir="=4"></button>
-                        <button class="glide__bullet" data-glide-dir="=5"></button>
-                    </div>
-                </div>
-                <div class="link">
-                    <a href="./portfolio/#2d" class="more-link aditional-paragraph">
-                        <button class="outlined">
-                            View all 2d videos
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <div id="ads3d" class="ads" data-navElement>
-                <div class="ads__text">
-                    <h3>3d video ads</h3>
-                    <p class="aditional-paragraph">Get a full cycle of video ad production from your Unity, Unreal
-                        Engine assets. Our creative managers, motion designers + team of tech-ninjas will create
-                        absolutely new approach for your product ads. You will get: idea generation (optional), 3d
-                        animation, and post-production (effects, CTA’s, interface details, etc.)</p>
-                </div>
-                <div id="3dslider" class="glide ads__video inline">
-                    <div data-glide-el="track" class="glide__track">
-                        <ul class="video glide__slides" style="max-height: 650px;">
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/3d-videos/2.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1a9Pcn6NrwLAyAtrQUHKKtCK-_6NYO--6&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Airport city. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/3d-videos/10.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1dK0G686Wj59ZXP4vrhGI6EYtATHkWHIW&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">NitroNation. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/3d-videos/1.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1yAZEskue417sm3O7gCfDn0CyD7CFEYQh&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Airport city. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/3d-videos/3.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1AAj5dGRf67ABWTaO7VEtaCGM9ePqUQds&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Dawn of zombies - Survival. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/3d-videos/4.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1hlH6re910NcPEXx7Zo_2WEvULQq-Y2j0&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Age of Magic. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/3d-videos/6.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1MFDSIBHRwI58qVFkC7qy3AMPrb1xMNR4&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Riverlands. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                        <button class="glide__bullet" data-glide-dir="=2"></button>
-                        <button class="glide__bullet" data-glide-dir="=3"></button>
-                        <button class="glide__bullet" data-glide-dir="=4"></button>
-                        <button class="glide__bullet" data-glide-dir="=5"></button>
-                    </div>
-                </div>
-                <div class="link">
-                    <a href="./portfolio/#3d" class="more-link aditional-paragraph">
-                        <button class="outlined">
-                            View all 3d videos
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <div id="ugcads" class="ads" data-navElement>
-                <div class="ads__text">
-                    <h3>UGC</h3>
-                    <p class="aditional-paragraph">Looking for UGC content for your video ads? You came to the right
-                        place! Get top-trended ideas from our creative team, add footages from relevant models, and as a
-                        result receive high-performing video ads.</p>
-                </div>
-                <div id="ugcslider" class="glide ads__video inline">
-                    <div data-glide-el="track" class="glide__track">
-                        <ul class="video glide__slides" style="max-height: 1400px">
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/UGC/1.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1O1_SpHV3kN10x4zK-ufhCVnWk4_DYDDs&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Avakin Life. games</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/UGC/2.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1uswMHn34ENKhddR-Z2FEgl-CAJVStria&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Mojo. video editor</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/UGC/3.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1zZnyZaQdttAos6-jND5NP-Y8Q8vaAEck&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Mojo. video editor</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/UGC/4.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=14CGeAgZn_Kgg7R4Es4hd4Tpbv6bnvaBL&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Keto Diet. health & fitness</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/UGC/5.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1Lwk-nOltM9wiIFi3P4qSBE9CvFRZZzZw&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Keto Diet. health & fitness</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="video__wrap glide__slide">
-                                <video playsinline class="video__player" preload="none" poster="./img/UGC/6.jpg">
-                                    <source
-                                        src="https://drive.google.com/u/1/uc?id=1H_FT3L0iSM6rRGy4XmbWp80LcAGpAcT8&export=download">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="description">
-                                    <div class="content">
-                                        <p class="description__title">Keto Diet. health & fitness</p>
-                                        <!-- <span class="description__category">PLAYGAME</span> -->
-                                    </div>
-                                    <button class="desc-button" data-role='play'>
-                                        <img src="./img/video-play.png" alt="play">
-                                        <span>Play</span>
-                                    </button>
-                                    <button class="desc-button" data-role='pause'>
-                                        <img src="./img/video-pause.png" alt="pause">
-                                        <span>Pause</span>
-                                    </button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                        <button class="glide__bullet" data-glide-dir="=2"></button>
-                        <button class="glide__bullet" data-glide-dir="=3"></button>
-                        <button class="glide__bullet" data-glide-dir="=4"></button>
-                        <button class="glide__bullet" data-glide-dir="=5"></button>
-                    </div>
-                </div>
-                <div class="link">
-                    <a href="./portfolio/#UGC" class="more-link aditional-paragraph">
-                        <button class="outlined">
-                            View all UGC videos
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="touch-with" id="touch-with">
-        <div class="container">
-            <div class="text-container">
-                <h3>See it for yourself</h3>
-                <p class="paragraph">Get in touch with one of our experts and take a personal tour of Perfomante.</p>
-                <div class="cta">
-                    <button class="button-offer contained offer__modal" data-seo-target="seeItClick"
-                        data-submit-seo-target="seeItSubmit">
-                        <img src="./img/green-logo.png" alt="perfomante">
-                        <span>Get offer</span>
-                    </button>
-                    <button id="calendly_toggle" class="outlined-dark">
-                        <span class="open">Get a demo</span>
-                        <span class="close">Hide</span>
-                    </button>
-                </div>
-            </div>
-            <div id="calendly"></div>
-        </div>
-    </section>
-    <section id="cases" class="reviews" data-navElement>
-        <div id="slider" class="container glide">
-            <div data-glide-el="track" class="glide__track">
-                <ul class="glide__slides">
-                    <li class="glide__slide customer">
-                        <div class="customer__about">
-                            <div class="company">
-                                <p class="aditional-paragraph">Client success: UGC videos </p>
-                            </div>
-                            <p class="quote">TikTok is a very demanding platform when it comes to creatives. Perfomante
-                                team did a great job embracing this mindset as well as the best practices. As a result -
-                                we really liked their work and creative approach. Also thanks to seamless communication
-                                all the deadlines were met.</p>
-
-                            <div class="client">
-                                <img src="./img/anton.jpg" alt="Anton" class="client__photo">
-                                <div class="client__info">
-                                    <div class="paragraph">Anton Gritsevskii</div>
-                                    <div class="aditional-paragraph">Creative Solutions Lead (Gaming&Apps Manger of
-                                        TikTok)</div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="customer__info">
-                            <div class="customer__content">
-                                <img src="./img/tik_tok.jpg" alt="tik tok">
-                                <div>
-                                    <p class="benefits">70+ ad sets provided</p>
-                                </div>
-                            </div>
-                            <button class="outlined">
-                                Read more
-                            </button>
-                        </div>
                     </li>
-                    <li class="glide__slide customer">
-                        <div class="customer__about">
-                            <div class="company">
-                                <p class="aditional-paragraph">Client success: UGC videos </p>
-                            </div>
-                            <p class="quote">For my taste - you have experience working with creatives and purchasing,
-                                you
-                                understand what the user wants in advertising on Facebook, this is reflected in the
-                                videos.
-                                We like the ideas and the focus of where we're going.</p>
-                            <div class="client">
-                                <img src="./img/irina.jpg" alt="Irina" class="client__photo">
-                                <div class="client__info">
-                                    <div class="paragraph">Irina Kirichenko</div>
-                                    <div class="aditional-paragraph">UA manager of IQOption</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="customer__info">
-                            <div class="customer__content">
-
-                                <img src="./img/iq_option.jpg" alt="iq option">
-                                <div>
-                                    <p class="benefits">22 ad sets tested, 10 exceeded benchmarks</p>
-                                </div>
-                            </div>
-                            <button class="outlined">
-                                Read more
-                            </button>
-                        </div>
+                    <li class="navigation__item"><a class="link black js-smooth-scroll" href="/cases">Cases</a></li>
+                    <li class="navigation__item"><a class="link black" href="portfolio">Portfolio</a></li>
+                    <li class="navigation__item"><a class="link black js-smooth-scroll" href="#team">About us</a>
                     </li>
-                    <li class="glide__slide customer">
-                        <div class="customer__about">
-                            <div class="company">
-                                <p class="aditional-paragraph">Client success: UGC videos </p>
-                            </div>
-                            <p class="quote">We had a great experience working with Perfomante team. Very clear and
-                                personalized communication led to impressive creatives that were created in time. The
-                                quality of creatives correlates with the professionalism of the team.</p>
-                            <div class="client">
-                                <img src="./img/Karim.jpg" alt="Karim" class="client__photo">
-                                <div class="client__info">
-                                    <div class="paragraph">Karim Iskakov</div>
-                                    <div class="aditional-paragraph">Co-founder & CTO of Avatarify</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="customer__info">
-                            <div class="customer__content">
-                                <img src="./img/avatarify.jpg" alt="avatarify">
-                                <div>
-                                    <p class="benefits">CTR and CPI beat the benchmark</p>
-                                    <p class="count">10 ad sets were tested</p>
-                                </div>
-                            </div>
-                            <button class="outlined">
-                                Read more
-                            </button>
-                        </div>
-                    </li>
-                    <li class="glide__slide customer">
-                        <div class="customer__about">
-                            <div class="company">
-                                <p class="aditional-paragraph">Client success: UGC videos </p>
-                            </div>
-                            <p class="quote">We contacted Perfomante because we were looking for a fresh take on the
-                                creatives for our game. We are pleased by the work process and results from this
-                                cooperation. Also, I’d like to note well-coordinated communication with the team in a
-                                convenient format and high-quality creatives that they delivered.
-                            </p>
-                            <div class="client">
-                                <img src="./img/Galiya.jpg" alt="Galiya" class="client__photo">
-                                <div class="client__info">
-                                    <div class="paragraph">Galiya Kadyrova</div>
-                                    <div class="aditional-paragraph">Creative Manager</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="customer__info">
-                            <div class="customer__content">
-
-                                <img src="./img/puzzle_point.jpg" alt="puzzle point">
-                                <div>
-                                    <p class="benefits">Significant CTR improvement </p>
-                                    <p class="count">10 ad sets were tested</p>
-                                </div>
-                            </div>
-                            <button class="outlined">
-                                Read more
-                            </button>
-                        </div>
-                    </li>
+                    <li class="navigation__item"><a class="link black" target="_blank"
+                                                    href="https://perfomante.io/blog/?utm_source=main"
+                                                    onclick="gtag('event', 'Main_header_Blog')">Blog</a></li>
                 </ul>
-            </div>
-            <div class="actions">
-                <!-- <button class="outlined">Read the story</button> -->
-                <div data-glide-el="controls" class="glide__arrows pagination">
-                    <button class="pagination__button glide__arrow glide__arrow--left" data-glide-dir="<">
-                        <img src="./img/arrow-left.svg" alt="arrow left">
-                    </button>
-                    <span id="slide-info"></span>
-                    <button class="pagination__button glide__arrow glide__arrow--right" data-glide-dir=">">
-                        <img src="./img/arrow-right.svg" alt="arrow right">
-                    </button>
-                </div>
-            </div>
+            </nav>
+            <nav class="header-buttons">
+                <a class="link black" target="_blank" href="https://app.perfomante.io/login">Sign in</a>
+                <button class="outlined open-calendly" data-seo-target="demoClick">
+                    Request demo
+                </button>
+            </nav>
         </div>
-    </section>
-    <section id="prices" class="price">
-        <div class="container">
-            <div class="price__header section-header">
-                <h4>PRICING</h4>
-                <h3>Your new video content creation strategy starts here</h3>
-                <p class="paragraph">Whether you’re just getting started with rapid testing or scaling across the
-                    organization, we’ve got you covered.</p>
-            </div>
-            <div class="price__services">
-                <div class="service">
-                    <div class="service__img"><img src="./img/2d-ads-service.png" alt="2d ads service"></div>
-                    <div class="service__header">
-                        <h5>2D video ads</h5>
-                        <p>Idea generation + Video animation</p>
-                    </div>
-                    <div class="service__price">
-                        <span>6'000<sup>$</sup></span>
-                        <p>600$ per video</p>
-                    </div>
-                    <div class="service__benefits">
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">10 videos in 2 formats monthly</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">script generation</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">art director + lead motion designer</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">personal manager</p>
-                        </div>
-                    </div>
-                    <button class="contained order__modal" data-index="0" data-seo-target="2dClick"
-                        data-submit-seo-target="2dSubmit">
-                        <span>Get started</span>
-                    </button>
-                    <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
-                </div>
-                <div class="service">
-                    <div class="service__img"><img src="./img/3d-ads-service.png" alt="3d ads service"></div>
-                    <div class="service__header">
-                        <h5>3D video ads</h5>
-                        <p>Idea + 3d animation + Postproduction</p>
-                    </div>
-                    <div class="service__price">
-                        <span>7'000<sup>$</sup></span>
-                        <p>1'400$ per video</p>
-                    </div>
-                    <div class="service__benefits">
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">5 videos</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">tech lead + art director</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">personal manager</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">creative sessions on demand</p>
-                        </div>
-                    </div>
-                    <button class="contained order__modal" data-index="1" data-seo-target="3dClick"
-                        data-submit-seo-target="3dSubmit">
-                        <span>Get started</span>
-                    </button>
-                    <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
-                </div>
-                <div class="service">
-                    <div class="service__img"><img src="./img/ugc-service.png" alt="ugc service"></div>
-                    <div class="service__header">
-                        <h5>UGC video ads</h5>
-                        <p>Idea + Shooting + Postproduction</p>
-                    </div>
-                    <div class="service__price">
-                        <span>5'000<sup>$</sup></span>
-                        <p>1'000$ per video</p>
-                    </div>
-                    <div class="service__benefits">
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">5 videos</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">art director + lead motion designer</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">personal manager</p>
-                        </div>
-                        <div class="service__benefit">
-                            <img src="./img/Icon-check.svg" alt="check">
-                            <p class="paragraph">creative sessions on demand</p>
-                        </div>
-                    </div>
-                    <button class="contained order__modal" data-index="2" data-seo-target="UGCClick"
-                        data-submit-seo-target="UGCSubmit">
-                        <span>Get started</span>
-                    </button>
-                    <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="team" class="team" data-navElement>
-        <div class="container">
-            <div class="team__avatar tablet">
-                <div class="team__avatar-row">
-                    <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
-                </div>
-                <div class="team__avatar-row">
-                    <img class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
-                </div>
-            </div>
-            <div class="team__avatar left">
-                <div class="team__avatar-row">
-                    <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
-                </div>
-                <div class="team__avatar-row">
-                    <img class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar10.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
-                </div>
-            </div>
-            <div class="team__avatar right">
-                <div class="team__avatar-row">
-                    <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar9.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
-                </div>
-                <div class="team__avatar-row">
-                    <img class="object-fit" src="./img/Avatar12.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar11.jpg" alt="avatar">
-                    <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
-                </div>
-            </div>
-            <div class="team__header section-header">
-                <h4>TEAM</h4>
-                <h3>We are Perfomante</h3>
-                <div>
-                    <p class="paragraph">We at Perfomante are ready to help you achieve your business goals and
-                        benchmarks with ease. Share your assets and see how the magic happens: our experts in
-                        performance marketing will analyze your product so your creatives will perform better than ever
-                        before.
-                    </p>
-                </div>
-            </div>
-            <div class="team__promo">
-                <div class="about-system">
-                    <h4>PERFOMANTE SYSTEM</h4>
-                    <h3>Want to scale production?</h3>
-                    <p class="paragraph">
-                        You can use our platform with connected motion designers. All your videos will be checked by
-                        Art-director as well.
-                    </p>
-                    <button class="outlined open-calendly">
-                        Request demo
-                    </button>
-                    <p class="aditional-information">Price starts at $300 per 15-sec video.</p>
-                </div>
-                <img class="demo" src="./img/Promo.jpg" alt="promo">
-            </div>
-        </div>
-    </section>
-    <!-- <section class="resources">
-        <div class="container">
-            <div class="section-header">
-                <h4>RESOURCES</h4>
-                <h3>Ideas for your video marketing</h3>
-                <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
-                    video creative.</p>
-            </div>
-            <div id="resources_slider" class="resources__ideas">
-                <div data-glide-el="track" class="glide__track">
-                    <div class="glide__slides">
-                        <div class="glide__slide">
-                            <div class="idea">
-                                <div class="idea__card">
-                                    <img src="./img/Logo-light.svg" alt="logo perfomante">
-                                    <h5>The state of video marketing at 2021</h5>
-                                    <div class="idea__footer">
-                                        <img src="./img/idea-avatar.jpg" alt="idea avatar">
-                                        <a href="#">Guide</a>
-                                    </div>
-                                </div>
-                                <h5 class="idea__name">Guide name</h5>
-                                <p class="paragraph">In context messaging lets us form 1:1 connections with our users.
-                                </p>
-                                <button class="outlined">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
-                                            fill="#337157" />
-                                        <path
-                                            d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
-                                            stroke="#337157" stroke-width="1.995" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <span>Download the guide</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="glide__slide">
-                            <div class="idea">
-                                <div class="idea__card">
-                                    <img src="./img/Logo-light.svg" alt="logo perfomante">
-                                    <h5>The state of video marketing at 2021</h5>
-                                    <div class="idea__footer">
-                                        <img src="./img/idea-avatar.jpg" alt="idea avatar">
-                                        <a href="#">Guide</a>
-                                    </div>
-                                </div>
-                                <h5 class="idea__name">Guide name</h5>
-                                <p class="paragraph">In context messaging lets us form 1:1 connections with our users.
-                                </p>
-                                <button class="outlined">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
-                                            fill="#337157" />
-                                        <path
-                                            d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
-                                            stroke="#337157" stroke-width="1.995" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <span>Download the guide</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="glide__slide">
-                            <div class="idea">
-                                <div class="idea__card">
-                                    <img src="./img/Logo-light.svg" alt="logo perfomante">
-                                    <h5>The state of video marketing at 2021</h5>
-                                    <div class="idea__footer">
-                                        <img src="./img/idea-avatar.jpg" alt="idea avatar">
-                                        <a href="#">Guide</a>
-                                    </div>
-                                </div>
-                                <h5 class="idea__name">Guide name</h5>
-                                <p class="paragraph">In context messaging lets us form 1:1 connections with our users.
-                                </p>
-                                <button class="outlined">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
-                                            fill="#337157" />
-                                        <path
-                                            d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
-                                            stroke="#337157" stroke-width="1.995" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <span>Download the guide</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <section class="offer">
-        <div class="square left"></div>
-        <div class="square right"></div>
-        <div class="container">
-            <h3>Your products tell interesting stories, let Perfomante make them heard.</h3>
+    </div>
+</header>
+<section class="intro" id="main">
+    <div class="container">
+        <div class="intro__text">
+            <h1>Marketing videos that perform and attract users</h1>
+            <p>Experts in visual production maximize return on impressions with
+                measurably better video creatives.
+            </p>
             <div class="cta">
-                <button class="button-offer contained offer__modal">
-                    <img src="./img/green-logo.png" alt="perfomante">
+                <button class="button-offer contained offer__modal" data-seo-target="marketingClick"
+                        data-submit-seo-target="marketingSubmit">
+                    <img src="./img/green-logo.png" alt="perfomante logo">
                     <span>Get offer</span>
                 </button>
-                <button class="outlined-dark open-calendly">
-                    <img class="object-fit" src="./img/Nurs-min.jpg" alt="perfomante">
+                <button class="outlined-dark open-calendly" data-seo-target="marketingDemoClick">
+                    <img class="object-fit" src="./img/Nurs-min.jpg" alt="Nurs">
                     <span>Get a demo <span class="mobile-hidden">from Nurs</span></span>
                 </button>
             </div>
         </div>
-    </section>
-    <footer class="footer" id="footer">
-        <div class="footer__container container">
-            <!-- Top part -->
-            <div class="footer__top">
-                <!-- Logo -->
-                <div class="footer__logo">
-                    <img src="./img/Logo-light.svg" alt="Perfomante" draggable="false">
+        <div class="intro__img">
+            <picture>
+                <source srcset="./img/intro-background.webp" type="image/webp">
+                <source srcset="./img/intro-background.png" type="image/jpg">
+                <img src="./img/intro-background.png" alt="intro background">
+            </picture>
+        </div>
+        <div class="intro__labels">
+            <div class="text-item first">
+                <div class="text-item__arrow">
+                    <img src="./img/Arrow-Long-Down.svg" alt="Arrow Down">
                 </div>
-                <!-- Navigation -->
-                <nav class="nav nav--footer footer__nav">
-                    <ul class="nav__container">
-                        <li class="nav__item nav__item--heading">
-                            Links
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="https://perfomante.io/cntct">Info for clients</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="https://perfomante.io/blog">Blog</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="https://perfomante.io/privacy">Privacy Policy</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="https://perfomante.io/cookies">Cookie Policy</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="https://perfomante.io/gdpr">GDPR</a>
-                        </li>
-                    </ul>
-                    <ul class="nav__container">
-                        <li class="nav__item nav__item--heading">
-                            Partners
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link"
-                                href="https://qonversion.io/?utm_source=perfomante&utm_medium=partners&utm_campaign=footer"
-                                target="_blank">Qonversion</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="https://asodesk.com/" target="_blank">ASOdesk</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- Bottom part -->
-            <div class="footer__bottom">
-                <div class="footer__copyright">
-                    <p><a class="link footer-link" href="mailto:hi@perfomante.io"><img src="./img/mail.svg"
-                                alt="">hi@perfomante.io</a></p>
-                    <p>&#169; 2021 All Rights Reserved. Perfomante &#171;LLC&#187;.</p>
-                    <p>HQ in Minsk, Belarus</p>
+                <div class="text-item__text">
+                    <p>12% reduction</p>
+                    <p>New scenario led to 12% CTR reduction</p>
                 </div>
             </div>
-            <div class="payment__section">
-                <img src="./img/payment.png" />
+            <div class="text-item second">
+                <div class="text-item__arrow">
+                    <img src="./img/Arrow-Long-Up.svg" alt="Arrow Down">
+                </div>
+                <div class="text-item__text">
+                    <p>27% growth</p>
+                    <p>New character resulted in CPI reduction by 27%</p>
+                </div>
             </div>
         </div>
-    </footer>
-    <!-- <footer>
-        <div class="container">
-            <div class="perfomante">
-                <div>
-                    <img src="./img/Logo-light.svg" alt="logo perfomante">
-                    <p class="paragraph">Marketing videos that perform and attract users</p>
+    </div>
+</section>
+<section class="companies" id="companies">
+    <div class="container">
+        <h2 class="bold-header">120+ companies in mobile industry trust us</h2>
+        <div id="autoplay" class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="company-list glide__slides">
+                    <li class="company-list__item glide__slide"><img src="./img/mytona.png" alt="mytona logo"></li>
+                    <li class="company-list__item glide__slide"><img src="./img/mail-group.png"
+                                                                     alt="mail group logo"></li>
+                    <li class="company-list__item glide__slide"><img src="./img/azur.png" alt="azur logo"></li>
+                    <li class="company-list__item glide__slide"><img src="./img/lockwood.png" alt="lockwood logo">
+                    </li>
+                    <li class="company-list__item glide__slide"><img src="./img/frog-mind.png" alt="frog mind logo">
+                    </li>
+                    <li class="company-list__item glide__slide"><img src="./img/exient.png" alt="exient logo"></li>
+                    <li class="company-list__item glide__slide"><img src="./img/iq-option.png" alt="iq option logo">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="technology" id="technology">
+    <div class="container">
+        <div class="text-container section-header">
+            <h4>WHY PERFOMANTE</h4>
+            <h3>Creative ads performance backed by experience and tech</h3>
+            <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
+                video creatives.</p>
+        </div>
+        <ul class="technology-row">
+            <li class="technology-row__item">
+                <img src="./img/idea.jpg" alt="idea">
+                <h5>Idea generation</h5>
+                <p class="aditional-paragraph">Using all collected data from thousands of videos, we provide the
+                    best practices in your domain. It’s not just a perfect motion design, but also creative ideas
+                    and top-notch production.</p>
+            </li>
+            <li class="technology-row__item">
+                <img src="./img/chart.jpg" alt="chart">
+                <h5>Mapping</h5>
+                <p class="aditional-paragraph">Our experienced creative team makes mapping of each video we create.
+                    So you get the insights on
+                    what really works.</p>
+            </li>
+            <li class="technology-row__item">
+                <img src="./img/wfh.jpg" alt="work from home">
+                <h5>In-house</h5>
+                <p class="aditional-paragraph">Fully in-house team. You just sit back and relax - our managers will
+                    cover all work processes.</p>
+            </li>
+            <li class="technology-row__item">
+                <img src="./img/system.jpg" alt="system">
+                <h5>System</h5>
+                <p class="aditional-paragraph">Our production is backed by own framework, so all your wishes and
+                    preferences will be taken into account</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h4>SERVICES</h4>
+        </div>
+        <div class="square square-1"></div>
+        <div class="square square-2"></div>
+        <div class="square square-3"></div>
+        <div id="ads2d" class="ads" data-navElement>
+            <div class="ads__text">
+                <h3>2d video ads</h3>
+                <p class="aditional-paragraph">Achieve your goals and benchmarks with ease. Share your assets and
+                    see how the magic happens: our experts in performance marketing will analyze your product so
+                    your creatives will perform better than ever before.</p>
+            </div>
+            <div id="2dslider" class="glide ads__video inline">
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="video glide__slides" style="max-height: 650px;">
+
+                        <li class="video__wrap vimeo__video glide__slide">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/556182633"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/2d/2d-american-dad-escape.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">American Dad. Escape</div>
+                        </li>
+
+                        <li class="video__wrap vimeo__video glide__slide">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/618875839">
+
+
+                            </div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/2d/2d-dragon-vale.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Dragon Vale. games</div>
+                        </li>
+
+                        <li class="video__wrap vimeo__video glide__slide">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/618876970"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/2d/2d-jelly-woman.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Jelly Woman</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/554744406">
+
+
+                            </div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/2d/2d-hidden-object-1.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Mystery Manor. games</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/618875704">
+
+
+                            </div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/2d/2d-simple.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">American Dad. games</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video ">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/556344370">
+
+
+                            </div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/2d/2d-rush-royal.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Rush royal. games</div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="license">
-                    <p class="aditional-paragraph">
-                        2021 Perfomante Inc.
-                    </p>
-                    <p class="aditional-paragraph">
-                        Terms & Privacy
-                    </p>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                    <button class="glide__bullet" data-glide-dir="=5"></button>
                 </div>
             </div>
-            <nav class="navigation">
-                <div class="navigation__row">
-                    <ul class="navigation__column">
-                        <li class="navigation__item title">Platform</li>
-                        <li class="navigation__item"><a class="link" href="#">2d video ads</a></li>
-                        <li class="navigation__item"><a class="link" href="#">3d video ads</a></li>
-                        <li class="navigation__item"><a class="link" href="#">UGS</a></li>
-                    </ul>
-                    <ul class="navigation__column">
-                        <li class="navigation__item title">Company</li>
-                        <li class="navigation__item"><a class="link" href="#">About us</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Career</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Press room</a></li>
+            <div class="link">
+                <a href="./portfolio/#2d" class="more-link aditional-paragraph">
+                    <button class="outlined">
+                        View all 2d videos
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="ads3d" class="ads" data-navElement>
+            <div class="ads__text">
+                <h3>3d video ads</h3>
+                <p class="aditional-paragraph">Get a full cycle of video ad production from your Unity, Unreal
+                    Engine assets. Our creative managers, motion designers + team of tech-ninjas will create
+                    absolutely new approach for your product ads. You will get: idea generation (optional), 3d
+                    animation, and post-production (effects, CTA’s, interface details, etc.)</p>
+            </div>
+            <div id="3dslider" class="glide ads__video inline">
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="video glide__slides" style="max-height: 650px;">
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/537291200"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/3d/airport-city.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Airport City</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/586186472"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/3d/nitro-nation-5.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Nitro Nation. Coffee Ride</div>
+                        </li>
+
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/522290279"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/3d/airport-city-2.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">3D video. Airport City. Bridge</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/556176205"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/3d/unity.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">3D video. Unity3D</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/582858764"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/3d/age-of-magic.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Age of Magic. Battle</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/522290499"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/3d/autochess-1.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Autochess</div>
+                        </li>
                     </ul>
                 </div>
-                <div class="navigation__row">
-                    <ul class="navigation__column">
-                        <li class="navigation__item title">Resources</li>
-                        <li class="navigation__item"><a class="link" href="#">Blog</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Guides</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Why Perfomante</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Help Center</a></li>
-                    </ul>
-                    <ul class="navigation__column">
-                        <li class="navigation__item title">Follow</li>
-                        <li class="navigation__item"><a class="link" href="#">Facebook</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Instagram</a></li>
-                        <li class="navigation__item"><a class="link" href="#">LinkedIn</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Pinterest</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Twitter</a></li>
-                        <li class="navigation__item"><a class="link" href="#">Youtube</a></li>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                    <button class="glide__bullet" data-glide-dir="=5"></button>
+                </div>
+            </div>
+            <div class="link">
+                <a href="./portfolio/#3d" class="more-link aditional-paragraph">
+                    <button class="outlined">
+                        View all 3d videos
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="ugcads" class="ads" data-navElement>
+            <div class="ads__text">
+                <h3>UGC</h3>
+                <p class="aditional-paragraph">Looking for UGC content for your video ads? You came to the right
+                    place! Get top-trended ideas from our creative team, add footages from relevant models, and as a
+                    result receive high-performing video ads.</p>
+            </div>
+            <div id="ugcslider" class="glide ads__video inline">
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="video glide__slides" style="max-height: 1400px">
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/556185930"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/ugc/spades-1.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">UGC. Spades</div>
+                        </li>
+
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/522270457"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/ugc/mojo-1.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Mojo. video editor</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/618930180"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/ugc/mf.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Mojo. video editor</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/561265225"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/ugc/keto-diet.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Keto Diet. health & fitness</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/561265179"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/ugc/keto-diet-2.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Keto Diet. health & fitness</div>
+                        </li>
+
+                        <li class="video__wrap glide__slide vimeo__video">
+                            <div class="video__player" data-video-url="https://player.vimeo.com/video/556228942"></div>
+                            <div class="video__overlay" style="background-image: url(./img/new-previews/ugc/keto-diet-3.jpg)"></div>
+                            <div class="video__play">
+                                <svg width="17" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.608c0-1.57 1.728-2.528 3.06-1.696l10.226 6.392a2 2 0 010 3.392L4.06 18.087C2.728 18.92 1 17.962 1 16.392V3.607z"
+                                          stroke="#fff" stroke-width="2"/>
+                                </svg>
+                                Play
+                            </div>
+                            <div class="video__description">Keto Diet. health & fitness</div>
+                        </li>
+
+
                     </ul>
                 </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                    <button class="glide__bullet" data-glide-dir="=5"></button>
+                </div>
+            </div>
+            <div class="link">
+                <a href="./portfolio/#UGC" class="more-link aditional-paragraph">
+                    <button class="outlined">
+                        View all UGC videos
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="touch-with" id="touch-with">
+    <div class="container">
+        <div class="text-container">
+            <h3>See it for yourself</h3>
+            <p class="paragraph">Get in touch with one of our experts and take a personal tour of Perfomante.</p>
+            <div class="cta">
+                <button class="button-offer contained offer__modal" data-seo-target="seeItClick"
+                        data-submit-seo-target="seeItSubmit">
+                    <img src="./img/green-logo.png" alt="perfomante">
+                    <span>Get offer</span>
+                </button>
+                <button id="calendly_toggle" class="outlined-dark">
+                    <span class="open">Get a demo</span>
+                    <span class="close">Hide</span>
+                </button>
+            </div>
+        </div>
+        <div id="calendly">
+            <div class="calendly-wrapper"></div>
+        </div>
+    </div>
+</section>
+<section id="cases" class="reviews" data-navElement>
+    <div id="slider" class="container glide">
+        <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+                <li class="glide__slide customer">
+                    <div class="customer__about">
+                        <div class="company">
+                            <p class="aditional-paragraph">Client success: UGC videos </p>
+                        </div>
+                        <p class="quote">TikTok is a very demanding platform when it comes to creatives. Perfomante
+                            team did a great job embracing this mindset as well as the best practices. As a result -
+                            we really liked their work and creative approach. Also thanks to seamless communication
+                            all the deadlines were met.</p>
+
+                        <div class="client">
+                            <img src="./img/anton.jpg" alt="Anton" class="client__photo">
+                            <div class="client__info">
+                                <div class="paragraph">Anton Gritsevskii</div>
+                                <div class="aditional-paragraph">Creative Solutions Lead (Gaming&Apps Manger of
+                                    TikTok)
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="customer__info">
+                        <div class="customer__content">
+                            <img src="./img/tik_tok.jpg" alt="tik tok">
+                            <div>
+                                <p class="benefits">70+ ad sets provided</p>
+                            </div>
+                        </div>
+                        <button class="outlined">
+                            Read more
+                        </button>
+                    </div>
+                </li>
+                <li class="glide__slide customer">
+                    <div class="customer__about">
+                        <div class="company">
+                            <p class="aditional-paragraph">Client success: UGC videos </p>
+                        </div>
+                        <p class="quote">For my taste - you have experience working with creatives and purchasing,
+                            you
+                            understand what the user wants in advertising on Facebook, this is reflected in the
+                            videos.
+                            We like the ideas and the focus of where we're going.</p>
+                        <div class="client">
+                            <img src="./img/irina.jpg" alt="Irina" class="client__photo">
+                            <div class="client__info">
+                                <div class="paragraph">Irina Kirichenko</div>
+                                <div class="aditional-paragraph">UA manager of IQOption</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer__info">
+                        <div class="customer__content">
+
+                            <img src="./img/iq_option.jpg" alt="iq option">
+                            <div>
+                                <p class="benefits">22 ad sets tested, 10 exceeded benchmarks</p>
+                            </div>
+                        </div>
+                        <button class="outlined">
+                            Read more
+                        </button>
+                    </div>
+                </li>
+                <li class="glide__slide customer">
+                    <div class="customer__about">
+                        <div class="company">
+                            <p class="aditional-paragraph">Client success: UGC videos </p>
+                        </div>
+                        <p class="quote">We had a great experience working with Perfomante team. Very clear and
+                            personalized communication led to impressive creatives that were created in time. The
+                            quality of creatives correlates with the professionalism of the team.</p>
+                        <div class="client">
+                            <img src="./img/Karim.jpg" alt="Karim" class="client__photo">
+                            <div class="client__info">
+                                <div class="paragraph">Karim Iskakov</div>
+                                <div class="aditional-paragraph">Co-founder & CTO of Avatarify</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customer__info">
+                        <div class="customer__content">
+                            <img src="./img/avatarify.jpg" alt="avatarify">
+                            <div>
+                                <p class="benefits">CTR and CPI beat the benchmark</p>
+                                <p class="count">10 ad sets were tested</p>
+                            </div>
+                        </div>
+                        <button class="outlined">
+                            Read more
+                        </button>
+                    </div>
+                </li>
+                <li class="glide__slide customer">
+                    <div class="customer__about">
+                        <div class="company">
+                            <p class="aditional-paragraph">Client success: UGC videos </p>
+                        </div>
+                        <p class="quote">We contacted Perfomante because we were looking for a fresh take on the
+                            creatives for our game. We are pleased by the work process and results from this
+                            cooperation. Also, I’d like to note well-coordinated communication with the team in a
+                            convenient format and high-quality creatives that they delivered.
+                        </p>
+                        <div class="client">
+                            <img src="./img/Galiya.jpg" alt="Galiya" class="client__photo">
+                            <div class="client__info">
+                                <div class="paragraph">Galiya Kadyrova</div>
+                                <div class="aditional-paragraph">Creative Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer__info">
+                        <div class="customer__content">
+
+                            <img src="./img/puzzle_point.jpg" alt="puzzle point">
+                            <div>
+                                <p class="benefits">Significant CTR improvement </p>
+                                <p class="count">10 ad sets were tested</p>
+                            </div>
+                        </div>
+                        <button class="outlined">
+                            Read more
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="actions">
+            <!-- <button class="outlined">Read the story</button> -->
+            <div data-glide-el="controls" class="glide__arrows pagination">
+                <button class="pagination__button glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <img src="./img/arrow-left.svg" alt="arrow left">
+                </button>
+                <span id="slide-info"></span>
+                <button class="pagination__button glide__arrow glide__arrow--right" data-glide-dir=">">
+                    <img src="./img/arrow-right.svg" alt="arrow right">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="prices" class="price">
+    <div class="container">
+        <div class="price__header section-header">
+            <h4>PRICING</h4>
+            <h3>Your new video content creation strategy starts here</h3>
+            <p class="paragraph">Whether you’re just getting started with rapid testing or scaling across the
+                organization, we’ve got you covered.</p>
+        </div>
+        <div class="price__services">
+            <div class="service">
+                <div class="service__img"><img src="./img/2d-ads-service.png" alt="2d ads service"></div>
+                <div class="service__header">
+                    <h5>2D video ads</h5>
+                    <p>Idea generation + Video animation</p>
+                </div>
+                <div class="service__price">
+                    <span>6'000<sup>$</sup></span>
+                    <p>600$ per video</p>
+                </div>
+                <div class="service__benefits">
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">10 videos in 2 formats monthly</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">script generation</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">art director + lead motion designer</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">personal manager</p>
+                    </div>
+                </div>
+                <button class="contained order__modal" data-index="0" data-seo-target="2dClick"
+                        data-submit-seo-target="2dSubmit">
+                    <span>Get started</span>
+                </button>
+                <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
+            </div>
+            <div class="service">
+                <div class="service__img"><img src="./img/3d-ads-service.png" alt="3d ads service"></div>
+                <div class="service__header">
+                    <h5>3D video ads</h5>
+                    <p>Idea + 3d animation + Postproduction</p>
+                </div>
+                <div class="service__price">
+                    <span>9'000<sup>$</sup></span>
+                    <p>1'900$ per video</p>
+                </div>
+                <div class="service__benefits">
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">5 videos</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">tech lead + art director</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">personal manager</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">creative sessions on demand</p>
+                    </div>
+                </div>
+                <button class="contained order__modal" data-index="1" data-seo-target="3dClick"
+                        data-submit-seo-target="3dSubmit">
+                    <span>Get started</span>
+                </button>
+                <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
+            </div>
+            <div class="service">
+                <div class="service__img"><img src="./img/ugc-service.png" alt="ugc service"></div>
+                <div class="service__header">
+                    <h5>UGC video ads</h5>
+                    <p>Idea + Shooting + Postproduction</p>
+                </div>
+                <div class="service__price">
+                    <span>5'000<sup>$</sup></span>
+                    <p>1'000$ per video</p>
+                </div>
+                <div class="service__benefits">
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">5 videos</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">art director + lead motion designer</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">personal manager</p>
+                    </div>
+                    <div class="service__benefit">
+                        <img src="./img/Icon-check.svg" alt="check">
+                        <p class="paragraph">creative sessions on demand</p>
+                    </div>
+                </div>
+                <button class="contained order__modal" data-index="2" data-seo-target="UGCClick"
+                        data-submit-seo-target="UGCSubmit">
+                    <span>Get started</span>
+                </button>
+                <!-- <p class="aditional-paragraph">Min pack - 10 pcs</p> -->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="team" class="team" data-navElement>
+    <div class="container">
+        <div class="team__avatar tablet">
+            <div class="team__avatar-row">
+                <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
+            </div>
+            <div class="team__avatar-row">
+                <img class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
+            </div>
+        </div>
+        <div class="team__avatar left">
+            <div class="team__avatar-row">
+                <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar3.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
+            </div>
+            <div class="team__avatar-row">
+                <img class="object-fit" src="./img/Avatar5.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar10.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar7.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
+            </div>
+        </div>
+        <div class="team__avatar right">
+            <div class="team__avatar-row">
+                <img class="object-fit" src="./img/Avatar1.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar2.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar9.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar4.jpg" alt="avatar">
+            </div>
+            <div class="team__avatar-row">
+                <img class="object-fit" src="./img/Avatar12.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar6.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar11.jpg" alt="avatar">
+                <img class="object-fit" src="./img/Avatar8.jpg" alt="avatar">
+            </div>
+        </div>
+        <div class="team__header section-header">
+            <h4>TEAM</h4>
+            <h3>We are Perfomante</h3>
+            <div>
+                <p class="paragraph">We at Perfomante are ready to help you achieve your business goals and
+                    benchmarks with ease. Share your assets and see how the magic happens: our experts in
+                    performance marketing will analyze your product so your creatives will perform better than ever
+                    before.
+                </p>
+            </div>
+        </div>
+        <div class="team__promo">
+            <div class="about-system">
+                <h4>PERFOMANTE SYSTEM</h4>
+                <h3>Want to scale production?</h3>
+                <p class="paragraph">
+                    You can use our platform with connected motion designers. All your videos will be checked by
+                    Art-director as well.
+                </p>
+                <button class="outlined open-calendly">
+                    Request demo
+                </button>
+                <p class="aditional-information">Price starts at $300 per 15-sec video.</p>
+            </div>
+            <img class="demo" src="./img/Promo.jpg" alt="promo">
+        </div>
+    </div>
+</section>
+<!-- <section class="resources">
+    <div class="container">
+        <div class="section-header">
+            <h4>RESOURCES</h4>
+            <h3>Ideas for your video marketing</h3>
+            <p class="paragraph">Experts in visual production maximize return on impressions with measurably better
+                video creative.</p>
+        </div>
+        <div id="resources_slider" class="resources__ideas">
+            <div data-glide-el="track" class="glide__track">
+                <div class="glide__slides">
+                    <div class="glide__slide">
+                        <div class="idea">
+                            <div class="idea__card">
+                                <img src="./img/Logo-light.svg" alt="logo perfomante">
+                                <h5>The state of video marketing at 2021</h5>
+                                <div class="idea__footer">
+                                    <img src="./img/idea-avatar.jpg" alt="idea avatar">
+                                    <a href="#">Guide</a>
+                                </div>
+                            </div>
+                            <h5 class="idea__name">Guide name</h5>
+                            <p class="paragraph">In context messaging lets us form 1:1 connections with our users.
+                            </p>
+                            <button class="outlined">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
+                                        fill="#337157" />
+                                    <path
+                                        d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
+                                        stroke="#337157" stroke-width="1.995" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Download the guide</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="glide__slide">
+                        <div class="idea">
+                            <div class="idea__card">
+                                <img src="./img/Logo-light.svg" alt="logo perfomante">
+                                <h5>The state of video marketing at 2021</h5>
+                                <div class="idea__footer">
+                                    <img src="./img/idea-avatar.jpg" alt="idea avatar">
+                                    <a href="#">Guide</a>
+                                </div>
+                            </div>
+                            <h5 class="idea__name">Guide name</h5>
+                            <p class="paragraph">In context messaging lets us form 1:1 connections with our users.
+                            </p>
+                            <button class="outlined">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
+                                        fill="#337157" />
+                                    <path
+                                        d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
+                                        stroke="#337157" stroke-width="1.995" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Download the guide</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="glide__slide">
+                        <div class="idea">
+                            <div class="idea__card">
+                                <img src="./img/Logo-light.svg" alt="logo perfomante">
+                                <h5>The state of video marketing at 2021</h5>
+                                <div class="idea__footer">
+                                    <img src="./img/idea-avatar.jpg" alt="idea avatar">
+                                    <a href="#">Guide</a>
+                                </div>
+                            </div>
+                            <h5 class="idea__name">Guide name</h5>
+                            <p class="paragraph">In context messaging lets us form 1:1 connections with our users.
+                            </p>
+                            <button class="outlined">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.80078 20.0703V22H8.42969V16.3125H10.6992C11.1341 16.3125 11.5182 16.3932 11.8516 16.5547C12.1875 16.7135 12.4466 16.9414 12.6289 17.2383C12.8138 17.5326 12.9062 17.8672 12.9062 18.2422C12.9062 18.7969 12.707 19.2409 12.3086 19.5742C11.9128 19.9049 11.3685 20.0703 10.6758 20.0703H9.80078ZM9.80078 19.0117H10.6992C10.9648 19.0117 11.1667 18.9453 11.3047 18.8125C11.4453 18.6797 11.5156 18.4922 11.5156 18.25C11.5156 17.9844 11.444 17.7721 11.3008 17.6133C11.1576 17.4544 10.9622 17.3737 10.7148 17.3711H9.80078V19.0117ZM13.6406 22V16.3125H15.4727C15.9753 16.3125 16.4271 16.4271 16.8281 16.6562C17.2292 16.8828 17.5417 17.2044 17.7656 17.6211C17.9922 18.0352 18.1068 18.5 18.1094 19.0156V19.2773C18.1094 19.7982 17.9987 20.2656 17.7773 20.6797C17.5586 21.0911 17.2487 21.4141 16.8477 21.6484C16.4492 21.8802 16.0039 21.9974 15.5117 22H13.6406ZM15.0117 17.3711V20.9453H15.4883C15.8815 20.9453 16.1836 20.806 16.3945 20.5273C16.6055 20.2461 16.7109 19.8294 16.7109 19.2773V19.0312C16.7109 18.4818 16.6055 18.0677 16.3945 17.7891C16.1836 17.5104 15.8763 17.3711 15.4727 17.3711H15.0117ZM22.3945 19.7344H20.1836V22H18.8125V16.3125H22.6172V17.3711H20.1836V18.6797H22.3945V19.7344Z"
+                                        fill="#337157" />
+                                    <path
+                                        d="M10.0003 3H6.00033C4.34347 3 3.00033 4.34315 3.00033 6V18C3.00033 18.4012 3.00031 18.7254 3.00028 19.0005C3.00016 20.105 3.89543 21 5 21V21H5.5M10.0003 3L16.0003 9M10.0003 3V7C10.0003 8.10457 10.8958 9 12.0003 9H16.0003M16.0003 9V13"
+                                        stroke="#337157" stroke-width="1.995" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Download the guide</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="offer">
+    <div class="square left"></div>
+    <div class="square right"></div>
+    <div class="container">
+        <h3>Your products tell interesting stories, let Perfomante make them heard.</h3>
+        <div class="cta">
+            <button class="button-offer contained offer__modal">
+                <img src="./img/green-logo.png" alt="perfomante">
+                <span>Get offer</span>
+            </button>
+            <button class="outlined-dark open-calendly">
+                <img class="object-fit" src="./img/Nurs-min.jpg" alt="perfomante">
+                <span>Get a demo <span class="mobile-hidden">from Nurs</span></span>
+            </button>
+        </div>
+    </div>
+</section>
+<footer class="footer" id="footer">
+    <div class="footer__container container">
+        <!-- Top part -->
+        <div class="footer__top">
+            <!-- Logo -->
+            <div class="footer__logo">
+                <img src="./img/Logo-light.svg" alt="Perfomante" draggable="false">
+            </div>
+            <!-- Navigation -->
+            <nav class="nav nav--footer footer__nav">
+                <ul class="nav__container">
+                    <li class="nav__item nav__item--heading">
+                        Links
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="https://perfomante.io/cntct">Info for clients</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="https://perfomante.io/blog">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="https://perfomante.io/privacy">Privacy Policy</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="https://perfomante.io/cookies">Cookie Policy</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="https://perfomante.io/gdpr">GDPR</a>
+                    </li>
+                </ul>
+                <ul class="nav__container">
+                    <li class="nav__item nav__item--heading">
+                        Partners
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link"
+                           href="https://qonversion.io/?utm_source=perfomante&utm_medium=partners&utm_campaign=footer"
+                           target="_blank">Qonversion</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="https://asodesk.com/" target="_blank">ASOdesk</a>
+                    </li>
+                </ul>
             </nav>
         </div>
-    </footer> -->
-    <div class="to-top">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="20" height="20" rx="10" fill="#337157" />
-            <rect x="2" y="2" width="20" height="20" rx="10" fill="white" fill-opacity="0.2" />
-            <rect x="2" y="2" width="20" height="20" rx="10" fill="black" fill-opacity="0.1" />
-            <path d="M16 11L12 7M12 7L8 11M12 7L12 17" stroke="white" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
+        <!-- Bottom part -->
+        <div class="footer__bottom">
+            <div class="footer__copyright">
+                <p><a class="link footer-link" href="mailto:hi@perfomante.io"><img src="./img/mail.svg"
+                                                                                   alt="">hi@perfomante.io</a></p>
+                <p>&#169; 2021 All Rights Reserved. Perfomante &#171;LLC&#187;.</p>
+                <p>HQ in Minsk, Belarus</p>
+            </div>
+        </div>
+        <div class="payment__section">
+            <img src="./img/payment.png"/>
+        </div>
     </div>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    <script src="js/runtime.min.js"></script>
-    <script src="js/main.min.js"></script>
-    <script src="js/vendors.min.js"></script>
-    <script async defer
+</footer>
+<!-- <footer>
+    <div class="container">
+        <div class="perfomante">
+            <div>
+                <img src="./img/Logo-light.svg" alt="logo perfomante">
+                <p class="paragraph">Marketing videos that perform and attract users</p>
+            </div>
+            <div class="license">
+                <p class="aditional-paragraph">
+                    2021 Perfomante Inc.
+                </p>
+                <p class="aditional-paragraph">
+                    Terms & Privacy
+                </p>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="navigation__row">
+                <ul class="navigation__column">
+                    <li class="navigation__item title">Platform</li>
+                    <li class="navigation__item"><a class="link" href="#">2d video ads</a></li>
+                    <li class="navigation__item"><a class="link" href="#">3d video ads</a></li>
+                    <li class="navigation__item"><a class="link" href="#">UGS</a></li>
+                </ul>
+                <ul class="navigation__column">
+                    <li class="navigation__item title">Company</li>
+                    <li class="navigation__item"><a class="link" href="#">About us</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Career</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Press room</a></li>
+                </ul>
+            </div>
+            <div class="navigation__row">
+                <ul class="navigation__column">
+                    <li class="navigation__item title">Resources</li>
+                    <li class="navigation__item"><a class="link" href="#">Blog</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Guides</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Why Perfomante</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Help Center</a></li>
+                </ul>
+                <ul class="navigation__column">
+                    <li class="navigation__item title">Follow</li>
+                    <li class="navigation__item"><a class="link" href="#">Facebook</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Instagram</a></li>
+                    <li class="navigation__item"><a class="link" href="#">LinkedIn</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Pinterest</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Twitter</a></li>
+                    <li class="navigation__item"><a class="link" href="#">Youtube</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</footer> -->
+<div class="to-top">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="10" fill="#337157"/>
+        <rect x="2" y="2" width="20" height="20" rx="10" fill="white" fill-opacity="0.2"/>
+        <rect x="2" y="2" width="20" height="20" rx="10" fill="black" fill-opacity="0.1"/>
+        <path d="M16 11L12 7M12 7L8 11M12 7L12 17" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"/>
+    </svg>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<script src="js/runtime.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="js/vendors.min.js"></script>
+<script>
+    window.onload = function () {
+        initMainScript('index');
+    }
+</script>
+<script async defer
         src="https://www.google.com/recaptcha/api.js?render=6Lf21fMUAAAAAPUNEc0_1RHMa-wJBOSy9TJirvG-&render=explicit"
         nonce="{NONCE}"></script>
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
-                a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+            a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(54065377, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
+    ym(54065377, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+    });
 
-    </script>
-    <noscript>
-        <div>
-            <img src="https://mc.yandex.ru/watch/54065377" style="position:absolute; left:-9999px;" alt="" />
-        </div>
-    </noscript>
+</script>
+<noscript>
+    <div>
+        <img src="https://mc.yandex.ru/watch/54065377" style="position:absolute; left:-9999px;" alt=""/>
+    </div>
+</noscript>
 </body>
 
 </html>
