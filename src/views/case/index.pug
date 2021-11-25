@@ -11,14 +11,11 @@ block content
           .case-main__list
             .case-main__item.case-main__info
               .case-main__title 
-                h2 Case Study: ElliotLee Estate Agents
+                h2.company-title
               p.case-main__text.company-info
             .case-main__item.case-main__precent
               .case-banner__precent
-                | 50% 
-                img(src="../img/precent.svg", alt="precent")
-              h3.case-banner__small-title more efficient (lower) Cost Per Lead 
-              p.case-banner__small-description 30 creative assets procuced
+              h3.case-banner__small-title
     section.case
       .container
         .case__videos 
@@ -108,9 +105,6 @@ block content
       .container
         h2 View more Case Studies
         .cases__list 
-          +case-link('/case', '../img/logos/1.svg', '50%', '2D VIDEO', 'Case Study - 2')
-          +case-link('/case', '../img/logos/2.svg', '50%', '2D VIDEO', 'Case Study - 2')
-          +case-link('/case', '../img/logos/3.svg', '50%', '2D VIDEO', 'Case Study - 2')
   script(type='text/javascript').
     window.onload = function() {
         initMainScript('case');

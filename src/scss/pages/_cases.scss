@@ -152,7 +152,7 @@
   box-sizing: border-box;
   position: relative;
   &__logo{
-    max-height: 90px;
+    // max-height: 90px;
     margin-bottom: 18px;
     img{
       max-width: 280px;
@@ -201,6 +201,10 @@
 }
 
 .case-link__top{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 30px 20px 40px;
   width: 100%;
   min-height: 300px;

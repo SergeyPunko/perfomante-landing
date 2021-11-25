@@ -16,6 +16,7 @@ import Portfolio from "./pages/portfolio";
 import Videos from "./sliders/video";
 import caseSlider from './sliders/case-slider'
 import CaseContent from './pages/case'
+import CasesContent from './pages/cases'
 
 // Инициализируем только необходимые скрипты для определенной страницы
 export function initMainScript(page) {
@@ -50,6 +51,7 @@ export function initMainScript(page) {
         Dropdowns.init();
         ObjectFillPolyfill.init();
         caseSlider();
+        CasesContent.init();
     } else if (page === 'case') {
         Header.init();
         Dropdowns.init();
