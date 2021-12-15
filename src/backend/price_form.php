@@ -16,11 +16,11 @@ function sendData($email, $name, $option) {
 
     try {
         //Recipients
-        $mail->setFrom('hi@perfomante.io', 'Perfomante.io');
+        $mail->setFrom('vladislav@perfomante.io', 'Perfomante.io');
         $mail->addAddress($email);
 
-        $mail_owners->setFrom('hi@perfomante.io', 'Perfomante Info');
-        $mail_owners->addAddress('hi@perfomante.io');
+        $mail_owners->setFrom('vladislav@perfomante.io', 'Perfomante Info');
+        $mail_owners->addAddress('vladislav@perfomante.io');
         $mail_owners->addBCC('a@perfomante.io');
         $mail_owners->addBCC('n@perfomante.io');
         $mail_owners->addBCC('v@perfomante.io');

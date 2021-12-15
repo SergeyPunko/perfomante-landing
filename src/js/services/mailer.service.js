@@ -16,7 +16,7 @@ const Mailer = (function () {
             .then((res) => res.json())
             .catch(err => {
                 console.error(err);
-                alert('Technical error. Please, reload the page and try again or send us an email directly to hi@perfomante.io');
+                alert('Technical error. Please, reload the page and try again or send us an email directly to vladislav@perfomante.io');
             })
     }
     return {
