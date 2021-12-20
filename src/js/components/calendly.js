@@ -10,7 +10,7 @@ const Calendar = (function () {
     const initInlineCalendly = function () {
         if(calendly) {
             Calendly.initInlineWidget({
-                url: 'https://calendly.com/perfomante/30min?back=1&hide_event_type_details=1',
+                url: 'https://calendly.com/vlad_davidovich/30min?back=1&hide_event_type_details=1',
                 parentElement: calendly
             });
         }
@@ -29,7 +29,7 @@ const Calendar = (function () {
 
     const openModal = ({ dataset }) => () => {
         sendGoalToAllTrackers(SEO_CODES[dataset.seoTarget]);
-        Calendly.initPopupWidget({url: 'https://calendly.com/perfomante/30min?back=1'});
+        Calendly.initPopupWidget({url: 'https://calendly.com/vlad_davidovich/30min?back=1'});
     }
     const init = function () {
         initInlineCalendly();
